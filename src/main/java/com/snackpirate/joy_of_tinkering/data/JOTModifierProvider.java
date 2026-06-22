@@ -165,6 +165,7 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 				.build();
 		buildModifier(burstFire)
 				.addModule(BurstfireModule.INSTANCE)
+//				.addModule(StatBoostModule.multiplyAll(ToolStats.PROJECTILE_DAMAGE).eachLevel(-0.2f))
 				.levelDisplay(new ModifierLevelDisplay.UniqueForLevels(5, true))
 				.build();
 	}

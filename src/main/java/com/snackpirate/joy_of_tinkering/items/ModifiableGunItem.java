@@ -213,6 +213,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 			ItemStack ammo = ItemStack.of((CompoundTag) heldAmmo.get(0));
 			float startAngle = getAngleStart(ammo.getCount());
 			int primaryIndex = ammo.getCount() / 2;
+			float burstFirePowerMult = 2f / (tool.getModifierLevel(JOTModifierIds.burstFire) + 2);
 			for (int arrowIndex = 0; arrowIndex < ammo.getCount(); arrowIndex++) {
 				// setup projectile
 				//junkshot means you can shoot:
@@ -232,7 +233,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 					float gunPower = ConditionalStatModifierHook.getModifiedStat(tool, living, ToolStats.PROJECTILE_DAMAGE);
 					float power = bulletPower != 0 && gunPower != 0 ? bulletPower + gunPower : 0;
 					bullet.onCreate(ammo, living);
-					bullet.setPower(power);
+					bullet.setPower(power * burstFirePowerMult);
 					speed = 2;
 					projectile = bullet;
 				}
@@ -247,7 +248,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 					damage += 3;
 					ThrownShuriken shuriken = new ThrownShuriken(level, player);
 					IToolStackView stool = shuriken.onCreate(ammo, player);
-					shuriken.setPower(shuriken.getPower() / 1.5f);
+					shuriken.setPower(shuriken.getPower() * burstFirePowerMult);
 					projectile = shuriken;
 				} else {
 					ArrowItem arrowItem = ammo.getItem() instanceof ArrowItem a ? a : (ArrowItem)Items.ARROW;
@@ -260,7 +261,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 
 					// vanilla arrows have a base damage of 2, cancel that out then add in our base damage to account for custom arrows with higher base damage
 					float baseArrowDamage = (float)(arrow.getBaseDamage() - 2 + tool.getStats().get(ToolStats.PROJECTILE_DAMAGE));
-					arrow.setBaseDamage(ConditionalStatModifierHook.getModifiedStat(tool, living, ToolStats.PROJECTILE_DAMAGE, baseArrowDamage) / 1.5f);
+					arrow.setBaseDamage(ConditionalStatModifierHook.getModifiedStat(tool, living, ToolStats.PROJECTILE_DAMAGE, baseArrowDamage) * burstFirePowerMult / 1.5f);
 
 					// fortunately, don't need to deal with vanilla infinity here, our infinity was dealt with during loading
 					if (creative) {

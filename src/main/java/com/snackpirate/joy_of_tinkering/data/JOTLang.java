@@ -134,7 +134,7 @@ public class JOTLang extends LanguageProvider {
 		addModifier(JOTModifierIds.crackshot, "Crackshot", "Boom, headshot", "Projectiles deal greater damage when hitting the heads of enemies");
 		add("modifier.joy_of_tinkering.crackshot.projectile_damage", "Headshot Damage");
 
-		addModifier(JOTModifierIds.burstFire, "Burst Fire", "Ratatat!", "Allows the gun to fire in rapid bursts");
+		addModifier(JOTModifierIds.burstFire, "Burst Fire", "Ratatat!", "Allows the gun to fire in rapid bursts, at the cost of projectile damage");
 		add("modifier.joy_of_tinkering.burst_fire.1", "2-Round Burst");
 		add("modifier.joy_of_tinkering.burst_fire.2", "3-Round Burst");
 		add("modifier.joy_of_tinkering.burst_fire.3", "4-Round Burst");

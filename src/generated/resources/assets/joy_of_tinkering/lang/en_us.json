@@ -72,7 +72,7 @@
   "modifier.joy_of_tinkering.burst_fire.3": "4-Round Burst",
   "modifier.joy_of_tinkering.burst_fire.4": "5-Round Burst",
   "modifier.joy_of_tinkering.burst_fire.5": "6-Round Burst",
-  "modifier.joy_of_tinkering.burst_fire.description": "Allows the gun to fire in rapid bursts",
+  "modifier.joy_of_tinkering.burst_fire.description": "Allows the gun to fire in rapid bursts, at the cost of projectile damage",
   "modifier.joy_of_tinkering.burst_fire.flavor": "Ratatat!",
   "modifier.joy_of_tinkering.crackshot": "Crackshot",
   "modifier.joy_of_tinkering.crackshot.description": "Projectiles deal greater damage when hitting the heads of enemies",
