@@ -93,7 +93,7 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 				new FiringMechanismMaterialStats(8, 0.15f, 2.25f),
 				JOTToolStats.Statless.BULLET_CASING);
 		addMaterialStats(MaterialIds.manyullyn,
-				new GunBarrelMaterialStats(1250, 0.25f, 0.2f),
+				new GunBarrelMaterialStats(1150, 0.20f, 0.1f),
 				new FiringMechanismMaterialStats(6, -0.15f, 3f),
 				JOTToolStats.Statless.BULLET_CASING);
 		addMaterialStats(MaterialIds.knightmetal,

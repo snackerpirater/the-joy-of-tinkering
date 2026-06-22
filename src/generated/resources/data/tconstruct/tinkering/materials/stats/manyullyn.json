@@ -1,9 +1,9 @@
 {
   "stats": {
     "joy_of_tinkering:barrel": {
-      "accuracy": 0.2,
-      "durability": 1250,
-      "velocity": 0.25
+      "accuracy": 0.1,
+      "durability": 1150,
+      "velocity": 0.2
     },
     "joy_of_tinkering:bullet_casing": {},
     "joy_of_tinkering:firing_mechanism": {
