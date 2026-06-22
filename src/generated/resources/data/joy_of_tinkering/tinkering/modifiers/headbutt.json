@@ -1,14 +1,4 @@
 {
   "level_display": "tconstruct:single_level",
-  "modules": [
-    {
-      "type": "joy_of_tinkering:headbutt_attack",
-      "damage_multiplier": 1.5,
-      "drawtime_multiplier": 0.9,
-      "force_multiplier": {
-        "each_level": 0.5
-      }
-    }
-  ],
   "tooltip_display": "always"
 }

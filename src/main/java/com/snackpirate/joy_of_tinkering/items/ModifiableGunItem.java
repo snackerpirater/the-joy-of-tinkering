@@ -62,6 +62,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.entity.ThrownShuriken;
+import slimeknights.tconstruct.tools.modifiers.ability.interaction.BlockingModifier;
 
 import javax.annotation.Nullable;
 import java.util.*;
@@ -125,9 +126,9 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 			// if we have ammo, start charging
 			Predicate<ItemStack> ammoPredicate = getSupportedHeldProjectiles().or((stack) -> tool.getModifierLevel(JOTModifierIds.junkshot) > 0 && (stack.is(JOTItemTags.JUNKSHOT_AMMO)));
 
-			ItemStack ammo = BowAmmoModifierHook.getAmmo(tool, ItemStack.EMPTY, player, ammoPredicate);
+			ItemStack ammo = BowAmmoModifierHook.getAmmo(tool, gun, player, ammoPredicate);
 			if (!ammo.isEmpty() || tool.getModifiers().has(TinkerTags.Modifiers.CHARGE_EMPTY_BOW_WITH_DRAWTIME)) {
-				GeneralInteractionModifierHook.startDrawing(tool, player, 1);
+				GeneralInteractionModifierHook.startDrawtime(tool, player, 1);
 				if (!ammo.isEmpty()) {
 					if (storeDrawingItem) {
 						persistentData.put(KEY_DRAWBACK_AMMO, ammo.save(new CompoundTag()));
@@ -344,7 +345,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 		//if we have two bullets, then load 3-6
 		for (int i = ammoListNBT.size(); i < ConditionalStatModifierHook.getModifiedStat(tool, living, JOTToolStats.MAX_AMMO); i++) {
 			Predicate<ItemStack> ammoPredicate = getSupportedHeldProjectiles().or((stack) -> tool.getModifierLevel(JOTModifierIds.junkshot) > 0 && (stack.is(JOTItemTags.JUNKSHOT_AMMO)));
-			ItemStack ammo = BowAmmoModifierHook.consumeAmmo(tool, ItemStack.EMPTY, living, player, ammoPredicate, 1); //loading one bullet at a time
+			ItemStack ammo = BowAmmoModifierHook.consumeAmmo(tool, bow, living, player, ammoPredicate, 1); //loading one bullet at a time
 //			JoyOfTinkering.LOGGER.info("ammo item {}", ammo.getDisplayName().getString());
 			if (!ammo.isEmpty()) ammoList.add(ammo);
 		}
@@ -397,7 +398,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 			builder.addOptional(ToolStats.ARMOR_TOUGHNESS);
 			builder.addOptional(ToolStats.KNOCKBACK_RESISTANCE, 10f);
 		}
-		if (tool.getModifierLevel(ModifierIds.blocking) > 0 || tool.getModifierLevel(TinkerModifiers.parrying.getId()) > 0) {
+		if (tool.getModifierLevel(TinkerModifiers.blocking.getId()) > 0 || tool.getModifierLevel(TinkerModifiers.parrying.getId()) > 0) {
 			builder.add(ToolStats.BLOCK_AMOUNT);
 			builder.add(ToolStats.BLOCK_ANGLE);
 		}

@@ -200,7 +200,7 @@ public class JOTServerEvents {
 //			JoyOfTinkering.LOGGER.info("ammo: {}", event.getProjectileItemStack());
 			//if the player is in creative and does not have a bullet in the inventory
 			if (event.getEntity() instanceof Player p && p.getAbilities().instabuild && !event.getProjectileItemStack().is(JOTItems.BULLET.get())) {
-				ToolStack bullets = ToolStack.createTool(JOTItems.BULLET.get(), JOTToolDefinitionProvider.BULLET, MaterialNBT.of(MaterialRegistry.getMaterial(MaterialIds.shulker), MaterialRegistry.getMaterial(MaterialIds.copper)));
+				ToolStack bullets = ToolStack.createTool(JOTItems.BULLET.get(), JOTToolDefinitionProvider.BULLET, MaterialNBT.of(MaterialRegistry.getMaterial(MaterialIds.flint), MaterialRegistry.getMaterial(MaterialIds.iron), MaterialRegistry.getMaterial(MaterialIds.gunpowder)));
 				ItemStack stack = bullets.createStack();
 				stack.setCount(1);
 				event.setProjectileItemStack(stack);
