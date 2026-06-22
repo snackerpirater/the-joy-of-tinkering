@@ -2,8 +2,8 @@
   "perStat": {
     "tconstruct:skull": [
       {
-        "level": 1,
-        "name": "tconstruct:springing"
+        "level": 2,
+        "name": "tconstruct:springy"
       },
       {
         "level": 1,

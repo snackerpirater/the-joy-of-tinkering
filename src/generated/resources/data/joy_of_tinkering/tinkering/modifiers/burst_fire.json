@@ -7,12 +7,6 @@
   "modules": [
     {
       "type": "joy_of_tinkering:burst_fire"
-    },
-    {
-      "type": "tconstruct:stat_boost",
-      "each_level": -0.2,
-      "operation": "multiply_all",
-      "stat": "tconstruct:projectile_damage"
     }
   ],
   "tooltip_display": "always"

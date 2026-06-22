@@ -145,11 +145,11 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 		buildModifier(overheat)
 				.addModule(new OverheatModule(LevelingValue.eachLevel(5)))
 				.addModule(MobEffectModule.builder(JOTEffects.overheat.get()).tool(ToolStackPredicate.and(HAS_OVERSLIME, ToolStackPredicate.context(ToolContextPredicate.fallback(ItemPredicate.tag(TinkerTags.Items.AMMO))).inverted())).time(RandomLevelingValue.perLevel(0, 100)).level(RandomLevelingValue.perLevel(0, 1)).build())
-				.addModule(MobEffectModule.builder(JOTEffects.overheat.get()).tool(ToolStackPredicate.context(ToolContextPredicate.fallback(ItemPredicate.tag(TinkerTags.Items.AMMO)))).level(RandomLevelingValue.flat(2)).chance(LevelingValue.ONE).time(RandomLevelingValue.flat(100)).build())
+				.addModule(MobEffectModule.builder(JOTEffects.overheat.get()).tool(ToolStackPredicate.context(ToolContextPredicate.fallback(ItemPredicate.tag(TinkerTags.Items.AMMO)))).level(RandomLevelingValue.flat(2)).chance(LevelingValue.flat(1)).time(RandomLevelingValue.flat(100)).build())
 				.addModule(FieryCounterModule.builder().tool(ToolStackPredicate.and(HAS_OVERSLIME, ToolStackPredicate.context(ToolContextPredicate.fallback(ItemPredicate.tag(TinkerTags.Items.ARMOR))))).chance(LevelingValue.flat(0.15f)).constant(LevelingValue.eachLevel(2.5f)).durabilityUsage(3).randomFlat(2).build())
 				.build();
 		buildModifier(headbutt)
-				.addModule(new HeadbuttModule(LevelingValue.eachLevel(0.5f), 0.9f, 1.5f, LivingEntityPredicate.ANY, ModifierCondition.ANY_TOOL))
+//				.addModule(new HeadbuttModule(LevelingValue.eachLevel(0.5f), 0.9f, 1.5f, LivingEntityPredicate.ANY, ModifierCondition.ANY_TOOL))
 				.levelDisplay(ModifierLevelDisplay.SINGLE_LEVEL)
 				.build();
 		buildModifier(junkshot)
