@@ -1,0 +1,11 @@
+{
+  "level_display": "tconstruct:no_levels",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:single_insta_break",
+      "predicate_type": "mantle:any"
+    }
+  ],
+  "priority": 50,
+  "tooltip_display": "always"
+}

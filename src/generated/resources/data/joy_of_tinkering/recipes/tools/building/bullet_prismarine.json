@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:tool_building",
+  "extra_materials": [
+    "tconstruct:prismarine"
+  ],
+  "extra_requirements": [
+    {
+      "item": "minecraft:prismarine_crystals"
+    }
+  ],
+  "result": "joy_of_tinkering:bullet",
+  "result_count": 6
+}

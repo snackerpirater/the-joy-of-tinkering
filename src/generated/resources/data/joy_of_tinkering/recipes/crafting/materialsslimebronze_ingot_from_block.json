@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "joy_of_tinkering:slimebronze_ingot",
+  "ingredients": [
+    {
+      "item": "joy_of_tinkering:slimebronze_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "joy_of_tinkering:slimebronze_ingot"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "joy_of_tinkering:bullet_casing",
+  "pattern_item": {
+    "tag": "tconstruct:casts/red_sand"
+  },
+  "result": "joy_of_tinkering:bullet_casing_red_sand_cast"
+}

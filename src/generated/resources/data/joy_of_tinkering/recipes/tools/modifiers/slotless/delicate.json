@@ -1,0 +1,20 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "tconstruct:silky_cloth"
+    },
+    {
+      "tag": "minecraft:wool"
+    },
+    {
+      "item": "tconstruct:silky_cloth"
+    }
+  ],
+  "level": 1,
+  "result": "joy_of_tinkering:delicate",
+  "tools": {
+    "tag": "tconstruct:modifiable/harvest"
+  }
+}

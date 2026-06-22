@@ -1,0 +1,13 @@
+{
+  "modifier_id": "joy_of_tinkering:well_read",
+  "text": [
+    {
+      "text": "Interacting with the helmet allows reading the book stored inside. Extra levels grant more book slots. Shift-interact to select slots from helmet"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "No max level",
+    "Requires 1 upgrade slot"
+  ]
+}

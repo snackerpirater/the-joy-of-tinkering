@@ -1,0 +1,44 @@
+{
+  "modules": [
+    {
+      "type": "tconstruct:material_stats",
+      "primary_part": 0,
+      "stat_types": [
+        {
+          "scale": 0.75,
+          "stat": "tconstruct:plating_boots"
+        }
+      ]
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "joy_of_tinkering:surface_strider"
+        },
+        {
+          "level": 1,
+          "name": "tconstruct:worldbound"
+        }
+      ]
+    },
+    {
+      "type": "tconstruct:modifier_slots",
+      "slots": {
+        "abilities": 1,
+        "defense": 1,
+        "upgrades": 2
+      }
+    },
+    {
+      "type": "tconstruct:default_materials",
+      "materials": [
+        {
+          "type": "tconstruct:random",
+          "tier": 1
+        }
+      ]
+    }
+  ]
+}

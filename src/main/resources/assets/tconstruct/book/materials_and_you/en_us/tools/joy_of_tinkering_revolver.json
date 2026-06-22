@@ -1,0 +1,20 @@
+{
+  "tool": "joy_of_tinkering:revolver",
+  "text": [
+    {
+      "text": "The revolver is useful for those wanting to outpace their enemy in a quickdraw duel"
+    },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "Revolver? I hardly know her!",
+      "paragraph": true
+    }
+
+  ],
+  "properties": [
+    "Smaller, more powerful firearm",
+    "Holds multiple bullets to be fired in sequence"
+  ]
+}

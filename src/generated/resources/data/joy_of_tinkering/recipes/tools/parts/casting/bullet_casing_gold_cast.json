@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "joy_of_tinkering:casts/multi_use/bullet_casing"
+  },
+  "item_cost": 1,
+  "result": "joy_of_tinkering:bullet_casing"
+}

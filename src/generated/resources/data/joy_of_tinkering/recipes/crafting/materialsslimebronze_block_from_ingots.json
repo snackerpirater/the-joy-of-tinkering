@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "joy_of_tinkering:slimebronze_block",
+  "key": {
+    "#": {
+      "tag": "forge:ingots/slimebronze"
+    },
+    "*": {
+      "item": "joy_of_tinkering:slimebronze_ingot"
+    }
+  },
+  "pattern": [
+    "###",
+    "#*#",
+    "###"
+  ],
+  "result": {
+    "item": "joy_of_tinkering:slimebronze_block"
+  },
+  "show_notification": true
+}

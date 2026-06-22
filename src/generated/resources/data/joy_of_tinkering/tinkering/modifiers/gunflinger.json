@@ -1,0 +1,9 @@
+{
+  "level_display": "tconstruct:no_levels",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:gunflinger"
+    }
+  ],
+  "tooltip_display": "always"
+}

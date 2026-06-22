@@ -1,0 +1,37 @@
+{
+  "icon": {
+    "item": "joy_of_tinkering:revolver",
+    "nbt": "{Damage:0,tic_broken:0b,tic_display:1b,tic_materials:[\"tconstruct:ui_render#head\",\"tconstruct:ui_render#handle\",\"tconstruct:ui_render#extra\",\"tconstruct:ui_render#large\",\"tconstruct:ui_render#extra_large\"]}"
+  },
+  "input_slots": [
+    {
+      "filter": {
+        "item": "joy_of_tinkering:gun_barrel"
+      },
+      "icon": "joy_of_tinkering:gun_barrel",
+      "translation_key": "item.joy_of_tinkering.gun_barrel",
+      "x": 31,
+      "y": 22
+    },
+    {
+      "filter": {
+        "item": "joy_of_tinkering:firing_mechanism"
+      },
+      "icon": "joy_of_tinkering:firing_mechanism",
+      "translation_key": "item.joy_of_tinkering.firing_mechanism",
+      "x": 51,
+      "y": 34
+    },
+    {
+      "filter": {
+        "item": "tconstruct:bow_grip"
+      },
+      "icon": "tconstruct:bow_grip",
+      "translation_key": "item.tconstruct.bow_grip",
+      "x": 22,
+      "y": 53
+    }
+  ],
+  "sortIndex": 8,
+  "translation_key": "item.joy_of_tinkering.revolver"
+}

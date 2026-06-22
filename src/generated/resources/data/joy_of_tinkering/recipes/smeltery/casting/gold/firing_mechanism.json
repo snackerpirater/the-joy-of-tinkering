@@ -1,0 +1,15 @@
+{
+  "type": "tconstruct:casting_table",
+  "cast": {
+    "type": "tconstruct:material",
+    "item": "joy_of_tinkering:firing_mechanism"
+  },
+  "cast_consumed": true,
+  "cooling_time": 57,
+  "fluid": {
+    "amount": 90,
+    "tag": "forge:molten_gold"
+  },
+  "result": "joy_of_tinkering:firing_mechanism_cast",
+  "switch_slots": true
+}

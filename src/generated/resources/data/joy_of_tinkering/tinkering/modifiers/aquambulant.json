@@ -1,0 +1,20 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:fluid_walker",
+      "damage_chance": 0.05,
+      "fluid_predicate": {
+        "type": "mantle:set",
+        "blocks": [
+          "minecraft:water"
+        ]
+      },
+      "velocity_threshold": {
+        "each_level": -1,
+        "flat": 3
+      }
+    }
+  ],
+  "tooltip_display": "always"
+}

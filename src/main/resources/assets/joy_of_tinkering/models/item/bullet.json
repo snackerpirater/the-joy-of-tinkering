@@ -1,0 +1,14 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default",
+  "textures": {
+    "head": "joy_of_tinkering:item/tool/bullet/head",
+    "casing": "joy_of_tinkering:item/tool/bullet/casing"
+  },
+  "modifier_maps": [ "joy_of_tinkering:bullet" ],
+  "show_traits": true,
+  "parts": [
+    { "name": "casing",   "index": 1 },
+    { "name": "head", "index": 0 }
+  ]
+}

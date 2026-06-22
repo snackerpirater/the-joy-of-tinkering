@@ -1,0 +1,37 @@
+{
+  "modifier.joy_of_tinkering": {
+    "well_read": "#ffffff",
+    "aquambulant": "#7CB3A4",
+    "delicate": "#F7CDBB",
+    "surface_strider": "#953300",
+    "fist_mining": "#999999",
+    "terraguard": "#AFB9D6",
+    "terracube_disguise": "#AFB9D6",
+    "oversharing": "#71DC85",
+    "slime_disguise": "#71DC85",
+    "magmadaptive": "#652828",
+    "magma_cube_disguise": "#652828",
+    "endrobe": "#af4cf6",
+    "enderslime_disguise": "#af4cf6",
+    "knockfront": "#01cbcd",
+    "skyslime_disguise": "#01cbcd",
+    "surplus": "#E77C56",
+    "scarce": "#2376dd",
+    "gunflinger": "#27C6C6",
+    "headbutt": "#ff970d",
+    "crackshot": "#ffb823",
+
+    "bulk_bandolier":  "#C65C35",
+    "trick_bandolier": "#F7CDBB",
+    "extended":           "#67718C",
+    "burst_fire":      "#ffb431",
+    "blunderbuss":     "#60496b",
+    "junkshot": "#df374a",
+    "southpaw":    "#A6846A",
+
+    "overheat": "#ff8f3b"
+  },
+  "material.joy_of_tinkering": {
+    "slimebronze": "#ff8f3b"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:tool_building",
+  "extra_materials": [
+    "tconstruct:glowstone"
+  ],
+  "extra_requirements": [
+    {
+      "item": "minecraft:glowstone_dust"
+    }
+  ],
+  "result": "joy_of_tinkering:bullet",
+  "result_count": 6
+}

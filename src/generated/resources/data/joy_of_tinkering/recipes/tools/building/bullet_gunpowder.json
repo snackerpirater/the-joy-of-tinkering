@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:tool_building",
+  "extra_materials": [
+    "tconstruct:gunpowder"
+  ],
+  "extra_requirements": [
+    {
+      "item": "minecraft:gunpowder"
+    }
+  ],
+  "result": "joy_of_tinkering:bullet",
+  "result_count": 6
+}

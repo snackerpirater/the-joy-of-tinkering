@@ -1,0 +1,12 @@
+{
+  "tool": "joy_of_tinkering:lava_loafers",
+  "text": [
+    { "text": "The Lava Loafers are a pair of unique boots found in nether-related areas, which imitate strider anatomy to allow the wearer to walk across lava" }
+  ],
+  "properties": [
+    "Moderate Armor",
+    "2 Defense Slots",
+    "2 Upgrade Slots",
+    "1 Ability Slot"
+  ]
+}

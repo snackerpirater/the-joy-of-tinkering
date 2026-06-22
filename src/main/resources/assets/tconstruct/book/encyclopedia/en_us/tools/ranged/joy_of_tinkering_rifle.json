@@ -1,0 +1,15 @@
+{
+  "tool": "joy_of_tinkering:rifle",
+  "text": [
+    { "text": "The Rifle is a large firearm that fires bullets. Multiple bullets can be loaded into the Rifle and fired at a later time." },
+    { "text": "When using interaction modifiers, the rifle acts on left click.", "paragraph": true }
+  ],
+  "properties": [
+    "+4 Max Ammo",
+    "0.9 Bullet Velocity",
+    "75% Projectile Damage",
+    "85% Accuracy",
+    "75% Draw Speed",
+    "130% Durability Multiplier"
+  ]
+}

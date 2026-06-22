@@ -1,0 +1,21 @@
+{
+  "constant": {
+    "smashing": {
+      "type": "tconstruct:trait",
+      "model": {
+        "type": "tconstruct:fluid",
+        "mask": "joy_of_tinkering:item/tool/bullet/modifiers/tconstruct_smashing_full",
+        "tank_helper": "tconstruct:smashing"
+      },
+      "modifier": "tconstruct:smashing"
+    },
+    "tipped": {
+      "type": "tconstruct:trait",
+      "model": {
+        "type": "tconstruct:potion",
+        "texture": "joy_of_tinkering:item/tool/bullet/modifiers/tconstruct_tipped"
+      },
+      "modifier": "tconstruct:tipped"
+    }
+  }
+}

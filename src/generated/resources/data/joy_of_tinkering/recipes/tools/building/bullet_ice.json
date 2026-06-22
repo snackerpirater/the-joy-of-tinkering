@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:tool_building",
+  "extra_materials": [
+    "tconstruct:ice"
+  ],
+  "extra_requirements": [
+    {
+      "item": "minecraft:powder_snow_bucket"
+    }
+  ],
+  "result": "joy_of_tinkering:bullet",
+  "result_count": 6
+}

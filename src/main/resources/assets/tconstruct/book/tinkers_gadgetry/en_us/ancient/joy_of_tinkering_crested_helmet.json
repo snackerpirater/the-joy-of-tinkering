@@ -1,0 +1,12 @@
+{
+  "tool": "joy_of_tinkering:crested_helmet",
+  "text": [
+    { "text": "The Crested Helmet boasts an impressive blade along the top, allowing the wearer to charge up and release a powerful headbutt attack." }
+  ],
+  "properties": [
+    "Headbutt",
+    "2 Defense Slots",
+    "2 Upgrade Slots",
+    "1 Ability Slot"
+  ]
+}

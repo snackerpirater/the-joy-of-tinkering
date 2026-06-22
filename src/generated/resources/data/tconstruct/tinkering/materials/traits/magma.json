@@ -1,0 +1,14 @@
+{
+  "perStat": {
+    "tconstruct:skull": [
+      {
+        "level": 1,
+        "name": "joy_of_tinkering:magmadaptive"
+      },
+      {
+        "level": 1,
+        "name": "joy_of_tinkering:magma_cube_disguise"
+      }
+    ]
+  }
+}

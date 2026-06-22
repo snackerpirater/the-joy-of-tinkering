@@ -1,0 +1,17 @@
+{
+  "modifier_id": "joy_of_tinkering:bulk_bandolier",
+  "text": [
+    {
+      "text": "Gives the gun internal slots for holding bullets. Bullets in the slots will be used if there are no bullets in the main inventory."
+    },
+    {
+      "text": "Bandolier inventory can be accessed by sneaking and attacking. Inventory holds three stacks of 64 bullets per level.",
+      "paragraph": true
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "No max level",
+    "Requires 1 ability slot per level"
+  ]
+}

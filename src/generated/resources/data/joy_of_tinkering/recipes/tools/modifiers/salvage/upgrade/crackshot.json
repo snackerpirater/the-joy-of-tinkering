@@ -1,0 +1,10 @@
+{
+  "type": "tconstruct:modifier_salvage",
+  "modifier": "joy_of_tinkering:crackshot",
+  "slots": {
+    "upgrades": 1
+  },
+  "tools": {
+    "item": "joy_of_tinkering:revolver"
+  }
+}

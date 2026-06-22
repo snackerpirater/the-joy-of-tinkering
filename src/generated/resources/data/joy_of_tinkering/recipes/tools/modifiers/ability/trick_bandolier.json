@@ -1,0 +1,36 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "tconstruct:silky_cloth"
+    },
+    {
+      "item": "minecraft:chain"
+    },
+    {
+      "item": "tconstruct:silky_cloth"
+    },
+    {
+      "item": "minecraft:chain"
+    },
+    {
+      "item": "minecraft:chain"
+    }
+  ],
+  "result": "joy_of_tinkering:trick_bandolier",
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "type": "forge:intersection",
+    "children": [
+      {
+        "tag": "joy_of_tinkering:modifiable_guns"
+      },
+      {
+        "tag": "tconstruct:modifiable/interactable"
+      }
+    ]
+  }
+}

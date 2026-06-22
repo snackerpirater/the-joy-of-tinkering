@@ -1,0 +1,24 @@
+{
+  "entity": "minecraft:piglin",
+  "equip": {
+    "chance": 0.075,
+    "materials": [
+      {
+        "type": "tconstruct:random",
+        "allow_hidden": true,
+        "material": {
+          "type": "mantle:inverted",
+          "inverted_type": "mantle:tag",
+          "tag": "tconstruct:exclude_from_loot"
+        },
+        "tier": {
+          "max": 4,
+          "min": 2
+        }
+      }
+    ],
+    "priority": 100,
+    "slot": "feet",
+    "tool": "joy_of_tinkering:lava_loafers"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "joy_of_tinkering:firing_mechanism",
+  "pattern_item": {
+    "tag": "forge:sand/red"
+  },
+  "result": {
+    "count": 4,
+    "item": "joy_of_tinkering:firing_mechanism_red_sand_cast"
+  }
+}

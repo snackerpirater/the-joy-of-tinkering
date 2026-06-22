@@ -1,0 +1,10 @@
+{
+  "perStat": {
+    "joy_of_tinkering:propellant": [
+      {
+        "level": 1,
+        "name": "tconstruct:supercharged"
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "modifier_id": "joy_of_tinkering:well_read",
+  "text": [
+    {
+      "text": "Lets you read from your helmet!"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "No maximum level",
+    "Requires 1 upgrade slot"
+  ]
+}

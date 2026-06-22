@@ -1,0 +1,17 @@
+{
+  "tool": "joy_of_tinkering:rifle",
+  "text": [
+    { "text": "The Rifle is useful for those wishing to pelt their enemies with a flurry of projectiles" },
+    {
+      "text": "\n"
+    },
+    {
+      "text": "You rifling, good for nothing type of firearm",
+      "paragraph": true
+    }
+  ],
+  "properties": [
+    "Faster but less powerful firearm",
+    "Designed to hold more bullets"
+  ]
+}

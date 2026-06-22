@@ -1,0 +1,123 @@
+{
+  "parts": [
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:tinker_armor/strider/metal_armor",
+      "stat_type": "tconstruct:armor_plating"
+    },
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:tinker_armor/rockpuncher/plating_armor",
+      "stat_type": "tconstruct:armor_plating"
+    },
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:tinker_armor/rockpuncher/fists_armor",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/bullet/casing",
+      "stat_type": "joy_of_tinkering:bullet_casing"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/bullet/head",
+      "stat_type": "tconstruct:arrow_head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/parts/gun_barrel",
+      "stat_type": "joy_of_tinkering:barrel"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/parts/firing_mechanism",
+      "stat_type": "joy_of_tinkering:firing_mechanism"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/crested_helmet/held/plating",
+      "stat_type": "tconstruct:plating_helmet"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/crested_helmet/held/blade",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:item/tool/armor/strider/boots/metal",
+      "stat_type": "tconstruct:plating_boots"
+    },
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:item/tool/armor/strider/boots/metal_broken",
+      "stat_type": "tconstruct:plating_boots"
+    },
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:item/tool/armor/rockpuncher/chestplate/plating",
+      "stat_type": "tconstruct:plating_chestplate"
+    },
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:item/tool/armor/rockpuncher/chestplate/plating_broken",
+      "stat_type": "tconstruct:plating_chestplate"
+    },
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:item/tool/armor/rockpuncher/chestplate/fists",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/revolver/body",
+      "stat_type": "joy_of_tinkering:barrel"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/revolver/cylinder",
+      "stat_type": "joy_of_tinkering:firing_mechanism"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/revolver/grip",
+      "stat_type": "tconstruct:grip"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/rifle/barrel",
+      "stat_type": "joy_of_tinkering:barrel"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/rifle/trim",
+      "stat_type": "joy_of_tinkering:barrel"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/rifle/receiver",
+      "stat_type": "joy_of_tinkering:firing_mechanism"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/rifle/stock",
+      "stat_type": "tconstruct:grip"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/rifle/large/barrel",
+      "stat_type": "joy_of_tinkering:barrel"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/rifle/large/trim",
+      "stat_type": "joy_of_tinkering:barrel"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/rifle/large/receiver",
+      "stat_type": "joy_of_tinkering:firing_mechanism"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/rifle/large/stock",
+      "stat_type": "tconstruct:grip"
+    },
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:item/tool/crested_helmet/plating",
+      "stat_type": "tconstruct:plating_helmet"
+    },
+    {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:item/tool/crested_helmet/blade",
+      "stat_type": "tconstruct:head"
+    }
+  ],
+  "replace": false
+}

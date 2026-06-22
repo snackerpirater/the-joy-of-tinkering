@@ -1,0 +1,14 @@
+{
+  "perStat": {
+    "tconstruct:skull": [
+      {
+        "level": 1,
+        "name": "tconstruct:springing"
+      },
+      {
+        "level": 1,
+        "name": "joy_of_tinkering:skyslime_disguise"
+      }
+    ]
+  }
+}

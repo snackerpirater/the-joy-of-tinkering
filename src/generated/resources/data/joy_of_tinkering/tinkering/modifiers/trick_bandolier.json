@@ -1,0 +1,30 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "tconstruct:inventory",
+      "filter": {
+        "type": "mantle:set",
+        "items": [
+          "joy_of_tinkering:bullet"
+        ]
+      },
+      "limit": {
+        "flat": 32
+      },
+      "pattern": "joy_of_tinkering:tipped_bullet",
+      "slots": {
+        "each_level": 3
+      }
+    },
+    {
+      "type": "joy_of_tinkering:trick_bandolier"
+    },
+    {
+      "type": "tconstruct:inventory_menu",
+      "on_key": "any"
+    }
+  ],
+  "priority": 70,
+  "tooltip_display": "always"
+}

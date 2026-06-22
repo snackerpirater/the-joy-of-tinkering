@@ -1,0 +1,20 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "joy_of_tinkering:overheat"
+    },
+    {
+      "level": 1,
+      "name": "tconstruct:overslime"
+    }
+  ],
+  "perStat": {
+    "joy_of_tinkering:bullet_casing": [
+      {
+        "level": 1,
+        "name": "joy_of_tinkering:overheat"
+      }
+    ]
+  }
+}

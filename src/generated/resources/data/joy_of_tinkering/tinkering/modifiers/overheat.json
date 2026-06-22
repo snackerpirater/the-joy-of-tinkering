@@ -1,0 +1,73 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:overheat_melee",
+      "seconds": {
+        "each_level": 5.0
+      }
+    },
+    {
+      "type": "tconstruct:mob_effect",
+      "effect": "joy_of_tinkering:overheat",
+      "level": {
+        "per_level": 1.0
+      },
+      "time": {
+        "per_level": 100.0
+      },
+      "tool": {
+        "type": "mantle:and",
+        "predicates": [
+          "joy_of_tinkering:has_overslime",
+          {
+            "type": "mantle:inverted",
+            "inverted_type": "mantle:tag",
+            "tag": "tconstruct:modifiable/ammo"
+          }
+        ]
+      }
+    },
+    {
+      "type": "tconstruct:mob_effect",
+      "chance": {
+        "flat": 1.0
+      },
+      "effect": "joy_of_tinkering:overheat",
+      "level": {
+        "flat": 2.0
+      },
+      "time": {
+        "flat": 100.0
+      },
+      "tool": {
+        "type": "mantle:tag",
+        "tag": "tconstruct:modifiable/ammo"
+      }
+    },
+    {
+      "type": "tconstruct:fiery_counter",
+      "chance": {
+        "flat": 0.15
+      },
+      "constant_seconds": {
+        "each_level": 2.5
+      },
+      "durability_usage": 3,
+      "random_seconds": {
+        "flat": 2.0
+      },
+      "tool": {
+        "type": "mantle:and",
+        "predicates": [
+          "joy_of_tinkering:has_overslime",
+          {
+            "type": "mantle:tag",
+            "tag": "tconstruct:modifiable/armor"
+          }
+        ]
+      }
+    }
+  ],
+  "tooltip_display": "always"
+}

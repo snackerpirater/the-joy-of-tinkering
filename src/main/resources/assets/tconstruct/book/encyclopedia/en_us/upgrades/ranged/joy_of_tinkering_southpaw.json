@@ -1,0 +1,13 @@
+{
+  "modifier_id": "joy_of_tinkering:southpaw",
+  "text": [
+    {
+      "text": "Causes the gun to fire on attack instead of interact, and to only load when not sneaking. Allows using an item in the offhand while using a gun."
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "Single level",
+    "Requires 1 upgrade slot"
+  ]
+}

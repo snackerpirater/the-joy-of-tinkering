@@ -1,0 +1,6 @@
+{
+  "parent": "forge:item/bucket_drip",
+  "flip_gas": false,
+  "fluid": "joy_of_tinkering:molten_slimebronze",
+  "loader": "tconstruct:fluid_container"
+}

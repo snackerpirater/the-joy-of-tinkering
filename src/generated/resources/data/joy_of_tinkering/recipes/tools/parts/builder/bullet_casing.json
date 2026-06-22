@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "cost": 1,
+  "pattern": "joy_of_tinkering:bullet_casing",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "joy_of_tinkering:bullet_casing_cast"
+    }
+  ],
+  "result": {
+    "item": "joy_of_tinkering:bullet_casing"
+  }
+}

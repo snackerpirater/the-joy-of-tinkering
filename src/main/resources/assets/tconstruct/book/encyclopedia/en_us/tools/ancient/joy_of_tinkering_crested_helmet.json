@@ -1,0 +1,14 @@
+{
+  "tool": "joy_of_tinkering:crested_helmet",
+  "text": [
+    { "text": "The Crested Helmet boasts an impressive blade along the top, allowing the wearer to charge up and release a powerful headbutt attack." },
+    { "text": "It can be found in the hands of Vindicators, or in Pillager Outposts and Woodland Mansions", "paragraph": true }
+  ],
+  "properties": [
+    "+3 Attack Damage",
+    "Headbutt",
+    "2 Defense Slots",
+    "2 Upgrade Slots",
+    "1 Ability Slot"
+  ]
+}

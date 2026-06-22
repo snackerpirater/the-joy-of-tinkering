@@ -1,0 +1,14 @@
+{
+  "tool": "joy_of_tinkering:lava_loafers",
+  "text": [
+    { "text": "The Lava Loafers are a pair of unique boots found in nether-related areas, which imitate strider anatomy to allow the wearer to walk across lava." },
+    { "text": "They are sometimes found in the hands (or feet) of piglins, or around ruined portals.", "paragraph": true }
+  ],
+  "properties": [
+    "75% Armor",
+    "Surface Strider",
+    "2 Defense Slots",
+    "2 Upgrade Slots",
+    "1 Ability Slot"
+  ]
+}

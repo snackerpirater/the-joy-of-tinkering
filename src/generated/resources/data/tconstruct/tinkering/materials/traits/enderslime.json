@@ -1,0 +1,14 @@
+{
+  "perStat": {
+    "tconstruct:skull": [
+      {
+        "level": 1,
+        "name": "joy_of_tinkering:endrobe"
+      },
+      {
+        "level": 1,
+        "name": "joy_of_tinkering:enderslime_disguise"
+      }
+    ]
+  }
+}

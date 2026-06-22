@@ -1,0 +1,28 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:chain"
+    },
+    {
+      "item": "minecraft:leather"
+    },
+    {
+      "item": "minecraft:chain"
+    },
+    {
+      "item": "minecraft:chain"
+    }
+  ],
+  "result": "joy_of_tinkering:bulk_bandolier",
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "tag": "joy_of_tinkering:modifiable_guns"
+  }
+}

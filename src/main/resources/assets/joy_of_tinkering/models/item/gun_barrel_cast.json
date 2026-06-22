@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "joy_of_tinkering:item/gun_barrel_cast"
+  }
+}

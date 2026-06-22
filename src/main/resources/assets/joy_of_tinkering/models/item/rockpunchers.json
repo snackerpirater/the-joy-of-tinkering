@@ -1,0 +1,22 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default",
+  "textures": {
+    "plating": "joy_of_tinkering:item/tool/armor/rockpuncher/chestplate/plating",
+    "fists":  "joy_of_tinkering:item/tool/armor/rockpuncher/chestplate/fists",
+    "straps": "joy_of_tinkering:item/tool/armor/rockpuncher/chestplate/straps"
+  },
+  "modifier_maps": [ "joy_of_tinkering:rockpunchers" ],
+  "first_modifiers": [ "tconstruct:trim" ],
+  "parts": [
+    { "name": "plating", "index": 0 },
+    { "name": "fists", "index": 1 },
+    { "name": "straps" }
+  ],
+  "overrides": [
+    {
+      "predicate": { "tconstruct:broken": 1 },
+      "model": "joy_of_tinkering:item/armor/rockpuncher/chestplate_broken"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "modifier_id": "joy_of_tinkering:delicate",
+  "text": [
+    {
+      "text": "Limits the harvest speed of the tool to not instantly mine blocks."
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "Maximum of 1 level",
+    "Slotless"
+  ]
+}

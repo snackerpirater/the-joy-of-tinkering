@@ -1,0 +1,12 @@
+{
+  "modifiers": {
+    "tconstruct:dyed": {
+      "type": "tconstruct:dyed",
+      "texture": "joy_of_tinkering:item/tool/armor/strider/boots/skin_dyed"
+    },
+    "tconstruct:trim": {
+      "type": "tconstruct:armor_trim",
+      "slot": "boots"
+    }
+  }
+}

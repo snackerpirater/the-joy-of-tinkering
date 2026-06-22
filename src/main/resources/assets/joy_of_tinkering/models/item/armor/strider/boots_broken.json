@@ -1,0 +1,22 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default",
+  "textures": {
+    "metal": "joy_of_tinkering:item/tool/armor/strider/boots/metal_broken",
+    "skin":  "joy_of_tinkering:item/tool/armor/strider/boots/skin_broken"
+  },
+  "modifier_maps": [ "joy_of_tinkering:lava_loafers" ],
+  "first_modifiers": [
+    "tconstruct:trim"
+  ],
+  "parts": [
+    {
+      "name": "metal",
+      "index": 0
+    },
+    {
+      "name": "skin",
+      "index": 1
+    }
+  ]
+}

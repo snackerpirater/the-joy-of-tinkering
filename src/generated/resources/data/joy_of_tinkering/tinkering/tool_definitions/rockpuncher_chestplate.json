@@ -1,0 +1,75 @@
+{
+  "modules": [
+    {
+      "type": "tconstruct:is_effective",
+      "predicate_type": "mantle:tag",
+      "tag": "minecraft:mineable/pickaxe"
+    },
+    {
+      "type": "tconstruct:material_stats",
+      "primary_part": 0,
+      "stat_types": [
+        {
+          "scale": 0.75,
+          "stat": "tconstruct:plating_chestplate"
+        },
+        "tconstruct:head"
+      ]
+    },
+    {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "tconstruct:ambidextrous"
+        },
+        {
+          "level": 1,
+          "name": "joy_of_tinkering:fist_mining"
+        }
+      ]
+    },
+    {
+      "type": "tconstruct:modifier_slots",
+      "slots": {
+        "abilities": 1,
+        "defense": 2,
+        "upgrades": 2
+      }
+    },
+    {
+      "type": "tconstruct:multiply_stats",
+      "multipliers": {
+        "tconstruct:attack_damage": 0.4,
+        "tconstruct:durability": 0.5
+      }
+    },
+    {
+      "type": "tconstruct:material_traits",
+      "hooks": [
+        "tconstruct:rebalanced_trait"
+      ],
+      "material_index": 1,
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "type": "tconstruct:base_stats",
+      "stats": {
+        "tconstruct:harvest_tier": "minecraft:stone"
+      }
+    },
+    {
+      "type": "tconstruct:default_materials",
+      "materials": [
+        {
+          "type": "tconstruct:random",
+          "tier": 1
+        },
+        {
+          "type": "tconstruct:random",
+          "tier": 1
+        }
+      ]
+    }
+  ]
+}

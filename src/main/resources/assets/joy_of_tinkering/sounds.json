@@ -1,0 +1,17 @@
+{
+  "revolver.fire": {
+    "sounds": [
+      "joy_of_tinkering:revolver_fire"
+    ]
+  },
+  "revolver.reload.start": {
+    "sounds": [
+      "joy_of_tinkering:revolver_reload_start"
+    ]
+  },
+  "revolver.reload.end": {
+    "sounds": [
+      "joy_of_tinkering:revolver_reload_finish"
+    ]
+  }
+}

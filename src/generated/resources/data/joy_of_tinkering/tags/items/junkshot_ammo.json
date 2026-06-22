@@ -1,0 +1,7 @@
+{
+  "values": [
+    "minecraft:firework_rocket",
+    "#tconstruct:modifiable/ammo/thrown",
+    "#minecraft:arrows"
+  ]
+}

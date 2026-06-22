@@ -1,0 +1,8 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "joy_of_tinkering:gun_barrel",
+  "pattern_item": {
+    "tag": "tconstruct:casts/sand"
+  },
+  "result": "joy_of_tinkering:gun_barrel_sand_cast"
+}

@@ -1,0 +1,14 @@
+{
+  "perStat": {
+    "tconstruct:skull": [
+      {
+        "level": 1,
+        "name": "joy_of_tinkering:terraguard"
+      },
+      {
+        "level": 1,
+        "name": "joy_of_tinkering:terracube_disguise"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "cost": 3,
+  "pattern": "joy_of_tinkering:firing_mechanism",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "joy_of_tinkering:firing_mechanism_cast"
+    }
+  ],
+  "result": {
+    "item": "joy_of_tinkering:firing_mechanism"
+  }
+}

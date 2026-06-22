@@ -1,0 +1,23 @@
+{
+  "level_display": "tconstruct:single_level",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:endrobe",
+      "on_key": [
+        "normal"
+      ]
+    },
+    {
+      "type": "joy_of_tinkering:endrobe_inventory",
+      "key": "joy_of_tinkering:endrobe",
+      "slots": {
+        "each_level": 3
+      }
+    },
+    {
+      "type": "tconstruct:inventory_menu",
+      "on_key": "shift"
+    }
+  ],
+  "tooltip_display": "always"
+}

@@ -1,0 +1,33 @@
+{
+  "values": [
+    "minecraft:player",
+    "minecraft:zombie",
+    "minecraft:skeleton",
+    "minecraft:creeper",
+    "minecraft:enderman",
+    "minecraft:armor_stand",
+    "minecraft:husk",
+    "minecraft:stray",
+    "minecraft:stray",
+    "minecraft:blaze",
+    "minecraft:bat",
+    "minecraft:evoker",
+    "minecraft:iron_golem",
+    "minecraft:snow_golem",
+    "minecraft:parrot",
+    "minecraft:pillager",
+    "minecraft:strider",
+    "minecraft:vex",
+    "minecraft:villager",
+    "minecraft:vindicator",
+    "minecraft:wandering_trader",
+    "minecraft:warden",
+    "minecraft:witch",
+    "minecraft:wither_skeleton",
+    "minecraft:zombie_villager",
+    {
+      "id": "dummmmmmy:target_dummy",
+      "required": false
+    }
+  ]
+}

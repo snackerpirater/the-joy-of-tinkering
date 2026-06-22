@@ -1,0 +1,23 @@
+{
+  "loader": "forge:composite",
+  "parent": "block/block",
+  "textures": {
+    "particle": "joy_of_tinkering:block/storage/slimebronze"
+  },
+  "children": {
+    "metal": {
+      "render_type": "minecraft:solid",
+      "parent": "tconstruct:block/template/cube_all_14",
+      "textures": {
+        "all": "joy_of_tinkering:block/storage/slimebronze_gold"
+      }
+    },
+    "slime": {
+      "render_type": "minecraft:translucent",
+      "parent": "block/cube_all",
+      "textures": {
+        "all": "joy_of_tinkering:block/storage/slimebronze_slime"
+      }
+    }
+  }
+}

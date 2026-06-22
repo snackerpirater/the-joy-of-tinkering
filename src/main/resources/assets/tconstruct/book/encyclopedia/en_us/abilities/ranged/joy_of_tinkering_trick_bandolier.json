@@ -1,0 +1,17 @@
+{
+  "modifier_id": "joy_of_tinkering:trick_bandolier",
+  "text": [
+    {
+      "text": "Gives the gun 3 internal slots per level for holding trick bullets, each slot holding 32 bullets."
+    },
+    {
+      "text": "Can toggle selected bullet by attacking, between the three options or skipping the trick bandolier. Sneaking and attacking opens the bandolier to add bullets.",
+      "paragraph": true
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "No max level",
+    "Requires 1 ability slot per level"
+  ]
+}

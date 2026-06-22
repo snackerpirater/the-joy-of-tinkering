@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:molding_table",
+  "material": {
+    "tag": "tconstruct:casts/red_sand"
+  },
+  "pattern": {
+    "type": "tconstruct:material",
+    "item": "joy_of_tinkering:firing_mechanism"
+  },
+  "result": "joy_of_tinkering:firing_mechanism_red_sand_cast"
+}

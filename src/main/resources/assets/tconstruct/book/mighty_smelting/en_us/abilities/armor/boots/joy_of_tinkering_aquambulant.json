@@ -1,0 +1,15 @@
+{
+  "modifier_id": "joy_of_tinkering:aquambulant",
+  "text": [
+    {
+      "text": "An amazing ability allowing for ambulation across arroyos and alternative aqueous accumulations."
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "Logical",
+    "Makes sense",
+    "Maximum of 2 levels",
+    "Requires 1 ability slot per level"
+  ]
+}

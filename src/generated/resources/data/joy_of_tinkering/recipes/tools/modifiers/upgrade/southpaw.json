@@ -1,0 +1,32 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "check_trait_level": true,
+  "inputs": [
+    {
+      "tag": "forge:ingots/steel"
+    },
+    {
+      "item": "minecraft:nautilus_shell"
+    },
+    {
+      "tag": "forge:ingots/steel"
+    }
+  ],
+  "level": 1,
+  "result": "joy_of_tinkering:southpaw",
+  "slots": {
+    "upgrades": 1
+  },
+  "tools": {
+    "type": "forge:intersection",
+    "children": [
+      {
+        "item": "joy_of_tinkering:revolver"
+      },
+      {
+        "tag": "tconstruct:modifiable/interactable/left"
+      }
+    ]
+  }
+}

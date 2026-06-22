@@ -1,0 +1,17 @@
+{
+  "modifier_id": "joy_of_tinkering:junkshot",
+  "text": [
+    {
+      "text": "Allows the rifle to fire any projectile or ammo, including arrows, fireworks, shurikens, etc."
+    },
+    {
+      "text": "Firing non-bullet ammunition consumes 5 extra durability per shot.",
+      "paragraph": true
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "Single level",
+    "Requires 1 ability slot"
+  ]
+}

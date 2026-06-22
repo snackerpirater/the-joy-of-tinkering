@@ -1,0 +1,13 @@
+{
+  "type": "tconstruct:tool_building",
+  "extra_materials": [
+    "tconstruct:blaze"
+  ],
+  "extra_requirements": [
+    {
+      "item": "minecraft:blaze_powder"
+    }
+  ],
+  "result": "joy_of_tinkering:bullet",
+  "result_count": 6
+}

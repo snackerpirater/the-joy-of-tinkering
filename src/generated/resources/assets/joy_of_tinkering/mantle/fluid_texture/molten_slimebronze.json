@@ -1,0 +1,8 @@
+{
+  "camera": "joy_of_tinkering:fluid/molten_slimebronze/camera",
+  "camera_opacity": 0.1,
+  "color": "FFFFFFFF",
+  "flowing": "joy_of_tinkering:fluid/molten_slimebronze/flowing",
+  "overlay": "joy_of_tinkering:fluid/molten_slimebronze/overlay",
+  "still": "joy_of_tinkering:fluid/molten_slimebronze/still"
+}

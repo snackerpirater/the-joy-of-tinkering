@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "minecraft:target"
+    },
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "level": {
+    "max": 5
+  },
+  "result": "joy_of_tinkering:crackshot",
+  "slots": {
+    "upgrades": 1
+  },
+  "tools": {
+    "item": "joy_of_tinkering:revolver"
+  }
+}

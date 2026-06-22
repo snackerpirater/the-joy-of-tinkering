@@ -1,0 +1,28 @@
+{
+  "layers": [
+    {
+      "type": "tconstruct:fixed",
+      "prefix": "joy_of_tinkering:rockpuncher/straps_"
+    },
+    {
+      "type": "tconstruct:material",
+      "index": 0,
+      "prefix": "joy_of_tinkering:rockpuncher/plating_"
+    },
+    {
+      "type": "tconstruct:first_present",
+      "options": [
+        {
+          "type": "tconstruct:dyed",
+          "prefix": "joy_of_tinkering:rockpuncher/fists_"
+        },
+        {
+          "type": "tconstruct:material",
+          "index": 1,
+          "prefix": "joy_of_tinkering:rockpuncher/fists_"
+        }
+      ]
+    },
+    "tconstruct:trim"
+  ]
+}

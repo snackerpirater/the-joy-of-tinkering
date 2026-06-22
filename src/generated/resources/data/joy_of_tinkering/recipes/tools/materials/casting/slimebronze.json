@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_fluid",
+  "fluid": {
+    "amount": 90,
+    "tag": "joy_of_tinkering:molten_slimebronze"
+  },
+  "output": "joy_of_tinkering:slimebronze",
+  "temperature": 700
+}

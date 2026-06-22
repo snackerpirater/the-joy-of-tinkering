@@ -1,0 +1,16 @@
+{
+  "type": "tconstruct:part_builder",
+  "cost": 2,
+  "pattern": "joy_of_tinkering:gun_barrel",
+  "pattern_item": [
+    {
+      "tag": "tconstruct:patterns/default"
+    },
+    {
+      "item": "joy_of_tinkering:gun_barrel_cast"
+    }
+  ],
+  "result": {
+    "item": "joy_of_tinkering:gun_barrel"
+  }
+}

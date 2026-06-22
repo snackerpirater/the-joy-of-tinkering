@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "joy_of_tinkering:casts/single_use/gun_barrel"
+  },
+  "cast_consumed": true,
+  "item_cost": 2,
+  "result": "joy_of_tinkering:gun_barrel"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "tconstruct:item_part_builder",
+  "pattern": "joy_of_tinkering:bullet_casing",
+  "pattern_item": {
+    "tag": "forge:sand/colorless"
+  },
+  "result": {
+    "count": 4,
+    "item": "joy_of_tinkering:bullet_casing_sand_cast"
+  }
+}

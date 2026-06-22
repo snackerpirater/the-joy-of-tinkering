@@ -1,0 +1,12 @@
+{
+  "modifiers": {
+    "tconstruct:dyed": {
+      "type": "tconstruct:dyed",
+      "texture": "joy_of_tinkering:item/tool/armor/rockpuncher/chestplate/fists"
+    },
+    "tconstruct:trim": {
+      "type": "tconstruct:armor_trim",
+      "slot": "chestplate"
+    }
+  }
+}

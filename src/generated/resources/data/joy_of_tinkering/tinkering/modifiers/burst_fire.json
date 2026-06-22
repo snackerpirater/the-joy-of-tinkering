@@ -1,0 +1,13 @@
+{
+  "level_display": {
+    "type": "tconstruct:unique",
+    "first_unique": true,
+    "unique_until": 5
+  },
+  "modules": [
+    {
+      "type": "joy_of_tinkering:burst_fire"
+    }
+  ],
+  "tooltip_display": "always"
+}

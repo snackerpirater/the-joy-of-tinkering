@@ -1,0 +1,15 @@
+{
+  "modifier_id": "joy_of_tinkering:southpaw",
+  "text": [
+    {
+      "text": "Holding your primary and secondary is faster than reloading"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "Guns in main hand will fire with attack button, and will not reload when sneaking",
+    "Allows dual wielding guns, or using with a shield",
+    "Single level",
+    "Requires 1 upgrade slot"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "tool": "joy_of_tinkering:bullet",
+  "text": [
+    { "text": "Bullets are a single-use projectile fired from rifles and revolvers. They cannot be used directly to attack." }
+  ],
+  "properties": [
+    "Projectile Damage varies with propellant",
+    "1 Head Trait, 1 Casing Trait, 1 Propellant Trait"
+  ]
+}

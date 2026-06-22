@@ -1,0 +1,15 @@
+{
+  "level_display": "tconstruct:no_levels",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:fluid_walker",
+      "damage_chance": 0.1,
+      "fluid_predicate": {
+        "type": "mantle:tag",
+        "tag": "joy_of_tinkering:surface_strider_fluids"
+      },
+      "velocity_threshold": {}
+    }
+  ],
+  "tooltip_display": "always"
+}

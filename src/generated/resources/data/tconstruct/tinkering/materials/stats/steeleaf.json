@@ -1,0 +1,15 @@
+{
+  "stats": {
+    "joy_of_tinkering:barrel": {
+      "accuracy": 0.15,
+      "durability": 200,
+      "velocity": 0.0
+    },
+    "joy_of_tinkering:bullet_casing": {},
+    "joy_of_tinkering:firing_mechanism": {
+      "draw_speed": 0.0,
+      "max_ammo": 5.0,
+      "projectile_damage": 2.0
+    }
+  }
+}

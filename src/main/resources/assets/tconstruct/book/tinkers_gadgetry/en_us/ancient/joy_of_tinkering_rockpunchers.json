@@ -1,0 +1,13 @@
+{
+  "tool": "joy_of_tinkering:rockpunchers",
+  "text": [
+    { "text": "The Rockpunchers are a unique chestplate fitted with sturdy gauntlets, which allow mining rock with bare hands." }
+  ],
+  "properties": [
+    "Medium Damage",
+    "Moderate Armor",
+    "2 Defense Slots",
+    "2 Upgrade Slots",
+    "1 Ability Slot"
+  ]
+}

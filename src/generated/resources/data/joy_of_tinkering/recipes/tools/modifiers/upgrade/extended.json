@@ -1,0 +1,25 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "minecraft:chain"
+    },
+    {
+      "item": "minecraft:gunpowder"
+    },
+    {
+      "tag": "forge:ingots/steel"
+    }
+  ],
+  "level": {
+    "max": 4
+  },
+  "result": "joy_of_tinkering:extended",
+  "slots": {
+    "upgrades": 1
+  },
+  "tools": {
+    "item": "joy_of_tinkering:rifle"
+  }
+}

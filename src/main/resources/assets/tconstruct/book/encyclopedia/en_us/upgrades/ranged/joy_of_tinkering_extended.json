@@ -1,0 +1,13 @@
+{
+  "modifier_id": "joy_of_tinkering:extended",
+  "text": [
+    {
+      "text": "Increases the maximum ammo capacity of the gun by 1."
+    }
+  ],
+  "more_text_space": false,
+  "effects": [
+    "Maximum of 4 levels",
+    "Requires 1 upgrade slot per level"
+  ]
+}

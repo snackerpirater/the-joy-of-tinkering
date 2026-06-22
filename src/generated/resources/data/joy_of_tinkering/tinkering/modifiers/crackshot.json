@@ -1,0 +1,12 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:crackshot",
+      "power_boost": {
+        "each_level": 0.1
+      }
+    }
+  ],
+  "tooltip_display": "always"
+}

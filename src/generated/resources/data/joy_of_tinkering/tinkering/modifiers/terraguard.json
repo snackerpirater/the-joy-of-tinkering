@@ -1,0 +1,9 @@
+{
+  "level_display": "tconstruct:single_level",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:terraguard"
+    }
+  ],
+  "tooltip_display": "always"
+}

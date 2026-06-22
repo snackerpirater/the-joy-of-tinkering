@@ -1,0 +1,11 @@
+{
+  "tool": "joy_of_tinkering:bullet",
+  "text": [
+    { "text": "Bullets are the ammunition for firearms. They require an arrow head, a bullet casing, and a powder propellant material." }
+  ],
+  "properties": [
+    "Requires a rifle or revolver",
+    "More powerful than arrows",
+    "Has different effects based on materials"
+  ]
+}

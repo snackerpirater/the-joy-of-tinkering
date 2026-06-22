@@ -1,0 +1,40 @@
+{
+  "name": "minecraft:chests/ruined_portal",
+  "pools": [
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "tconstruct:add_tool_data",
+              "materials": [
+                {
+                  "type": "tconstruct:random",
+                  "allow_hidden": true,
+                  "material": {
+                    "type": "mantle:inverted",
+                    "inverted_type": "mantle:tag",
+                    "tag": "tconstruct:exclude_from_loot"
+                  }
+                }
+              ]
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.9,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
+            }
+          ],
+          "name": "joy_of_tinkering:lava_loafers",
+          "weight": 18
+        }
+      ],
+      "name": "main"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "tag": "forge:ingots/steel"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    }
+  ],
+  "result": "joy_of_tinkering:well_read",
+  "slots": {
+    "upgrades": 1
+  },
+  "tools": {
+    "tag": "tconstruct:modifiable/armor/helmets"
+  }
+}

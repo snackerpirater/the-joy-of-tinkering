@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "joy_of_tinkering:casts/single_use/firing_mechanism"
+  },
+  "cast_consumed": true,
+  "item_cost": 3,
+  "result": "joy_of_tinkering:firing_mechanism"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:part_builder_tool_recycling",
+  "parts": [
+    "tconstruct:boots_plating"
+  ],
+  "pattern": {
+    "item": "tconstruct:venom_bottle"
+  },
+  "tools": {
+    "item": "joy_of_tinkering:lava_loafers"
+  }
+}

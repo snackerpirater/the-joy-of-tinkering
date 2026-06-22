@@ -1,0 +1,16 @@
+{
+  "tool": "joy_of_tinkering:rockpunchers",
+  "text": [
+    { "text": "The Rockpunchers are a unique chestplate fitted with sturdy gauntlets, which allow mining rock with bare hands." },
+    { "text": "They are often found in dungeons and mineshafts, and occasionally in the hands of zombies", "paragraph": true }
+  ],
+  "properties": [
+    "Fist Mining",
+    "Ambidextrous",
+    "75% Attack Modifier",
+    "75% Plating Stats",
+    "2 Defense Slots",
+    "2 Upgrade Slots",
+    "1 Ability Slot"
+  ]
+}

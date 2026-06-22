@@ -1,0 +1,152 @@
+{
+  "texture_size": [32, 32],
+  "loader": "tconstruct:material_block",
+  "textures": {
+    "plating": "joy_of_tinkering:item/tool/crested_helmet/plating",
+    "blade": "joy_of_tinkering:item/tool/crested_helmet/blade"
+  },
+  "modifier_maps": [ "joy_of_tinkering:crested_helmet" ],
+  "elements": [
+    {
+      "name": "plating",
+      "from": [4, 0, 4],
+      "to": [12, 8, 12],
+      "rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 12]},
+      "faces": {
+        "north": {"uv": [4, 4, 8, 8], "texture": "#plating"},
+        "east": {"uv": [0, 4, 4, 8], "texture": "#plating"},
+        "south": {"uv": [12, 4, 16, 8], "texture": "#plating"},
+        "west": {"uv": [8, 4, 12, 8], "texture": "#plating"},
+        "up": {"uv": [8, 4, 4, 0], "rotation": 270, "texture": "#plating"},
+        "down": {"uv": [12, 0, 8, 4], "rotation": 90, "texture": "#plating"}
+      }
+    },
+    {
+      "name": "platinginner",
+      "from": [12, 0, 4],
+      "to": [4, 8, 12],
+      "rotation": {"angle": 0, "axis": "y", "origin": [12, 0, 12]},
+      "faces": {
+        "north": {"uv": [4, 4, 8, 8], "texture": "#plating"},
+        "east": {"uv": [0, 4, 4, 8], "texture": "#plating"},
+        "south": {"uv": [12, 4, 16, 8], "texture": "#plating"},
+        "west": {"uv": [8, 4, 12, 8], "texture": "#plating"},
+        "up": {"uv": [8, 4, 4, 0], "rotation": 270, "texture": "#plating"},
+        "down": {"uv": [12, 0, 8, 4], "rotation": 90, "texture": "#plating"}
+      }
+    },
+    {
+      "name": "crest",
+      "from": [7.5, 0, 8],
+      "to": [8.5, 15, 11],
+      "rotation": {"angle": -45, "axis": "x", "origin": [8, 4, 8]},
+      "faces": {
+        "north": {"uv": [16, 15.5, 8.5, 16], "rotation": 270, "texture": "#blade"},
+        "east": {"uv": [16, 14.5, 8.5, 16], "rotation": 270, "texture": "#blade"},
+        "south": {"uv": [16, 15, 8.5, 14.5], "rotation": 270, "texture": "#blade"},
+        "west": {"uv": [8.5, 14.5, 16, 16], "rotation": 90, "texture": "#blade"},
+        "up": {"uv": [8.5, 14.5, 9, 16], "rotation": 180, "texture": "#blade"},
+        "down": {"uv": [15.5, 14.5, 16, 16], "texture": "#blade"}
+      }
+    },
+    {
+      "name": "crest2",
+      "from": [7.5, 3.12132, 10.12132],
+      "to": [8.5, 16.12132, 12.12132],
+      "rotation": {"angle": -45, "axis": "x", "origin": [8, 6.12132, 10.12132]},
+      "faces": {
+        "north": {"uv": [16, 15.5, 8.5, 16], "rotation": 270, "texture": "#blade"},
+        "east": {"uv": [15.5, 13.5, 9, 14.5], "rotation": 270, "texture": "#blade"},
+        "south": {"uv": [15.5, 13.5, 9, 14], "rotation": 270, "texture": "#blade"},
+        "west": {"uv": [9, 13.5, 15.5, 14.5], "rotation": 90, "texture": "#blade"},
+        "up": {"uv": [9, 13.5, 9.5, 14.5], "rotation": 180, "texture": "#blade"},
+        "down": {"uv": [15, 13.5, 15.5, 14.5], "texture": "#blade"}
+      }
+    },
+    {
+      "name": "crest3",
+      "from": [7.5, 5.53553, 11.53553],
+      "to": [8.5, 16.53553, 13.53553],
+      "rotation": {"angle": -45, "axis": "x", "origin": [8, 7.53553, 11.53553]},
+      "faces": {
+        "north": {"uv": [16, 15.5, 8.5, 16], "rotation": 270, "texture": "#blade"},
+        "east": {"uv": [15, 12.5, 9.5, 13.5], "rotation": 270, "texture": "#blade"},
+        "south": {"uv": [15, 12.5, 9.5, 13], "rotation": 270, "texture": "#blade"},
+        "west": {"uv": [9.5, 12.5, 15, 13.5], "rotation": 90, "texture": "#blade"},
+        "up": {"uv": [9.5, 12.5, 10, 13.5], "rotation": 180, "texture": "#blade"},
+        "down": {"uv": [14.5, 12.5, 15, 13.5], "texture": "#blade"}
+      }
+    },
+    {
+      "name": "crest4",
+      "from": [7.5, 7.94975, 12.94975],
+      "to": [8.5, 15.94975, 13.94975],
+      "rotation": {"angle": -45, "axis": "x", "origin": [8, 8.94975, 12.94975]},
+      "faces": {
+        "north": {"uv": [16, 15.5, 8.5, 16], "rotation": 270, "texture": "#blade"},
+        "east": {"uv": [14.5, 12, 10.5, 12.5], "rotation": 270, "texture": "#blade"},
+        "south": {"uv": [14.5, 12, 10.5, 12.5], "rotation": 270, "texture": "#blade"},
+        "west": {"uv": [10.5, 12, 14.5, 12.5], "rotation": 90, "texture": "#blade"},
+        "up": {"uv": [10.5, 12, 11, 12.5], "rotation": 180, "texture": "#blade"},
+        "down": {"uv": [14, 12, 14.5, 12.5], "texture": "#blade"}
+      }
+    },
+    {
+      "name": "crest5",
+      "from": [7.5, 10.65685, 13.65685],
+      "to": [8.5, 14.65685, 14.65685],
+      "rotation": {"angle": -45, "axis": "x", "origin": [8, 9.65685, 13.65685]},
+      "faces": {
+        "north": {"uv": [16, 15.5, 8.5, 16], "rotation": 270, "texture": "#blade"},
+        "east": {"uv": [13.5, 11.5, 11.5, 12], "rotation": 270, "texture": "#blade"},
+        "south": {"uv": [13.5, 11.5, 11.5, 12], "rotation": 270, "texture": "#blade"},
+        "west": {"uv": [11.5, 11.5, 13.5, 12], "rotation": 90, "texture": "#blade"},
+        "up": {"uv": [11.5, 11.5, 12, 12], "rotation": 180, "texture": "#blade"},
+        "down": {"uv": [13, 11.5, 13.5, 12], "texture": "#blade"}
+      }
+    },
+    {
+      "name": "trim",
+      "from": [3.9, -0.1, 3.9],
+      "to": [12.1, 8.1, 12.1],
+      "rotation": {"angle": 0, "axis": "y", "origin": [4, 0, 12]},
+      "faces": {
+        "north": {"uv": [4, 4, 8, 8], "texture": "#blade"},
+        "east": {"uv": [0, 4, 4, 8], "texture": "#blade"},
+        "south": {"uv": [12, 4, 16, 8], "texture": "#blade"},
+        "west": {"uv": [8, 4, 12, 8], "texture": "#blade"},
+        "up": {"uv": [4, 0, 8, 4], "texture": "#blade"},
+        "down": {"uv": [0, 0, 4, 4], "rotation": 90, "texture": "#blade"}
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [90, 0, 0],
+      "translation": [0, -0.5, 0],
+      "scale": [0.51, 0.51, 0.51]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [90, 0, 0],
+      "translation": [0, -0.5, 0],
+      "scale": [0.51, 0.51, 0.51]
+    },
+    "ground": {
+      "translation": [0, 2.5, 0],
+      "scale": [0.5, 0.5, 0.5]
+    },
+    "gui": {
+      "rotation": [21, 134, 0],
+      "translation": [0, 1.5, 0]
+    },
+    "head": {
+      "translation": [0, 8.25, 0],
+      "scale": [2, 2, 2]
+    }
+
+  },
+  "parts": [
+    "plating",
+    "blade"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "modifier_id": "joy_of_tinkering:aquambulant",
+  "text": [
+    {
+      "text": "Allows walking on water, but only above certain speeds. The first level lets you sprint on water, and the second lets you walk/stand."
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "Maximum of 2 levels",
+    "Requires 1 ability slot per level"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "type": "tconstruct:modifier",
+  "allow_crystal": true,
+  "inputs": [
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "item": "tconstruct:blaze_head"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+    {
+      "type": "tconstruct:material",
+      "item": "joy_of_tinkering:firing_mechanism"
+    },
+    {
+      "item": "minecraft:flint"
+    }
+  ],
+  "level": {
+    "max": 5
+  },
+  "result": "joy_of_tinkering:burst_fire",
+  "slots": {
+    "abilities": 1
+  },
+  "tools": {
+    "item": "joy_of_tinkering:revolver"
+  }
+}

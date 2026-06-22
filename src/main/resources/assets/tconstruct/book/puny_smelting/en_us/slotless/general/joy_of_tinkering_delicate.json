@@ -1,0 +1,14 @@
+{
+  "modifier_id": "joy_of_tinkering:delicate",
+  "text": [
+    {
+      "text": "Pump the brakes, speed miner!"
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "Prevents the tool from instantly mining blocks",
+    "Single level",
+    "Slotless"
+  ]
+}
