@@ -28,6 +28,7 @@ public class JOTLang extends LanguageProvider {
 		addModifier(JOTModifierIds.delicate, "Delicate", "Isn't it?", "Limits the harvest speed of the tool to not instantly mine blocks.");
 
 		addItem(JOTItems.BUCKET_OF_TERRACUBE, "Bucket of Terracube");
+		add("item.tconstruct.slime_helmet.material.tconstruct.clay", "Terracube Slimeskull");
 		add("material.tconstruct.clay.skull", "Terracube");
 		add("material.tconstruct.clay.skull_flavor", "Yummy clay!");
 		add("material.tconstruct.clay.skull_encyclopedia", "Allows consuming clay/clay blocks from the inventory to boost armor by +4 for an additional 5 seconds, for a maximum of 30 seconds");
@@ -36,6 +37,7 @@ public class JOTLang extends LanguageProvider {
 		addModifier(JOTModifierIds.terracubeDisguise, "Terracube Disguise", "You haven't seen any Terracubes, and now they won't be seeing you either", "Makes you look more like a terracube to other terracubes");
 
 		addItem(JOTItems.BUCKET_OF_SLIME, "Bucket of Slime");
+		add("item.tconstruct.slime_helmet.material.tconstruct.earthslime", "Earthslime Slimeskull");
 		add("material.tconstruct.earthslime.skull", "Slime");
 		add("material.tconstruct.earthslime.skull_flavor", "Sharing is caring");
 		add("material.tconstruct.earthslime.skull_encyclopedia", "Every other second, one overslime is depleted from the helmet and redistributed to an equipped tool.");
@@ -44,6 +46,7 @@ public class JOTLang extends LanguageProvider {
 
 
 		addItem(JOTItems.BUCKET_OF_MAGMA_CUBE, "Bucket of Magma Cube");
+		add("item.tconstruct.slime_helmet.material.tconstruct.magma", "Magma Cube Slimeskull");
 		add("material.tconstruct.magma.skull", "Magma Cube");
         add("material.tconstruct.magma.skull_flavor", "Improvise. Adapt. Overcome");
         add("material.tconstruct.magma.skull_encyclopedia", "Allows consuming Magma Cream from the inventory, which lets you freely swim through lava for an additional 10 seconds, for a maximum of 60 seconds");
@@ -52,6 +55,7 @@ public class JOTLang extends LanguageProvider {
         addModifier(JOTModifierIds.magmaCubeDisguise, "Magma Cube Disguise", "The hottest disguise", "Makes you look more like a Magma Cube to other Magma Cubes");
 
 		addItem(JOTItems.BUCKET_OF_SKYSLIME, "Bucket of Skyslime");
+		add("item.tconstruct.slime_helmet.material.tconstruct.skyslime", "Skyslime Slimeskull");
 		add("material.tconstruct.skyslime.skull", "Skyslime");
 		add("material.tconstruct.skyslime.skull_flavor", "!kcabkconK");
 		add("material.tconstruct.skyslime.skull_encyclopedia", "Receiving knockback sends you upwards instead of sideways");
@@ -59,6 +63,7 @@ public class JOTLang extends LanguageProvider {
 		addModifier(JOTModifierIds.skyslimeDisguise, "Skyslime Disguise", "The sky is blue, and so are you", "Makes you look more like a Skyslime to other Skyslimes");
 
 		addItem(JOTItems.BUCKET_OF_ENDERSLIME, "Bucket of Enderslime");
+		add("item.tconstruct.slime_helmet.material.tconstruct.enderslime", "Enderslime Slimeskull");
 		add("material.tconstruct.enderslime.skull", "Enderslime");
 		add("material.tconstruct.enderslime.skull_flavor", "Gives you greater control of your own teleportation");
 		add("material.tconstruct.enderslime.skull_encyclopedia", "Whenever you teleport, always teleport in the direction you are looking. The range of this is limited by the distance of the original teleport.");

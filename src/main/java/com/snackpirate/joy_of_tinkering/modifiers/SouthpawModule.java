@@ -2,7 +2,6 @@ package com.snackpirate.joy_of_tinkering.modifiers;
 
 import com.snackpirate.joy_of_tinkering.items.ModifiableGunItem;
 import com.snackpirate.joy_of_tinkering.registries.JOTModifierIds;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -34,7 +33,7 @@ public enum SouthpawModule implements ModifierModule, GeneralInteractionModifier
 	@Override
 	public InteractionResult onToolUse(IToolStackView tool, ModifierEntry modifier, Player player, InteractionHand hand, InteractionSource source) {
 		if (source == InteractionSource.LEFT_CLICK && hand == InteractionHand.MAIN_HAND && !tool.isBroken()) {
-			ListTag heldAmmo = tool.getPersistentData().getList(GUN_AMMO, CompoundTag.TAG_COMPOUND);
+			ListTag heldAmmo = ((ListTag) tool.getPersistentData().get(GUN_AMMO));
 			if (!heldAmmo.isEmpty()) {
 				ModifiableGunItem.fireGun(tool, player, hand, heldAmmo);
 				for (int i = 0; i < tool.getModifierLevel(JOTModifierIds.burstFire); i++) {

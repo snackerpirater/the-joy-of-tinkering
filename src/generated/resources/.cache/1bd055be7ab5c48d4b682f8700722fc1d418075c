@@ -1,8 +1,0 @@
-// 1.20.1	2026-04-15T16:51:59.4725801	Tags for minecraft:block mod id joy_of_tinkering
-2d8f926ef09dc1e4fedd7e504ae0d243b47dc8d9 data/forge/tags/blocks/storage_blocks.json
-2449ed053042ede019b6820cda666f211162a407 data/forge/tags/blocks/storage_blocks/slimebronze.json
-916d5f2c951178e6efd747074e554ad483593c6b data/joy_of_tinkering/tags/blocks/surface_strider_fluids.json
-4cfef3774f09164eaeedb92e415d111c20b03e6f data/minecraft/tags/blocks/beacon_base_blocks.json
-2449ed053042ede019b6820cda666f211162a407 data/minecraft/tags/blocks/mineable/pickaxe.json
-2449ed053042ede019b6820cda666f211162a407 data/minecraft/tags/blocks/needs_iron_tool.json
-4cfef3774f09164eaeedb92e415d111c20b03e6f data/tconstruct/tags/blocks/anvil_metal.json
