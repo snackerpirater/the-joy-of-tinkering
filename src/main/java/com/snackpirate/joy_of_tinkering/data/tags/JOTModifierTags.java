@@ -16,15 +16,13 @@ public class JOTModifierTags extends AbstractModifierTagProvider {
 		tag(TinkerTags.Modifiers.HELMET_UPGRADES).add(JOTModifierIds.wellRead);
 		tag(TinkerTags.Modifiers.BOOT_ABILITIES).add(JOTModifierIds.aquambulant);
 		tag(TinkerTags.Modifiers.GENERAL_SLOTLESS).add(JOTModifierIds.delicate);
-		tag(TinkerTags.Modifiers.RANGED_ABILITIES).add(JOTModifierIds.bulkBandolier, JOTModifierIds.trickBandolier,
-//				JOTModifierIds.junkshot,
-				JOTModifierIds.burstFire);
+		tag(TinkerTags.Modifiers.RANGED_ABILITIES).add(JOTModifierIds.bulkBandolier, JOTModifierIds.trickBandolier, JOTModifierIds.junkshot, JOTModifierIds.burstFire);
 		tag(TinkerTags.Modifiers.RANGED_UPGRADES).add(JOTModifierIds.extended, JOTModifierIds.southpaw, JOTModifierIds.crackshot);
 		tag(TinkerTags.Modifiers.OVERSLIME_FRIEND).add(JOTModifierIds.overheat, JOTModifierIds.oversharing);
 	}
 
 	@Override
 	public String getName() {
-		return "Joy Of Tinkering Modifier Tags";
+		return "Tinkers' Additions Modifier Tags";
 	}
 }
