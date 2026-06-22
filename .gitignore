@@ -2,3 +2,8 @@
 /.gradle/
 /build/
 /build/classes/java/main/
+/run/
+/run-data/
+/libs/
+/.idea/
+/src/generated/resources/.cache/

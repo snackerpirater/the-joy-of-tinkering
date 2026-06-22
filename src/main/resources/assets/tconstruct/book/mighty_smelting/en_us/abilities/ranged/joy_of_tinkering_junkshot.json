@@ -1,0 +1,13 @@
+{
+  "modifier_id": "joy_of_tinkering:junkshot",
+  "text": [
+    {
+      "text": "Allows the Rifle to fire any projectile or ammo, including arrows, fireworks, shurikens, etc."
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "Single level",
+    "Requires 1 ability slot"
+  ]
+}

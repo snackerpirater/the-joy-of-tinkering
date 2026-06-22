@@ -1,0 +1,13 @@
+{
+  "modifier_id": "joy_of_tinkering:burst_fire",
+  "text": [
+    {
+      "text": "Allows the Revolver to fire in (level + 1) round bursts, at the cost of projectile power."
+    }
+  ],
+  "more_text_space": true,
+  "effects": [
+    "Maximum of 5 levels",
+    "Requires 1 ability slot per level"
+  ]
+}
