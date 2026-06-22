@@ -28,13 +28,9 @@ import slimeknights.tconstruct.library.materials.definition.MaterialVariantId;
 import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.recipe.alloying.AlloyRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
-import slimeknights.tconstruct.library.recipe.casting.material.MaterialCastingRecipeBuilder;
-import slimeknights.tconstruct.library.recipe.casting.material.ToolCastingRecipe;
 import slimeknights.tconstruct.library.recipe.ingredient.MaterialIngredient;
-import slimeknights.tconstruct.library.recipe.material.MaterialRecipe;
 import slimeknights.tconstruct.library.recipe.modifiers.adding.ModifierRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.partbuilder.recycle.PartBuilderToolRecycleBuilder;
-import slimeknights.tconstruct.library.recipe.tinkerstation.building.MaterialSwappingRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.tinkerstation.building.ToolBuildingRecipeBuilder;
 import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.library.tools.nbt.MaterialIdNBT;
@@ -134,7 +130,7 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 
 		bulletRecipe(Items.GUNPOWDER, MaterialIds.gunpowder, consumer);
 		bulletRecipe(Items.BLAZE_POWDER, MaterialIds.blaze, consumer);
-		bulletRecipe(Items.REDSTONE, MaterialIds.redstone, consumer);
+//		bulletRecipe(Items.REDSTONE, MaterialIds.redstone, consumer);
 		bulletRecipe(Items.SUGAR, JOTMaterialIds.sugar, consumer);
 		bulletRecipe(Items.POWDER_SNOW_BUCKET, MaterialIds.ice, consumer);
 		bulletRecipe(Items.BONE_MEAL, MaterialIds.bone,  consumer);
@@ -236,14 +232,19 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 	}
 
 	private void slimeskull(Consumer<FinishedRecipe> consumer, MaterialId material, ItemLike skull, String folder) {
-		MaterialCastingRecipeBuilder.basinRecipe(TinkerTools.slimesuit.get(ArmorItem.Type.HELMET))
-				.setCast(skull, ToolCastingRecipe.CastPurpose.CONSUMED_OFFSET)
-				.addExtraMaterial(material)
-				.setItemCost(5)
+//		MaterialCastingRecipeBuilder.basinRecipe(TinkerTools.slimesuit.get(ArmorItem.Type.HELMET))
+//				.setCast(skull, ToolCastingRecipe.CastPurpose.FIRST_MATERIAL)
+//				.addExtraMaterial(material)
+//				.setItemCost(5)
+//				.save(consumer, location(folder + "slime_skull/" + material.getPath()));
+//		MaterialSwappingRecipeBuilder.tools(TinkerTags.Items.SWAPPABLE_SKULLS)
+//				.index(0).material(material, skull).repairValue((int) (MaterialRecipe.INGOTS_PER_REPAIR * 2))
+//				.save(consumer, location(folder + "slime_skull/swapping/" + material.getPath()));
+		MaterialIdNBT nbt = new MaterialIdNBT(Collections.singletonList(material));
+		ItemCastingRecipeBuilder.basinRecipe(ItemOutput.fromStack(nbt.updateStack(new ItemStack(TinkerTools.slimesuit.get(ArmorItem.Type.HELMET)))))
+				.setCast(skull, true)
+				.setFluidAndTime(TinkerFluids.enderSlime, FluidValues.SLIME_CONGEALED * 5)
 				.save(consumer, location(folder + "slime_skull/" + material.getPath()));
-		MaterialSwappingRecipeBuilder.tools(TinkerTags.Items.SWAPPABLE_SKULLS)
-				.index(0).material(material, skull).repairValue((int) (MaterialRecipe.INGOTS_PER_REPAIR * 2))
-				.save(consumer, location(folder + "slime_skull/swapping/" + material.getPath()));
 	}
 
 	@Override
