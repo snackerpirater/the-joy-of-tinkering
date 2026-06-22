@@ -150,7 +150,7 @@ public class JoyOfTinkering {
 
 		gen.addProvider(server, new JOTMobEquipmentProvider(output, MOD_ID));
 		gen.addProvider(server, new JOTLootTableProvider(output));
-		gen.addProvider(server, new JOTModifierModelMaps(output, MOD_ID));
+//		gen.addProvider(server, new JOTModifierModelMaps(output, MOD_ID));
 
 		gen.addProvider(server, new JOTItemTags(output, provider, blockTags.contentsGetter(), MOD_ID, helper));
 //		gen.addProvider(server, new JOTDamageTypeTags(output, provider, MOD_ID, helper));
@@ -171,7 +171,7 @@ public class JoyOfTinkering {
 			ModifierModule.LOADER.register(id("trick_bandolier"), TrickBandolierModule.LOADER);
 			ModifierModule.LOADER.register(id("overheat_melee"), OverheatModule.LOADER);
 			ModifierModule.LOADER.register(id("overheat_counter"), OverheatCounterModule.LOADER);
-			ModifierModule.LOADER.register(id("headbutt_attack"), HeadbuttModule.LOADER);
+//			ModifierModule.LOADER.register(id("headbutt_attack"), HeadbuttModule.LOADER);
 			ModifierModule.LOADER.register(id("junkshot"), JunkshotModule.LOADER);
 			ModifierModule.LOADER.register(id("southpaw"), SouthpawModule.LOADER);
 			ModifierModule.LOADER.register(id("crackshot"), CrackshotModule.LOADER);
