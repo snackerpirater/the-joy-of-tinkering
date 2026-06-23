@@ -178,18 +178,18 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 				.save(consumer, prefix(JOTFluids.moltenSlimebronze, alloyFolder));
 		metalCrafting(consumer, JOTBlocks.slimebronze, "crafting/materials");
 
-		ModifierRecipeBuilder.modifier(junkshot)
-				.addInput(TinkerMaterials.steel.getIngotTag(), 4)
-				.addInput(TinkerMaterials.cinderslime.getIngotTag(), 4)
-				.addInput(TinkerMaterials.steel.getIngotTag(), 4)
-				.addInput(Items.TNT, 4)
-				.addInput(Items.TNT, 4)
-				.setSlots(SlotType.ABILITY, 1)
-				.setTools(Ingredient.of(JOTItems.RIFLE))
-				.setMaxLevel(1)
-				.allowCrystal()
-				.saveSalvage(consumer, prefix(junkshot, abilitySalvage))
-				.save(consumer, prefix(junkshot, abilityFolder));
+//		ModifierRecipeBuilder.modifier(junkshot)
+//				.addInput(TinkerMaterials.steel.getIngotTag(), 4)
+//				.addInput(TinkerMaterials.cinderslime.getIngotTag(), 4)
+//				.addInput(TinkerMaterials.steel.getIngotTag(), 4)
+//				.addInput(Items.TNT, 4)
+//				.addInput(Items.TNT, 4)
+//				.setSlots(SlotType.ABILITY, 1)
+//				.setTools(Ingredient.of(JOTItems.RIFLE))
+//				.setMaxLevel(1)
+//				.allowCrystal()
+//				.saveSalvage(consumer, prefix(junkshot, abilitySalvage))
+//				.save(consumer, prefix(junkshot, abilityFolder));
 
 		ModifierRecipeBuilder.modifier(southpaw)
 				.addInput(TinkerMaterials.steel.getIngotTag())
