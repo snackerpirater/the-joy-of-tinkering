@@ -237,6 +237,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 					bullet.setPower(power * burstFirePowerMult);
 					speed = 2;
 					projectile = bullet;
+					damage+=1;
 				}
 				else if (ammo.is(Items.FIREWORK_ROCKET)) {
 					projectile = new FireworkRocketEntity(level, ammo, living, living.getX(), living.getEyeY() - 0.15f, living.getZ(), true);
