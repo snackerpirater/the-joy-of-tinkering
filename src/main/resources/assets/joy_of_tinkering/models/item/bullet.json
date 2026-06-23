@@ -7,6 +7,7 @@
     "propellant": "joy_of_tinkering:item/tool/bullet/propellant"
   },
   "modifier_maps": [ "joy_of_tinkering:bullet" ],
+  "modifier_roots": [ "joy_of_tinkering:item/tool/bullet/modifiers/" ],
   "show_traits": true,
   "parts": [
     { "name": "casing",   "index": 1 },
