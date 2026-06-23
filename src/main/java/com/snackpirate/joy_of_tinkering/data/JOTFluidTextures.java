@@ -1,5 +1,6 @@
 package com.snackpirate.joy_of_tinkering.data;
 
+import com.mojang.blaze3d.shaders.FogShape;
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
 import com.snackpirate.joy_of_tinkering.registries.JOTFluids;
 import net.minecraft.data.PackOutput;
@@ -14,7 +15,7 @@ public class JOTFluidTextures extends AbstractFluidTextureProvider {
 
 	@Override
 	public void addTextures() {
-		texture(JOTFluids.moltenSlimebronze).root(JoyOfTinkering.id("fluid/molten_slimebronze/")).still().flowing().color(0xffffffff).overlay().camera();
+		texture(JOTFluids.moltenSlimebronze).root(JoyOfTinkering.id("fluid/molten_slimebronze/")).still().flowing().color(0xffffffff).overlay().camera().cameraOpacity(0.3f).fog(FogShape.SPHERE, 0.25f, 2).calculateFogColor(true);
 	}
 
 	@Override

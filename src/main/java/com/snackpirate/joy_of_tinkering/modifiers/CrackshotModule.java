@@ -87,7 +87,7 @@ public record CrackshotModule(IJsonPredicate<LivingEntity> holder, LevelingValue
 			else if (projectile instanceof AbstractArrow arrow) {
 				arrow.setBaseDamage(arrow.getBaseDamage() * (1 + powerBoost.compute(modifier.getLevel())));
 			}
-			attacker.level().playSound(null, attacker.getX(), attacker.getY(), attacker.getZ(), SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS, 1.0f, 1.0f);
+			attacker.level().playSound(null, attacker.getX(), attacker.getY(), attacker.getZ(), SoundEvents.NOTE_BLOCK_CHIME.get(), SoundSource.PLAYERS, 1.0f, 1.0f);
 		}
 		return false;
 	}
