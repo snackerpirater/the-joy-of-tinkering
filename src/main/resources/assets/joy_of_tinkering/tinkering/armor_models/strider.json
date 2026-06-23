@@ -1,22 +1,13 @@
 {
   "layers": [
     {
-      "type": "tconstruct:first_present",
-      "options": [
-        {
-          "type": "tconstruct:dyed",
-          "prefix": "joy_of_tinkering:strider/skin_dyed_"
-        },
-        {
-          "type": "tconstruct:fixed",
-          "prefix": "joy_of_tinkering:strider/skin_"
-        }
-    ]},
+      "type": "tconstruct:fixed",
+      "prefix": "joy_of_tinkering:strider/skin_"
+    },
     {
       "type": "tconstruct:material",
       "index": 0,
       "prefix": "joy_of_tinkering:strider/metal_"
-    },
-    "tconstruct:trim"
+    }
   ]
 }
