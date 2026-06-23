@@ -33,7 +33,6 @@ public class JOTItemTags extends ItemTagsProvider {
 	public static TagKey<Item> MOD_GUNS = ItemTags.create(JoyOfTinkering.id("modifiable_guns"));
 	public static TagKey<Item> JUNKSHOT_AMMO = ItemTags.create(JoyOfTinkering.id("junkshot_ammo"));
 	public static TagKey<Item> PROPELLANTS = ItemTags.create(JoyOfTinkering.id("propellants"));
-
 	@Override
 	protected void addTags(HolderLookup.Provider pProvider) {
 		tag(TERRAGUARD_CONSUMABLE).add(Items.CLAY, Items.CLAY_BALL);
@@ -45,7 +44,6 @@ public class JOTItemTags extends ItemTagsProvider {
 		addToolTags(JOTItems.BULLET, MULTIPART_TOOL, AMMO, UNSALVAGABLE, UNSWAPPABLE, SINGLE_USE);
 		addToolTags(JOTItems.REVOLVER, MULTIPART_TOOL, DURABILITY, BONUS_SLOTS, LAUNCHERS, MOD_GUNS, SMALL_RANGED, INTERACTABLE_LEFT, MELEE_WEAPON);
 		addToolTags(JOTItems.RIFLE, MULTIPART_TOOL, DURABILITY, BONUS_SLOTS, LAUNCHERS, MOD_GUNS, BROAD_RANGED, INTERACTABLE_LEFT, MELEE_WEAPON);
-		addToolTags(JOTItems.DECIMATOR, MULTIPART_TOOL, DURABILITY, BONUS_SLOTS, LAUNCHERS, MOD_GUNS, ANCIENT_TOOLS, MELEE_PRIMARY);
 
 		IntrinsicTagAppender<Item> goldCasts = this.tag(TinkerTags.Items.GOLD_CASTS);
 		IntrinsicTagAppender<Item> sandCasts = this.tag(TinkerTags.Items.SAND_CASTS);
