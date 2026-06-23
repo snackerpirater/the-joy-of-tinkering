@@ -1,5 +1,6 @@
 {
   "block.joy_of_tinkering.slimebronze_block": "Block Of Slimebronze",
+  "death.attack.joy_of_tinkering.bullet": "%s was shot dead by %s",
   "effect.joy_of_tinkering.magmadaptation": "Magmadaptation",
   "effect.joy_of_tinkering.terraguard": "Terraguard",
   "fluid.joy_of_tinkering.molten_slimebronze": "Molten Slimebronze",

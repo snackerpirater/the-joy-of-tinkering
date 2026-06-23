@@ -2,11 +2,8 @@ package com.snackpirate.joy_of_tinkering;
 
 import com.mojang.logging.LogUtils;
 import com.snackpirate.joy_of_tinkering.data.*;
-import com.snackpirate.joy_of_tinkering.data.materials.JOTMaterialData;
-import com.snackpirate.joy_of_tinkering.data.materials.JOTMaterialStats;
-import com.snackpirate.joy_of_tinkering.data.materials.JOTMaterialTraits;
+import com.snackpirate.joy_of_tinkering.data.materials.*;
 import com.snackpirate.joy_of_tinkering.data.JOTFluidTextures;
-import com.snackpirate.joy_of_tinkering.data.materials.JOTMaterialSprites;
 import com.snackpirate.joy_of_tinkering.data.tags.*;
 import com.snackpirate.joy_of_tinkering.data.tools.*;
 import com.snackpirate.joy_of_tinkering.items.tools.FiringMechanismMaterialStats;
@@ -17,6 +14,7 @@ import com.snackpirate.joy_of_tinkering.modifiers.*;
 import com.snackpirate.joy_of_tinkering.network.JOTNetwork;
 import com.snackpirate.joy_of_tinkering.registries.*;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -24,6 +22,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -44,6 +43,7 @@ import slimeknights.tconstruct.library.modifiers.modules.ModifierModule;
 import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
 
+import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -110,11 +110,17 @@ public class JoyOfTinkering {
 
 	@SubscribeEvent
 	public static void genData(GatherDataEvent event) {
-		DataGenerator gen = event.getGenerator();
 		boolean server = event.includeServer();
+		DataGenerator gen = event.getGenerator();
 		PackOutput output = gen.getPackOutput();
 		ExistingFileHelper helper = event.getExistingFileHelper();
 		CompletableFuture<HolderLookup.Provider> provider = event.getLookupProvider();
+
+		RegistrySetBuilder registrySetBuilder = new RegistrySetBuilder();
+		JOTDamageTypeProvider.register(registrySetBuilder);
+		DatapackBuiltinEntriesProvider datapackRegistryProvider = new DatapackBuiltinEntriesProvider(output, provider, registrySetBuilder, Set.of(MOD_ID));
+		gen.addProvider(server, datapackRegistryProvider);
+
 		JOTMaterialData materials = new JOTMaterialData(output);
 		gen.addProvider(server, new JOTModifierProvider(output));
 		gen.addProvider(server, new JOTModifierTags(output, MOD_ID, helper));
@@ -145,6 +151,7 @@ public class JoyOfTinkering {
 		gen.addProvider(server, new JOTModifierModelMaps(output, MOD_ID));
 
 		gen.addProvider(server, new JOTItemTags(output, provider, blockTags.contentsGetter(), MOD_ID, helper));
+//		gen.addProvider(server, new JOTDamageTypeTags(output, provider, MOD_ID, helper));
 	}
 	void registerSerializers(RegisterEvent event) {
 		if (event.getRegistryKey() == Registries.RECIPE_SERIALIZER) {

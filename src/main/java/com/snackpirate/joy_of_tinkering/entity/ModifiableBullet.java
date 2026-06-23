@@ -1,6 +1,7 @@
 package com.snackpirate.joy_of_tinkering.entity;
 
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
+import com.snackpirate.joy_of_tinkering.registries.JOTDamageTypes;
 import com.snackpirate.joy_of_tinkering.registries.JOTEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
@@ -216,8 +217,7 @@ public class ModifiableBullet extends Projectile implements ToolProjectile, Proj
 	@Override
 	protected void onHitEntity(EntityHitResult result) {
 		Entity target = result.getEntity();
-		boolean hit = target.hurt(damageSources().thrown(this, this.getOwner()), 2f*power);
-
+		boolean hit = target.hurt(JOTDamageTypes.source(level().registryAccess(), JOTDamageTypes.BULLET, this, getOwner()), 2f*power);
 		if (hit && knockback > 0 && target instanceof LivingEntity living) {
 			// knockback logic based on arrows
 			double resistance = Math.max(0, 1 - living.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
