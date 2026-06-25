@@ -69,7 +69,7 @@ public class JOTItemTags extends ItemTagsProvider {
 		copy(TinkerTags.Blocks.ANVIL_METAL, ANVIL_METAL);
 
 		tag(JUNKSHOT_AMMO).add(Items.FIREWORK_ROCKET).addTag(THROWN_AMMO).addTag(ItemTags.ARROWS);
-		tag(PROPELLANTS).add(Items.GUNPOWDER, Items.REDSTONE, Items.GLOWSTONE, Items.SUGAR, Items.BONE_MEAL, Items.POWDER_SNOW_BUCKET, Items.PRISMARINE_CRYSTALS, Items.BLAZE_POWDER);
+		tag(PROPELLANTS).add(Items.GUNPOWDER, Items.REDSTONE, Items.GLOWSTONE_DUST, Items.SUGAR, Items.BONE_MEAL, Items.POWDER_SNOW_BUCKET, Items.PRISMARINE_CRYSTALS, Items.BLAZE_POWDER);
 	}
 
 	@SafeVarargs
