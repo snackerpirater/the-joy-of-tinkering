@@ -1,4 +1,4 @@
-// 1.20.1	2026-06-16T11:03:15.2306446	Tags for minecraft:item mod id joy_of_tinkering
+// 1.20.1	2026-06-25T11:25:17.7082299	Tags for minecraft:item mod id joy_of_tinkering
 b556ab61fc3c23e5275337b38cb68338d894a0a8 data/forge/tags/items/ingots.json
 4c378ec3d9f26343bedfd69d4dc952fc85e65054 data/forge/tags/items/ingots/slimebronze.json
 a8c1d8212fa3f9d78218d61cac38f6b5a3d45dd7 data/forge/tags/items/nuggets.json
@@ -12,7 +12,7 @@ f6f534e5dcc17d072f9db7e742d98152c3bc0a2b data/joy_of_tinkering/tags/items/casts/
 bc90c6e098755ff7cee6b5ca18e021cf8bf4bf8c data/joy_of_tinkering/tags/items/casts/single_use/gun_barrel.json
 e91187d0a1cb28a353f8363a501d4cc47b8d9002 data/joy_of_tinkering/tags/items/junkshot_ammo.json
 dc694303553fa775346e128089949faee12d48e2 data/joy_of_tinkering/tags/items/modifiable_guns.json
-3acbbc515345b6f2dbd3b986627816f62562c2ee data/joy_of_tinkering/tags/items/propellants.json
+fec15c597267a111c1ce8ff8c4c05ca60f313e27 data/joy_of_tinkering/tags/items/propellants.json
 98dfc492260c8e3a1130ae20bac346337b64a737 data/joy_of_tinkering/tags/items/terraguard_consumable.json
 4cfef3774f09164eaeedb92e415d111c20b03e6f data/tconstruct/tags/items/anvil_metal.json
 b3eced44f9d2e2fed9da79b41bd15f57486b30f9 data/tconstruct/tags/items/casts/gold.json

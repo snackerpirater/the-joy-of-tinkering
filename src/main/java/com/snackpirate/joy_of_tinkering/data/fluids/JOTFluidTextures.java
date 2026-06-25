@@ -1,4 +1,4 @@
-package com.snackpirate.joy_of_tinkering.data;
+package com.snackpirate.joy_of_tinkering.data.fluids;
 
 import com.mojang.blaze3d.shaders.FogShape;
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;

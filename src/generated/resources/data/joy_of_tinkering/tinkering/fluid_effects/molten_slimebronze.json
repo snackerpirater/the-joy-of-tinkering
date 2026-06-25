@@ -1,0 +1,57 @@
+{
+  "block_effects": [
+    {
+      "type": "tconstruct:explosion",
+      "block_interaction": "keep",
+      "damage": {
+        "each_level": 1.5
+      },
+      "knockback": {
+        "flat": 1.0
+      },
+      "place_fire": true,
+      "radius": {
+        "each_level": 1.0,
+        "flat": 1.0
+      }
+    },
+    {
+      "type": "tconstruct:mob_effect_cloud",
+      "effects": [
+        {
+          "effect": "tconstruct:conductive",
+          "level": 1,
+          "time": 100
+        }
+      ]
+    }
+  ],
+  "entity_effects": [
+    {
+      "type": "tconstruct:explosion",
+      "block_interaction": "keep",
+      "damage": {
+        "each_level": 1.5
+      },
+      "knockback": {
+        "flat": 1.0
+      },
+      "place_fire": true,
+      "radius": {
+        "each_level": 1.0,
+        "flat": 1.0
+      }
+    },
+    {
+      "type": "tconstruct:mob_effect",
+      "action": "add",
+      "effect": "tconstruct:conductive",
+      "level": 1,
+      "time": 100
+    }
+  ],
+  "fluid": {
+    "amount": 20,
+    "tag": "joy_of_tinkering:molten_slimebronze"
+  }
+}

@@ -1,4 +1,4 @@
-// 1.20.1	2026-06-15T17:42:11.0319547	Tinkers' Additions Material Stats
+// 1.20.1	2026-06-25T11:25:17.7092305	Tinkers' Additions Material Stats
 6bd507484e78c2f6f6a44f37b22feb3db1adbf8c data/joy_of_tinkering/tinkering/materials/stats/slimebronze.json
 090cb7d24db69e739b709e7417a7135a6dc701ec data/joy_of_tinkering/tinkering/materials/stats/sugar.json
 4967db4b45cd5076c0f45a481d15a4e1294644ef data/tconstruct/tinkering/materials/stats/aluminum.json
@@ -26,7 +26,7 @@ fc39d48c09f867fcb5af0f4f3a5a8dee04735d8e data/tconstruct/tinkering/materials/sta
 4e8aefa98446b715374c75bf9809c177c9e65a03 data/tconstruct/tinkering/materials/stats/knightslime.json
 f2257fbd1a51a9944abb820027d15134e3afd55e data/tconstruct/tinkering/materials/stats/lead.json
 b0dd8580efa342fc5f98ac0aa94f908821068d02 data/tconstruct/tinkering/materials/stats/magma.json
-bcfcd3f242820c859d0b320646a80ad4e2cd85f7 data/tconstruct/tinkering/materials/stats/manyullyn.json
+982525dccbd7d9e6506880a4a91820dca4ff9fc0 data/tconstruct/tinkering/materials/stats/manyullyn.json
 cd8e09d5ea3b74b1722db7d2d4666d2b65b5acf7 data/tconstruct/tinkering/materials/stats/pewter.json
 4972bf6371c5256388d57e40e76a995489f07bfb data/tconstruct/tinkering/materials/stats/prismarine.json
 2c273f519048c7d90c4bf614b0069e8d641d865f data/tconstruct/tinkering/materials/stats/queens_slime.json
