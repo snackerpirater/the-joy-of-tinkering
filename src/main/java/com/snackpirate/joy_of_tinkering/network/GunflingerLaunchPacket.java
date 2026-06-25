@@ -12,8 +12,7 @@ public class GunflingerLaunchPacket implements IThreadsafePacket {
 	private final Vector3f vec;
 	@Override
 	public void handleThreadsafe(NetworkEvent.Context context) {
-		Minecraft.getInstance().player.push(vec.x, vec.y, vec.z);
-		SlimeBounceHandler.addBounceHandler(Minecraft.getInstance().player);
+		HandleClient.handle(this);
 	}
 
 	@Override
@@ -25,5 +24,13 @@ public class GunflingerLaunchPacket implements IThreadsafePacket {
 	}
 	public GunflingerLaunchPacket(FriendlyByteBuf buf) {
 		vec = buf.readVector3f();
+	}
+
+	private static class HandleClient {
+		private static void handle(GunflingerLaunchPacket packet) {
+			Vector3f vec = packet.vec;
+			Minecraft.getInstance().player.push(vec.x, vec.y, vec.z);
+			SlimeBounceHandler.addBounceHandler(Minecraft.getInstance().player);
+		}
 	}
 }

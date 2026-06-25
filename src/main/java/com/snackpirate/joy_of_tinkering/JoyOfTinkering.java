@@ -79,9 +79,7 @@ public class JoyOfTinkering {
 		modEventBus.addListener(this::registerSerializers);
 		CREATIVE_TABS.register(modEventBus);
 		MinecraftForge.EVENT_BUS.register(this);
-		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> JOTNetwork::setup);
-
-
+		JOTNetwork.setup();
 //		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 	}
 
