@@ -23,6 +23,6 @@ public class JOTModifierTags extends AbstractModifierTagProvider {
 
 	@Override
 	public String getName() {
-		return "Tinkers' Additions Modifier Tags";
+		return "Joy Of Tinkering Modifier Tags";
 	}
 }

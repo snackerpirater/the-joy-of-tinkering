@@ -21,12 +21,14 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -77,7 +79,7 @@ public class JoyOfTinkering {
 		modEventBus.addListener(this::registerSerializers);
 		CREATIVE_TABS.register(modEventBus);
 		MinecraftForge.EVENT_BUS.register(this);
-		JOTNetwork.setup();
+		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> JOTNetwork::setup);
 
 
 //		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
