@@ -2,10 +2,7 @@ package com.snackpirate.joy_of_tinkering.registries;
 
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
 import com.snackpirate.joy_of_tinkering.data.tools.JOTToolDefinitionProvider;
-import com.snackpirate.joy_of_tinkering.items.ModifiableBulletItem;
-import com.snackpirate.joy_of_tinkering.items.ModifiableGunItem;
-import com.snackpirate.joy_of_tinkering.items.ModifiableHeadItem;
-import com.snackpirate.joy_of_tinkering.items.SlimeBucketItem;
+import com.snackpirate.joy_of_tinkering.items.*;
 import com.snackpirate.joy_of_tinkering.items.tools.FiringMechanismMaterialStats;
 import com.snackpirate.joy_of_tinkering.items.tools.GunBarrelMaterialStats;
 import com.snackpirate.joy_of_tinkering.items.tools.JOTToolStats;
@@ -63,6 +60,8 @@ public class JOTItems {
 	public static final ItemObject<ModifiableGunItem> REVOLVER = ITEMS.register("revolver", () -> new ModifiableGunItem(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.REVOLVER));
 	public static final ItemObject<ModifiableGunItem> RIFLE = ITEMS.register("rifle", () -> new ModifiableGunItem(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.RIFLE));
 
+	public static final ItemObject<ModifiableGunItem> DECIMATOR = ITEMS.register("decimator", () -> new ModifiableDecimator(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.DECIMATOR));
+
 	public static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
 		output.accept(JOTBlocks.slimebronze.getIngot());
 		output.accept(JOTBlocks.slimebronze.getNugget());
@@ -80,13 +79,15 @@ public class JOTItems {
 		output.accept(ToolBuildHandler.buildItemFromMaterials(TinkerTools.slimesuit.get(ArmorItem.Type.HELMET), MaterialNBT.of(MaterialRegistry.getMaterial(MaterialIds.skyslime), MaterialRegistry.getMaterial(MaterialIds.skyslime))));
 		output.accept(ToolBuildHandler.buildItemFromMaterials(TinkerTools.slimesuit.get(ArmorItem.Type.HELMET), MaterialNBT.of(MaterialRegistry.getMaterial(MaterialIds.enderslime), MaterialRegistry.getMaterial(MaterialIds.enderslime))));
 
-		ToolBuildHandler.addVariants(output::accept, JOTItems.CRESTED_HELMET.get(), "");
-		ToolBuildHandler.addVariants(output::accept, JOTItems.ROCKPUNCHERS.get(), "");
-		ToolBuildHandler.addVariants(output::accept, JOTItems.LAVA_LOAFERS.get(), "");
 		ToolBuildHandler.addVariants(output::accept, JOTItems.REVOLVER.get(), "");
 		ToolBuildHandler.addVariants(output::accept, JOTItems.RIFLE.get(), "");
 //		ToolBuildHandler.addVariants(output::accept, JOTItems.BULLET.get(), "");
 		addBulletVariants(output::accept);
+
+		ToolBuildHandler.addVariants(output::accept, JOTItems.DECIMATOR.get(), "");
+		ToolBuildHandler.addVariants(output::accept, JOTItems.CRESTED_HELMET.get(), "");
+		ToolBuildHandler.addVariants(output::accept, JOTItems.ROCKPUNCHERS.get(), "");
+		ToolBuildHandler.addVariants(output::accept, JOTItems.LAVA_LOAFERS.get(), "");
 
 		BULLET_CASING.get().addVariants(output::accept, "");
 		GUN_BARREL.get().addVariants(output::accept, "");

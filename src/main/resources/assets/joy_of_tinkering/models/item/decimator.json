@@ -1,0 +1,32 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "large": true,
+  "large_offset": [-5,5],
+  "textures": {
+    "head": "joy_of_tinkering:item/tool/decimator/head",
+    "grip": "joy_of_tinkering:item/tool/decimator/grip",
+    "body": "joy_of_tinkering:item/tool/decimator/body",
+    "handle": "joy_of_tinkering:item/tool/decimator/handle",
+
+    "large_head": "joy_of_tinkering:item/tool/decimator/large/head",
+    "large_grip": "joy_of_tinkering:item/tool/decimator/large/grip",
+    "large_body": "joy_of_tinkering:item/tool/decimator/large/body",
+    "large_handle": "joy_of_tinkering:item/tool/decimator/large/handle"
+  },
+  "modifier_maps": [ "joy_of_tinkering:decimator" ],
+  "modifier_roots": {
+    "small": [
+      "joy_of_tinkering:item/tool/decimator/modifiers/"
+    ],
+    "large": [
+      "joy_of_tinkering:item/tool/decimator/large/modifiers/"
+    ]
+  },
+  "parts": [
+    { "name": "handle", "index": 3 },
+    { "name": "grip",   "index": 1 },
+    { "name": "body",   "index": 2 },
+    { "name": "head",   "index": 0 }
+  ]
+}

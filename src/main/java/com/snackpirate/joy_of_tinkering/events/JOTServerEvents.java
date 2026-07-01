@@ -5,10 +5,7 @@ import be.florens.expandability.api.forge.PlayerSwimEvent;
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
 import com.snackpirate.joy_of_tinkering.data.tools.JOTToolDefinitionProvider;
 import com.snackpirate.joy_of_tinkering.data.tags.JOTItemTags;
-import com.snackpirate.joy_of_tinkering.registries.JOTEffects;
-import com.snackpirate.joy_of_tinkering.registries.JOTItems;
-import com.snackpirate.joy_of_tinkering.registries.JOTModifierHooks;
-import com.snackpirate.joy_of_tinkering.registries.JOTModifierIds;
+import com.snackpirate.joy_of_tinkering.registries.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Vec3i;
 import net.minecraft.sounds.SoundEvents;
@@ -16,6 +13,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -25,7 +23,12 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
 import net.minecraftforge.event.entity.EntityTeleportEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingGetProjectileEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
@@ -35,6 +38,7 @@ import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.RegistryObject;
 import slimeknights.tconstruct.common.Sounds;
 import slimeknights.tconstruct.common.TinkerEffect;
 import slimeknights.tconstruct.common.TinkerTags;
@@ -216,4 +220,29 @@ public class JOTServerEvents {
 //			mob.setItemSlot(EquipmentSlot.FEET, ToolBuildHandler.buildItemRandomMaterials(TAItems.LAVA_LOAFERS.get(), random));
 //		}
 //	}
+
+	@SubscribeEvent
+	static void stickinessMovement(TickEvent.PlayerTickEvent event) {
+		Player entity = event.player;
+		if (entity.getAttributeValue(JOTAttributes.stickiness.get()) > 0) {
+//			if (entity.horizontalCollision) JoyOfTinkering.LOGGER.info("horiz");
+//			if (entity.minorHorizontalCollision) JoyOfTinkering.LOGGER.info("minor");
+		}
+	}
+	@net.minecraftforge.fml.common.Mod.EventBusSubscriber(modid = JoyOfTinkering.MOD_ID, bus = net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD)
+	private static class Mod {
+		@SubscribeEvent
+		static void entityAttributes(EntityAttributeModificationEvent event) {
+			addToAll(event, JOTAttributes.stickiness);
+		}
+		private static void addToAll(EntityAttributeModificationEvent event, RegistryObject<Attribute> attribute) {
+			addToAll(event, attribute, attribute.get().getDefaultValue());
+		}
+		private static void addToAll(EntityAttributeModificationEvent event, RegistryObject<Attribute> attribute, double defaultValue) {
+			Attribute attr = attribute.get();
+			for (EntityType<? extends LivingEntity> entity : event.getTypes()) {
+				event.add(entity, attr, defaultValue);
+			}
+		}
+	}
 }

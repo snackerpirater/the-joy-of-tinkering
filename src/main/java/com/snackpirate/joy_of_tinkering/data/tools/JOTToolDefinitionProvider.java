@@ -1,6 +1,7 @@
 package com.snackpirate.joy_of_tinkering.data.tools;
 
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
+import com.snackpirate.joy_of_tinkering.items.tools.FiringMechanismMaterialStats;
 import com.snackpirate.joy_of_tinkering.items.tools.JOTToolStats;
 import com.snackpirate.joy_of_tinkering.items.tools.PropellantMaterialStats;
 import com.snackpirate.joy_of_tinkering.registries.JOTItems;
@@ -27,6 +28,7 @@ import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.TinkerToolParts;
 import slimeknights.tconstruct.tools.data.ModifierIds;
+import slimeknights.tconstruct.tools.stats.HandleMaterialStats;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 import slimeknights.tconstruct.tools.stats.PlatingMaterialStats;
 import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
@@ -38,6 +40,7 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 	public static final ToolDefinition RIFLE = ToolDefinition.create(JOTItems.RIFLE);
 	public static final ToolDefinition BULLET = ToolDefinition.create(JOTItems.BULLET);
 	public static final ToolDefinition CRESTED_HELMET = ToolDefinition.create(JOTItems.CRESTED_HELMET);
+	public static final ToolDefinition DECIMATOR = ToolDefinition.create(JOTItems.DECIMATOR);
 
 	public JOTToolDefinitionProvider(PackOutput packOutput, String modId) {
 		super(packOutput, modId);
@@ -182,6 +185,28 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 				.module(defaultFourParts)
 				.module(FixedMaterialToolName.FIRST)
 				.largeToolStartingSlots()
+				.build();
+		define(DECIMATOR)
+				.module(MaterialStatsModule.stats()
+						.stat(HeadMaterialStats.ID, 0.35f)
+						.stat(FiringMechanismMaterialStats.ID)
+						.stat(HeadMaterialStats.ID, 0.35f)
+						.stat(HandleMaterialStats.ID)
+						.build())
+				.module(ToolSlotsModule.builder()
+						.slots(SlotType.ABILITY, 1)
+						.slots(SlotType.UPGRADE, 2)
+						.build())
+				.module(new SetStatsModule(StatsNBT.builder()
+						.set(ToolStats.PROJECTILE_DAMAGE, 0.5f)
+						.set(ToolStats.VELOCITY, 0.8f)
+						.set(ToolStats.ATTACK_DAMAGE, 3f)
+						.set(ToolStats.ATTACK_SPEED, 0.75f).build()))
+				.module(new MultiplyStatsModule(MultiplierNBT.builder()
+						.set(ToolStats.ATTACK_DAMAGE, 1.35f)
+						.set(ToolStats.MINING_SPEED, 0.4f)
+						.set(ToolStats.DURABILITY, 2f).build()))
+				.module(new MaterialTraitsModule(FiringMechanismMaterialStats.ID, 1), ToolHooks.REBALANCED_TRAIT)
 				.build();
 	}
 

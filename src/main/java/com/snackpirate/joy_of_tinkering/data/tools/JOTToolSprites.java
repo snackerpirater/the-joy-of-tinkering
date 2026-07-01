@@ -58,5 +58,12 @@ public class JOTToolSprites extends AbstractPartSpriteProvider {
 				.disallowAnimated();
 		addTexture("item/tool/crested_helmet/held/plating", PlatingMaterialStats.HELMET.getId());
 		addTexture("item/tool/crested_helmet/held/blade", HeadMaterialStats.ID);
+
+		buildTool("decimator")
+				.withLarge()
+				.addHead("head")
+				.addPart("grip", FiringMechanismMaterialStats.ID)
+				.addHead("body")
+				.addHandle("handle");
 	}
 }

@@ -117,6 +117,38 @@
       "allow_animated": false,
       "path": "joy_of_tinkering:item/tool/crested_helmet/blade",
       "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/decimator/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/decimator/grip",
+      "stat_type": "joy_of_tinkering:firing_mechanism"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/decimator/body",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/decimator/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/decimator/large/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/decimator/large/grip",
+      "stat_type": "joy_of_tinkering:firing_mechanism"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/decimator/large/body",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/decimator/large/handle",
+      "stat_type": "tconstruct:handle"
     }
   ],
   "replace": false

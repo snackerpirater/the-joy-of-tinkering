@@ -68,6 +68,7 @@ public class JoyOfTinkering {
 	}
 	public JoyOfTinkering() {
 		IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		JOTAttributes.register(modEventBus);
 		JOTItems.ITEMS.register(modEventBus);
 		JOTEffects.register(modEventBus);
 		JOTEntities.ENTITIES.register(modEventBus);

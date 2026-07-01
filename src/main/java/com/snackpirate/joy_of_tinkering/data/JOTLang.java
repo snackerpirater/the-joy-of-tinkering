@@ -114,6 +114,8 @@ public class JOTLang extends LanguageProvider {
 		addItem(JOTItems.RIFLE, "Rifle");
 		add("item.joy_of_tinkering.rifle.description", "The Rifle is a large firearm, able to fire lower-power rounds at a higher quantity");
 
+		addItem(JOTItems.DECIMATOR, "Decimator");
+		add("item.joy_of_tinkering.decimator.description", "The Decimator is a modified hammer, capable of loading bullets to add an explosive burst to melee attacks");
 
 		addModifier(JOTModifierIds.surplus, "Surplus", "Quantity over quality", "Crafts more bullets at the cost of damage");
 		addModifier(JOTModifierIds.scarce, "Scarce", "Quality over quantity", "Grants more damage at the cost of craft quantity");
