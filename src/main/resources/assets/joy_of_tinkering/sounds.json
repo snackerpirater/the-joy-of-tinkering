@@ -13,5 +13,10 @@
     "sounds": [
       "joy_of_tinkering:revolver_reload_finish"
     ]
+  },
+  "decimator.fire": {
+    "sounds": [
+      "joy_of_tinkering:decimator_fire"
+    ]
   }
 }

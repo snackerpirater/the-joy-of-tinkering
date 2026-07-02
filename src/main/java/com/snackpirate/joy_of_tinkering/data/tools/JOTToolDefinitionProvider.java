@@ -206,6 +206,9 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 						.set(ToolStats.ATTACK_DAMAGE, 1.35f)
 						.set(ToolStats.MINING_SPEED, 0.4f)
 						.set(ToolStats.DURABILITY, 2f).build()))
+				.module(ToolTraitsModule.builder()
+						.trait(JOTModifierIds.kaboom)
+						.build())
 				.module(new MaterialTraitsModule(FiringMechanismMaterialStats.ID, 1), ToolHooks.REBALANCED_TRAIT)
 				.build();
 	}

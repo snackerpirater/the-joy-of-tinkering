@@ -14,6 +14,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -290,7 +291,9 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 
 				// finally, fire the projectile
 				level.addFreshEntity(projectile);
-				level.playSound(null, living.getX(), living.getY(), living.getZ(), JOTSounds.REVOLVER_FIRE.get(), SoundSource.PLAYERS, 0.35F, getRandomShotPitch(angle, living.getRandom()));
+
+				SoundEvent fireSound = tool.getItem().equals(JOTItems.DECIMATOR.asItem()) ? JOTSounds.DECIMATOR_FIRE.get() : JOTSounds.REVOLVER_FIRE.get();
+				level.playSound(null, living.getX(), living.getY(), living.getZ(), fireSound, SoundSource.PLAYERS, 0.35F, getRandomShotPitch(angle, living.getRandom()));
 			}
 
 			// clear the ammo, damage the bow

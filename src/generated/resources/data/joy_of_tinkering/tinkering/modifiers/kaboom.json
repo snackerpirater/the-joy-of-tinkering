@@ -1,0 +1,15 @@
+{
+  "level_display": "tconstruct:no_levels",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:fire_on_crit"
+    },
+    {
+      "type": "tconstruct:stat_boost",
+      "flat": -2.0,
+      "operation": "add",
+      "stat": "joy_of_tinkering:max_ammo"
+    }
+  ],
+  "tooltip_display": "always"
+}

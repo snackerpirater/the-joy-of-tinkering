@@ -61,6 +61,8 @@ public class JOTModifierIds {
 	//sinistral for guns
 	public static final ModifierId southpaw = modId("southpaw");
 
+	public static final ModifierId kaboom = modId("kaboom");
+
 	public static ModifierId modId(String id) {
 		return new ModifierId(JoyOfTinkering.MOD_ID, id);
 	}

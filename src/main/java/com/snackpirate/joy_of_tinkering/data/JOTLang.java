@@ -144,6 +144,8 @@ public class JOTLang extends LanguageProvider {
 		add("modifier.joy_of_tinkering.burst_fire.5", "6-Round Burst");
 
 		add("death.attack.joy_of_tinkering.bullet", "%s was shot dead by %s");
+
+		addModifier(JOTModifierIds.kaboom, "Kaboom", "Kablooey!", "Critical melee attacks fire the gun!");
 	}
 
 	public void addModifier(ModifierId modifier, String name, String flavour, String desc) {

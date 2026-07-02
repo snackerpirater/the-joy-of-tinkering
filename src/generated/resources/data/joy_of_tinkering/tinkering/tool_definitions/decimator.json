@@ -41,6 +41,15 @@
       }
     },
     {
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 1,
+          "name": "joy_of_tinkering:kaboom"
+        }
+      ]
+    },
+    {
       "type": "tconstruct:material_traits",
       "hooks": [
         "tconstruct:rebalanced_trait"

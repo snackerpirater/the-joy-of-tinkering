@@ -17,5 +17,6 @@ public class JOTSounds {
 	public static RegistryObject<SoundEvent> REVOLVER_FIRE = registerSoundEvent("revolver.fire");
 	public static RegistryObject<SoundEvent> REVOLVER_RELOAD_START = registerSoundEvent("revolver.reload.start");
 	public static RegistryObject<SoundEvent> REVOLVER_RELOAD_END = registerSoundEvent("revolver.reload.end");
+	public static RegistryObject<SoundEvent> DECIMATOR_FIRE = registerSoundEvent("decimator.fire");
 
 }
