@@ -168,6 +168,11 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 //				.addModule(StatBoostModule.multiplyAll(ToolStats.PROJECTILE_DAMAGE).eachLevel(-0.2f))
 				.levelDisplay(new ModifierLevelDisplay.UniqueForLevels(5, true))
 				.build();
+		buildModifier(kaboom)
+				.addModule(FireOnCritModule.INSTANCE)
+				.addModule(StatBoostModule.add(JOTToolStats.MAX_AMMO).flat(-2f))
+				.levelDisplay(ModifierLevelDisplay.NO_LEVELS)
+				.build();
 	}
 
 	@Override
