@@ -1,0 +1,14 @@
+{
+  "tool": "joy_of_tinkering:decimator",
+  "text": [
+    { "text": "The Decimator is a modified hammer, capable of loading bullets to add an explosive burst to critical melee attacks." },
+    { "text": "It can be found in the hands of Vindicators, or in Pillager Outposts and Woodland Mansions", "paragraph": true }
+  ],
+  "properties": [
+    "+3 Attack Damage",
+    "135% Attack Multiplier",
+    "200% Durability Multiplier",
+    "2 Upgrade Slots",
+    "1 Ability Slot"
+  ]
+}
