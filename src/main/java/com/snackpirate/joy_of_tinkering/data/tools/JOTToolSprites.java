@@ -3,6 +3,7 @@ package com.snackpirate.joy_of_tinkering.data.tools;
 import com.snackpirate.joy_of_tinkering.items.tools.FiringMechanismMaterialStats;
 import com.snackpirate.joy_of_tinkering.items.tools.GunBarrelMaterialStats;
 import com.snackpirate.joy_of_tinkering.items.tools.JOTToolStats;
+import com.snackpirate.joy_of_tinkering.items.tools.PropellantMaterialStats;
 import org.jetbrains.annotations.NotNull;
 import slimeknights.tconstruct.library.client.data.material.AbstractPartSpriteProvider;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
@@ -37,6 +38,7 @@ public class JOTToolSprites extends AbstractPartSpriteProvider {
 
 		addTexture("item/tool/bullet/casing", JOTToolStats.Statless.BULLET_CASING.getIdentifier());
 		addTexture("item/tool/bullet/head", StatlessMaterialStats.ARROW_HEAD.getIdentifier());
+		addTexture("item/tool/bullet/propellant", PropellantMaterialStats.ID);
 		addPart("gun_barrel", GunBarrelMaterialStats.ID);
 		addPart("firing_mechanism", FiringMechanismMaterialStats.ID);
 

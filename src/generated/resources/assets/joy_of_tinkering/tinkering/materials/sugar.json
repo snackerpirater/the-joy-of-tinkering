@@ -1,5 +1,46 @@
 {
   "fallbacks": [
     "crystal"
-  ]
+  ],
+  "generator": {
+    "supported_stats": [
+      "joy_of_tinkering:propellant"
+    ],
+    "transformer": {
+      "type": "tconstruct:recolor_sprite",
+      "color_mapping": {
+        "type": "tconstruct:grey_to_color",
+        "palette": [
+          {
+            "color": "FF000000",
+            "grey": 0
+          },
+          {
+            "color": "FF535468",
+            "grey": 63
+          },
+          {
+            "color": "FF84849F",
+            "grey": 102
+          },
+          {
+            "color": "FFBAB9CB",
+            "grey": 140
+          },
+          {
+            "color": "FFD5D5DF",
+            "grey": 178
+          },
+          {
+            "color": "FFEAEAEA",
+            "grey": 216
+          },
+          {
+            "color": "FFFFFFFF",
+            "grey": 255
+          }
+        ]
+      }
+    }
+  }
 }

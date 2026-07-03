@@ -24,6 +24,10 @@
       "stat_type": "tconstruct:arrow_head"
     },
     {
+      "path": "joy_of_tinkering:item/tool/bullet/propellant",
+      "stat_type": "joy_of_tinkering:propellant"
+    },
+    {
       "path": "joy_of_tinkering:item/tool/parts/gun_barrel",
       "stat_type": "joy_of_tinkering:barrel"
     },

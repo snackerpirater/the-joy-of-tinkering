@@ -3,12 +3,14 @@
   "parent": "forge:item/default",
   "textures": {
     "head": "joy_of_tinkering:item/tool/bullet/head",
-    "casing": "joy_of_tinkering:item/tool/bullet/casing"
+    "casing": "joy_of_tinkering:item/tool/bullet/casing",
+    "propellant": "joy_of_tinkering:item/tool/bullet/propellant"
   },
   "modifier_maps": [ "joy_of_tinkering:bullet" ],
   "show_traits": true,
   "parts": [
     { "name": "casing",   "index": 1 },
-    { "name": "head", "index": 0 }
+    { "name": "head", "index": 0 },
+    { "name": "propellant",   "index": 2 }
   ]
 }

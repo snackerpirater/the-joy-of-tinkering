@@ -292,8 +292,9 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 				// finally, fire the projectile
 				level.addFreshEntity(projectile);
 
-				SoundEvent fireSound = tool.getItem().equals(JOTItems.DECIMATOR.asItem()) ? JOTSounds.DECIMATOR_FIRE.get() : JOTSounds.REVOLVER_FIRE.get();
-				level.playSound(null, living.getX(), living.getY(), living.getZ(), fireSound, SoundSource.PLAYERS, 0.35F, getRandomShotPitch(angle, living.getRandom()));
+				boolean isDecimator = tool.getItem().equals(JOTItems.DECIMATOR.asItem());
+				SoundEvent fireSound = isDecimator ? JOTSounds.DECIMATOR_FIRE.get() : JOTSounds.REVOLVER_FIRE.get();
+				level.playSound(null, living.getX(), living.getY(), living.getZ(), fireSound, SoundSource.PLAYERS, 0.35F + (isDecimator ? 0.2f : 0f), getRandomShotPitch(angle, living.getRandom()));
 			}
 
 			// clear the ammo, damage the bow

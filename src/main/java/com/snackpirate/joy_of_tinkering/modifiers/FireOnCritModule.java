@@ -11,7 +11,9 @@ import slimeknights.tconstruct.library.modifiers.modules.ModifierModule;
 import slimeknights.tconstruct.library.module.HookProvider;
 import slimeknights.tconstruct.library.module.ModuleHook;
 import slimeknights.tconstruct.library.tools.context.ToolAttackContext;
+import slimeknights.tconstruct.library.tools.helper.ToolAttackUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
+import slimeknights.tconstruct.tools.TinkerTools;
 
 import java.util.List;
 
@@ -31,7 +33,10 @@ public enum FireOnCritModule implements ModifierModule, MeleeHitModifierHook {
 		if (context.isCritical() && context.getPlayerAttacker() != null) {
 			context.getTarget().invulnerableTime = 0;
 			ListTag ammo = (ListTag) tool.getPersistentData().get(ModifiableGunItem.GUN_AMMO);
-			if (!ammo.isEmpty()) ModifiableGunItem.fireGun(tool, context.getPlayerAttacker(), context.getHand(), ammo);
+			if (!ammo.isEmpty()) {
+				ModifiableGunItem.fireGun(tool, context.getPlayerAttacker(), context.getHand(), ammo);
+				ToolAttackUtil.spawnAttackParticle(TinkerTools.hammerAttackParticle.get(), context.getTarget(), 0.8f);
+			}
 		}
 	}
 

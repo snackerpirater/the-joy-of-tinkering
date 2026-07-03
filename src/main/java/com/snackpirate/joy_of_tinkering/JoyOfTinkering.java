@@ -192,9 +192,8 @@ public class JoyOfTinkering {
 			builder.addVariant(GunBarrelMaterialStats.ID, material);
 			builder.addVariant(FiringMechanismMaterialStats.ID, material);
 		});
-		JOTMaterialStats.bulletMetals.forEach(material -> {
-			builder.addVariant(JOTToolStats.Statless.BULLET_CASING.getIdentifier(), material);
-		});
+		JOTMaterialStats.bulletMetals.forEach(material -> builder.addVariant(JOTToolStats.Statless.BULLET_CASING.getIdentifier(), material));
+		JOTMaterialStats.bulletPropellants.forEach(material -> builder.addVariant(PropellantMaterialStats.ID, material));
 		return builder.build();
 	}
 }

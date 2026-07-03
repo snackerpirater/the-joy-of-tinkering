@@ -210,6 +210,7 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 						.trait(JOTModifierIds.kaboom)
 						.build())
 				.module(new MaterialTraitsModule(FiringMechanismMaterialStats.ID, 1), ToolHooks.REBALANCED_TRAIT)
+				.module(defaultFourParts)
 				.build();
 	}
 

@@ -3,6 +3,7 @@ package com.snackpirate.joy_of_tinkering.data.materials;
 import com.snackpirate.joy_of_tinkering.items.tools.FiringMechanismMaterialStats;
 import com.snackpirate.joy_of_tinkering.items.tools.GunBarrelMaterialStats;
 import com.snackpirate.joy_of_tinkering.items.tools.JOTToolStats;
+import com.snackpirate.joy_of_tinkering.items.tools.PropellantMaterialStats;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -33,6 +34,17 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 						.addARGB(178, 0xFFff6313)
 						.addARGB(216, 0xFFff8f3b)
 						.addARGB(255, 0xFFffb480)
+						.build()));
+		buildMaterial(sugar)
+				.statType(PropellantMaterialStats.ID)
+				.fallbacks("crystal")
+				.transformer(new RecolorSpriteTransformer(GreyToColorMapping.builderFromBlack()
+						.addARGB(63,  0xFF535468)
+						.addARGB(102, 0xFF84849f)
+						.addARGB(140, 0xFFbab9cb)
+						.addARGB(178, 0xFFd5d5df)
+						.addARGB(216, 0xFFeaeaea)
+						.addARGB(255, 0xFFffffff)
 						.build()));
 	}
 	public static class RenderInfo extends AbstractMaterialRenderInfoProvider {
