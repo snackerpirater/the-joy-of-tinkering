@@ -41,8 +41,9 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 			MaterialIds.steeleaf, MaterialIds.slimesteel,
 			MaterialIds.silver, MaterialIds.electrum);
 	public static final List<MaterialVariantId> bulletPropellants = List.of(
-			MaterialIds.gunpowder, MaterialIds.blaze, MaterialIds.redstone, MaterialIds.ice,
-			MaterialIds.prismarine, MaterialIds.bone, MaterialIds.glowstone
+			MaterialIds.gunpowder, MaterialIds.blaze,
+//			MaterialIds.redstone,
+			MaterialIds.ice, MaterialIds.prismarine, MaterialIds.bone, MaterialIds.glowstone
 	);
 	public JOTMaterialStats(PackOutput packOutput, AbstractMaterialDataProvider materials) {
 		super(packOutput, materials);

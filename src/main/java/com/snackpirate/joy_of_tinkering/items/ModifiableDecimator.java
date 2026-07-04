@@ -60,9 +60,9 @@ public class ModifiableDecimator extends ModifiableGunItem {
 			// if we have ammo, start charging
 			Predicate<ItemStack> ammoPredicate = getSupportedHeldProjectiles().or((stack) -> tool.getModifierLevel(JOTModifierIds.junkshot) > 0 && (stack.is(JOTItemTags.JUNKSHOT_AMMO)));
 
-			ItemStack ammo = BowAmmoModifierHook.getAmmo(tool, ItemStack.EMPTY, player, ammoPredicate);
+			ItemStack ammo = BowAmmoModifierHook.getAmmo(tool, gun, player, ammoPredicate);
 			if (!ammo.isEmpty() || tool.getModifiers().has(TinkerTags.Modifiers.CHARGE_EMPTY_BOW_WITH_DRAWTIME)) {
-				GeneralInteractionModifierHook.startDrawing(tool, player, 1);
+				GeneralInteractionModifierHook.startDrawtime(tool, player, 1);
 				if (!ammo.isEmpty()) {
 					if (storeDrawingItem) {
 						persistentData.put(KEY_DRAWBACK_AMMO, ammo.save(new CompoundTag()));
