@@ -193,7 +193,7 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 
 		ModifierRecipeBuilder.modifier(southpaw)
 				.addInput(TinkerMaterials.steel.getIngotTag())
-				.addInput(Items.NAUTILUS_SHELL)
+				.addInput(Items.COMPASS)
 				.addInput(TinkerMaterials.steel.getIngotTag())
 				.setMaxLevel(1).checkTraitLevel()
 				.setSlots(SlotType.UPGRADE, 1)
