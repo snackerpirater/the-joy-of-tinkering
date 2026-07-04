@@ -35,7 +35,7 @@
     {
       "type": "tconstruct:multiply_stats",
       "multipliers": {
-        "tconstruct:attack_damage": 1.35,
+        "tconstruct:attack_damage": 1.25,
         "tconstruct:durability": 2.0,
         "tconstruct:mining_speed": 0.4
       }

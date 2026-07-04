@@ -204,7 +204,7 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 						.set(ToolStats.ATTACK_DAMAGE, 3f)
 						.set(ToolStats.ATTACK_SPEED, 0.75f).build()))
 				.module(new MultiplyStatsModule(MultiplierNBT.builder()
-						.set(ToolStats.ATTACK_DAMAGE, 1.35f)
+						.set(ToolStats.ATTACK_DAMAGE, 1.25f)
 						.set(ToolStats.MINING_SPEED, 0.4f)
 						.set(ToolStats.DURABILITY, 2f).build()))
 				.module(ToolTraitsModule.builder()
