@@ -144,7 +144,7 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 
 		addMaterialStats(slimebronze,
 				new HeadMaterialStats(480, 7.5f, Tiers.DIAMOND, 2.5f),
-				new HandleMaterialStats(-0.05f, -0.1f, 0.1f, 0.1f),
+				new HandleMaterialStats(0f, -0.1f, 0.05f, 0.05f),
 				StatlessMaterialStats.BINDING,
 				new PlatingMaterialStats(PlatingMaterialStats.HELMET, 318, 2, 2, 0.15f),
 				new PlatingMaterialStats(PlatingMaterialStats.CHESTPLATE, 458, 6, 2, 0.15f),
