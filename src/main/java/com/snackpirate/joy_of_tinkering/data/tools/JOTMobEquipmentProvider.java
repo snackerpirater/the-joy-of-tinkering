@@ -4,6 +4,7 @@ import com.snackpirate.joy_of_tinkering.registries.JOTItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EquipmentSlot;
+import org.jetbrains.annotations.NotNull;
 import slimeknights.mantle.data.predicate.IJsonPredicate;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.data.tinkering.AbstractMobEquipmentProvider;
@@ -27,7 +28,7 @@ public class JOTMobEquipmentProvider extends AbstractMobEquipmentProvider {
 	}
 
 	@Override
-	public String getName() {
+	public @NotNull String getName() {
 		return "Tinkers Additions Mob Equipment Provider";
 	}
 }
