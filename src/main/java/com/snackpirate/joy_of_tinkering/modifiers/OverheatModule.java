@@ -55,7 +55,7 @@ public record OverheatModule(LevelingValue time) implements ModifierModule, Proj
 	public float beforeMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damage, float baseKnockback, float knockback) {
 		// vanilla hack: apply fire so the entity drops the proper items on instant kill
 		if (context.getAttacker().getItemBySlot(context.getSlotType()).is(TinkerTags.Items.ARMOR)) return knockback;
-		if (OverslimeModule.INSTANCE.getAmount(tool) >= 3) {
+		if (OverslimeModule.INSTANCE.getAmount(tool) >= 2) {
 			LivingEntity target = context.getLivingTarget();
 			if (target != null && !target.isOnFire()) {
 				target.setRemainingFireTicks(1);
@@ -77,18 +77,18 @@ public record OverheatModule(LevelingValue time) implements ModifierModule, Proj
 	@Override
 	public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
 		if (context.getAttacker().getItemBySlot(context.getSlotType()).is(TinkerTags.Items.ARMOR)) return;
-		if (OverslimeModule.INSTANCE.getAmount(tool) >= 3) {
+		if (OverslimeModule.INSTANCE.getAmount(tool) >= 2) {
 			setFire(tool.getModifiers(), modifier, context.getTarget());
-			OverslimeModule.INSTANCE.addAmount(tool, -3);
+			OverslimeModule.INSTANCE.addAmount(tool, -1);
 		}
 	}
 
 	@Override
 	public void onProjectileShoot(IToolStackView tool, ModifierEntry modifier, @Nullable LivingEntity shooter, ItemStack ammo, Projectile projectile, @Nullable AbstractArrow arrow, ModDataNBT persistentData, boolean primary) {
 		// this is mostly cosmetic as we handle hit time below
-		if (OverslimeModule.INSTANCE.getAmount(tool) >= 3) {
+		if (OverslimeModule.INSTANCE.getAmount(tool) >= 2) {
 			projectile.setSecondsOnFire(100);
-			OverslimeModule.INSTANCE.addAmount(tool, -3);
+			OverslimeModule.INSTANCE.addAmount(tool, -1);
 			persistentData.putBoolean(JoyOfTinkering.id("is_overburn"), true);
 		}
 	}
