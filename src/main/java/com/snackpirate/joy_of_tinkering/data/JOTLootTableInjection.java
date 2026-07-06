@@ -3,6 +3,7 @@ package com.snackpirate.joy_of_tinkering.data;
 import com.snackpirate.joy_of_tinkering.registries.JOTItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.functions.LootItemConditionalFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemDamageFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import slimeknights.mantle.data.predicate.IJsonPredicate;
@@ -70,7 +71,9 @@ public class JOTLootTableInjection extends AbstractLootTableInjectionProvider {
 						.setWeight(1) // makes it a 1 in 4 chance of a war pick
 						.apply(ancientToolData2)
 						.build());
-
+		AddToolDataFunction.Builder ancientToolData4 = ancientToolData2.addMaterial(random).addMaterial(random);
+		injectChest("nether_bridge")
+				.addToPool("main", LootItem.lootTableItem(JOTItems.DECIMATOR).setWeight(2).apply(ancientToolData4).build());
 	}
 
 	@Override

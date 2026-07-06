@@ -1,7 +1,7 @@
 {
-  "entity": "minecraft:zombie_villager",
+  "entity": "minecraft:wither_skeleton",
   "equip": {
-    "chance": 0.2,
+    "chance": 0.1,
     "materials": [
       {
         "type": "tconstruct:random",
@@ -18,7 +18,7 @@
       }
     ],
     "priority": 100,
-    "slot": "chest",
-    "tool": "joy_of_tinkering:rockpunchers"
+    "slot": "mainhand",
+    "tool": "joy_of_tinkering:decimator"
   }
 }

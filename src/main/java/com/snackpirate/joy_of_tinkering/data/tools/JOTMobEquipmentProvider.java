@@ -21,8 +21,9 @@ public class JOTMobEquipmentProvider extends AbstractMobEquipmentProvider {
 		IJsonPredicate<MaterialVariantId> includeInLoot = MaterialPredicate.tag(TinkerTags.Materials.EXCLUDE_FROM_LOOT).inverted();
 		RandomMaterial tier2up = RandomMaterial.random().allowHidden().tier(2, 4).material(includeInLoot).build();
 		equip(EntityType.PIGLIN).slot(EquipmentSlot.FEET).tool(JOTItems.LAVA_LOAFERS).chance(0.075f).material(tier2up).end();
-		equip(EntityType.ZOMBIE_VILLAGER).slot(EquipmentSlot.CHEST).tool(JOTItems.LAVA_LOAFERS).chance(0.25f).material(tier2up).end();
-		equip(EntityType.VINDICATOR).slot(EquipmentSlot.HEAD).tool(JOTItems.CRESTED_HELMET).chance(0.10f).material(tier2up).end();
+		equip(EntityType.ZOMBIE_VILLAGER).slot(EquipmentSlot.CHEST).tool(JOTItems.ROCKPUNCHERS).chance(0.2f).material(tier2up).end();
+		equip(EntityType.VINDICATOR).slot(EquipmentSlot.HEAD).tool(JOTItems.CRESTED_HELMET).chance(0.1f).material(tier2up).end();
+		equip(EntityType.WITHER_SKELETON).slot(EquipmentSlot.MAINHAND).tool(JOTItems.DECIMATOR).chance(0.1f).material(tier2up).end();
 	}
 
 	@Override
