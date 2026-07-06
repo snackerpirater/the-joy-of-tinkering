@@ -43,7 +43,7 @@
   "item.joy_of_tinkering.slimebronze_nugget": "Slimebronze Nugget",
   "itemGroup.joy_of_tinkering.joy_of_tinkering": "The Joy Of Tinkering",
   "material.joy_of_tinkering.slimebronze": "Slimebronze",
-  "material.joy_of_tinkering.slimebronze.encyclopedia": "Uses overslime to burn enemies",
+  "material.joy_of_tinkering.slimebronze.encyclopedia": "Consumes 1 extra overslime to burn enemies and increase fire damage by 20% per level for 5 seconds",
   "material.joy_of_tinkering.slimebronze.flavor": "Slime with a copper veneer",
   "material.joy_of_tinkering.sugar": "Sugar",
   "material.joy_of_tinkering.sugar.encyclopedia": "Prevents the projectile from dealing damage",

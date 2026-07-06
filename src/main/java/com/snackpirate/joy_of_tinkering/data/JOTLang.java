@@ -127,7 +127,7 @@ public class JOTLang extends LanguageProvider {
 		add("modifier.joy_of_tinkering.trick_bandolier.selected", "Trick Bandolier: Selected %s from slot %s");
 		addModifier(JOTModifierIds.extended, "Extended", "It costs $400,000 to fire this weapon, for twelve seconds", "Increases the ammo capacity of the gun");
 
-		addMaterial(slimebronze, "Slimebronze","Slime with a copper veneer", "Uses overslime to burn enemies");
+		addMaterial(slimebronze, "Slimebronze","Slime with a copper veneer", "Consumes 1 extra overslime to burn enemies and increase fire damage by 20% per level for 5 seconds");
 		addModifier(JOTModifierIds.overheat, "Overheat", "Brazen!", "Consumes overslime on hit to burn and debuff enemies");
 
 		addModifier(JOTModifierIds.junkshot, "Junkshot", "Random bullcrap go!", "Allows firing any ammo or throwable item from the gun, which consumes more durability");
