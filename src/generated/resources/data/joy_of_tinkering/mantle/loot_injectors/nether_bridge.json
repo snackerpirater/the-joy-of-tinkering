@@ -46,10 +46,19 @@
                   }
                 }
               ]
+            },
+            {
+              "add": false,
+              "damage": {
+                "type": "minecraft:uniform",
+                "max": 0.9,
+                "min": 0.1
+              },
+              "function": "minecraft:set_damage"
             }
           ],
           "name": "joy_of_tinkering:decimator",
-          "weight": 2
+          "weight": 4
         }
       ],
       "name": "main"

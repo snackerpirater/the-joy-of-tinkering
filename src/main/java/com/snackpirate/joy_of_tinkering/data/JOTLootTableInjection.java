@@ -73,7 +73,10 @@ public class JOTLootTableInjection extends AbstractLootTableInjectionProvider {
 						.build());
 		AddToolDataFunction.Builder ancientToolData4 = ancientToolData2.addMaterial(random).addMaterial(random);
 		injectChest("nether_bridge")
-				.addToPool("main", LootItem.lootTableItem(JOTItems.DECIMATOR).setWeight(2).apply(ancientToolData4).build());
+				.addToPool("main", LootItem.lootTableItem(JOTItems.DECIMATOR).setWeight(4)
+						.apply(ancientToolData4)
+						.apply(SetItemDamageFunction.setDamage(UniformGenerator.between(0.1f, 0.9f)))
+						.build());
 	}
 
 	@Override

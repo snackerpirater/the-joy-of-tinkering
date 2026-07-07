@@ -33,6 +33,7 @@ public class JOTItemTags extends ItemTagsProvider {
 	public static TagKey<Item> MOD_GUNS = ItemTags.create(JoyOfTinkering.id("modifiable_guns"));
 	public static TagKey<Item> JUNKSHOT_AMMO = ItemTags.create(JoyOfTinkering.id("junkshot_ammo"));
 	public static TagKey<Item> PROPELLANTS = ItemTags.create(JoyOfTinkering.id("propellants"));
+
 	@Override
 	protected void addTags(HolderLookup.Provider pProvider) {
 		tag(TERRAGUARD_CONSUMABLE).add(Items.CLAY, Items.CLAY_BALL);
