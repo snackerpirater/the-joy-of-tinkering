@@ -138,7 +138,6 @@ public class JoyOfTinkering {
 		gen.addProvider(server, materials);
 		gen.addProvider(server, new JOTMaterialStats(output, materials));
 		gen.addProvider(server, new JOTMaterialTraits(output, materials));
-		gen.addProvider(server, new JOTMaterialTags(output, helper));
 		JOTMaterialSprites materialSprites = new JOTMaterialSprites();
 		JOTToolSprites toolSprites = new JOTToolSprites(MOD_ID);
 		gen.addProvider(server, new JOTMaterialSprites.RenderInfo(output, materialSprites, helper));
