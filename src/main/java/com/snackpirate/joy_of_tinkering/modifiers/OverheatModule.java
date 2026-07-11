@@ -77,7 +77,7 @@ public record OverheatModule(LevelingValue time) implements ModifierModule, Proj
 	@Override
 	public void afterMeleeHit(IToolStackView tool, ModifierEntry modifier, ToolAttackContext context, float damageDealt) {
 		if (context.getAttacker().getItemBySlot(context.getSlotType()).is(TinkerTags.Items.ARMOR)) return;
-		if (OverslimeModule.INSTANCE.getAmount(tool) >= 2) {
+		if (OverslimeModule.INSTANCE.getAmount(tool) >= 2 && !context.getTarget().fireImmune()) {
 			setFire(tool.getModifiers(), modifier, context.getTarget());
 			OverslimeModule.INSTANCE.addAmount(tool, -1);
 		}
@@ -96,7 +96,7 @@ public record OverheatModule(LevelingValue time) implements ModifierModule, Proj
 	@Override
 	public boolean onProjectileHitEntity(ModifierNBT modifiers, ModDataNBT persistentData, ModifierEntry modifier, Projectile projectile, EntityHitResult hit, @org.jetbrains.annotations.Nullable LivingEntity attacker, @org.jetbrains.annotations.Nullable LivingEntity target, boolean notBlocked) {
 //		return ProjectileHitModifierHook.super.onProjectileHitEntity(modifiers, persistentData, modifier, projectile, hit, attacker, target, notBlocked);
-		if (persistentData.getBoolean(JoyOfTinkering.id("is_overburn"))) setFire(modifiers, modifier, hit.getEntity());
+		if (persistentData.getBoolean(JoyOfTinkering.id("is_overburn")) && !target.fireImmune()) setFire(modifiers, modifier, hit.getEntity());
 		return false;
 	}
 
