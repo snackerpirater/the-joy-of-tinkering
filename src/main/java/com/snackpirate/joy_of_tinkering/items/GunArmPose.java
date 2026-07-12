@@ -23,6 +23,7 @@ public class GunArmPose extends ModifiableItemClientExtension {
     public static final GunArmPose INSTANCE = new GunArmPose();
     @OnlyIn(Dist.CLIENT)
     public static HumanoidModel.ArmPose ONE_HANDED = HumanoidModel.ArmPose.create("TINKER_ADDITIONS_ONE_HANDED", false, (model, entity, arm) -> {
+        if (entity.swinging) return;
         ModelPart correctArm = arm == HumanoidArm.RIGHT ? model.rightArm : model.leftArm;
         correctArm.xRot =
                 model.head.xRot - (float)(Math.PI / 2);
@@ -33,6 +34,7 @@ public class GunArmPose extends ModifiableItemClientExtension {
 
     @OnlyIn(Dist.CLIENT)
     public static HumanoidModel.ArmPose TWO_HANDED = HumanoidModel.ArmPose.create("TINKER_ADDITIONS_TWO_HANDED", true, (model, entity, arm) -> {
+        if (entity.swinging) return;
         AnimationUtils.animateCrossbowHold(model.rightArm, model.leftArm, model.head, arm == HumanoidArm.RIGHT);
         ModelPart correctArm = arm == HumanoidArm.RIGHT ? model.rightArm : model.leftArm;
         correctArm.xRot =
