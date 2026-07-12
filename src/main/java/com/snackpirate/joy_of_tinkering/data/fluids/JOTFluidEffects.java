@@ -9,6 +9,7 @@ import slimeknights.tconstruct.library.json.LevelingValue;
 import slimeknights.tconstruct.library.modifiers.fluid.FluidMobEffect;
 import slimeknights.tconstruct.library.modifiers.fluid.TimeAction;
 import slimeknights.tconstruct.library.modifiers.fluid.block.MobEffectCloudFluidEffect;
+import slimeknights.tconstruct.library.modifiers.fluid.entity.FireFluidEffect;
 import slimeknights.tconstruct.library.modifiers.fluid.entity.MobEffectFluidEffect;
 import slimeknights.tconstruct.library.modifiers.fluid.general.ExplosionFluidEffect;
 import slimeknights.tconstruct.library.recipe.FluidValues;
@@ -25,6 +26,7 @@ public class JOTFluidEffects extends AbstractFluidEffectProvider {
 		addFluid(JOTFluids.moltenSlimebronze, FluidValues.NUGGET * 2)
 				.addEffect(ExplosionFluidEffect.radius(1, 1).damage(LevelingValue.eachLevel(1.5f)).placeFire().ignoreBlocks().build())
 				.addEntityEffect(new MobEffectFluidEffect(conductive, TimeAction.ADD))
+				.addEntityEffect(new FireFluidEffect(TimeAction.ADD, 3))
 				.addBlockEffect(new MobEffectCloudFluidEffect(conductive));
 	}
 

@@ -20,7 +20,7 @@ public record OverheatCounterModule(LevelingValue chance, LevelingValue constant
 
 	@Override
 	public void applyEffect(IToolStackView tool, ModifierEntry modifier, float value, EquipmentContext context, Entity attacker, DamageSource source, float damageDealt) {
-		if (OverslimeModule.INSTANCE.getAmount(tool) >= 2 && !attacker.fireImmune()) {
+		if (OverslimeModule.INSTANCE.getAmount(tool) >= 2 && !attacker.fireImmune() && !attacker.isInWater()) {
 			setFire(value, attacker);
 			OverslimeModule.INSTANCE.addAmount(tool, -1);
 		}
