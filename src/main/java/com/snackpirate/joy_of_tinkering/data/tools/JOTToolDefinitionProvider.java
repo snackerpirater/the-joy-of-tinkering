@@ -183,7 +183,6 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 						.part(TinkerToolParts.bowGrip)
 						.build())
 				.module(defaultFourParts)
-				.module(FixedMaterialToolName.FIRST)
 				.largeToolStartingSlots()
 				.build();
 		define(DECIMATOR)
