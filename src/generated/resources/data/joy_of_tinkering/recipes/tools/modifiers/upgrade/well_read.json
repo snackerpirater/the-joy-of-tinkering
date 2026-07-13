@@ -3,13 +3,13 @@
   "allow_crystal": true,
   "inputs": [
     {
-      "item": "minecraft:glass_pane"
+      "tag": "forge:glass_panes"
     },
     {
       "tag": "forge:ingots/steel"
     },
     {
-      "item": "minecraft:glass_pane"
+      "tag": "forge:glass_panes"
     }
   ],
   "result": "joy_of_tinkering:well_read",
