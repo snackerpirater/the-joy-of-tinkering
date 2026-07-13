@@ -12,6 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.IntersectionIngredient;
 import slimeknights.mantle.recipe.data.ICommonRecipeHelper;
 import slimeknights.mantle.recipe.helper.ItemOutput;
@@ -80,9 +81,9 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 		String compatSalvage = salvageFolder + "compat/";
 
 		ModifierRecipeBuilder.modifier(wellRead)
-				.addInput(Items.GLASS_PANE)
+				.addInput(Tags.Items.GLASS_PANES)
 				.addInput(TinkerMaterials.steel.getIngotTag())
-				.addInput(Items.GLASS_PANE)
+				.addInput(Tags.Items.GLASS_PANES)
 				.setSlots(SlotType.UPGRADE, 1)
 				.setTools(TinkerTags.Items.HELMETS)
 				.saveSalvage(consumer, location(salvageFolder + "well_read"))
