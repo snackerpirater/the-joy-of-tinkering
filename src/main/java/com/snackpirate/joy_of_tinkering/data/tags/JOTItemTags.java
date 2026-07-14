@@ -19,6 +19,7 @@ import org.jetbrains.annotations.Nullable;
 import slimeknights.mantle.registration.object.MetalItemObject;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.common.registration.CastItemObject;
+import slimeknights.tconstruct.fluids.TinkerFluids;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
@@ -30,6 +31,7 @@ public class JOTItemTags extends ItemTagsProvider {
 		super(pOutput, pLookupProvider, pBlockTags, modId, existingFileHelper);
 	}
 	public static TagKey<Item> TERRAGUARD_CONSUMABLE = ItemTags.create(JoyOfTinkering.id("terraguard_consumable"));
+	public static TagKey<Item> magmadaptiveConsumable = ItemTags.create(JoyOfTinkering.id("magmadaptive_consumable"));
 	public static TagKey<Item> MOD_GUNS = ItemTags.create(JoyOfTinkering.id("modifiable_guns"));
 	public static TagKey<Item> JUNKSHOT_AMMO = ItemTags.create(JoyOfTinkering.id("junkshot_ammo"));
 	public static TagKey<Item> PROPELLANTS = ItemTags.create(JoyOfTinkering.id("propellants"));
@@ -70,6 +72,7 @@ public class JOTItemTags extends ItemTagsProvider {
 		addMetalTags(JOTBlocks.slimebronze);
 		copy(TinkerTags.Blocks.ANVIL_METAL, ANVIL_METAL);
 
+		tag(magmadaptiveConsumable).add(Items.MAGMA_CREAM, Items.MAGMA_BLOCK, TinkerFluids.magmaBottle.get());
 		tag(JUNKSHOT_AMMO).add(Items.FIREWORK_ROCKET).addTag(THROWN_AMMO).addTag(ItemTags.ARROWS);
 		tag(PROPELLANTS).add(Items.GUNPOWDER, Items.REDSTONE, Items.GLOWSTONE_DUST, Items.SUGAR, Items.BONE_MEAL, Items.POWDER_SNOW_BUCKET, Items.PRISMARINE_CRYSTALS, Items.BLAZE_POWDER);
 	}
