@@ -46,8 +46,8 @@ public record MagmadaptiveModule(LevelingInt addedDuration, LevelingInt maxDurat
     private static final List<ModuleHook<?>> DEFAULT_HOOKS = HookProvider.<MagmadaptiveModule>defaultHooks(ModifierHooks.ARMOR_INTERACT, ModifierHooks.EQUIPMENT_CHANGE);
     private static final Map<Item, Integer> MULTIPLIERS = Map.of(
             Items.MAGMA_CREAM, 1,
-            Items.MAGMA_BLOCK, 4,
-            TinkerFluids.magmaBottle.get(), 4
+            Items.MAGMA_BLOCK, 2,
+            TinkerFluids.magmaBottle.get(), 2
     );
     @Override
     public RecordLoadable<? extends ModifierModule> getLoader() {

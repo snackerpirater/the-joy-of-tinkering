@@ -42,6 +42,7 @@ public class JOTMaterialTraits extends AbstractMaterialTraitDataProvider {
 		addTraits(MaterialIds.glowstone, PropellantMaterialStats.ID, ModifierIds.spectral);
 		addTraits(MaterialIds.prismarine, PropellantMaterialStats.ID, ModifierIds.finsAmmo);
 		addTraits(sugar, PropellantMaterialStats.ID, ModifierIds.soft);
+		addTraits(MaterialIds.magma, PropellantMaterialStats.ID, ModifierIds.fuse);
 	}
 
 	@Override

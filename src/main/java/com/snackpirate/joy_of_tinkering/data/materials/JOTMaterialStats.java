@@ -40,7 +40,7 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 			MaterialIds.silver, MaterialIds.electrum);
 	public static final List<MaterialVariantId> bulletPropellants = List.of(
 			MaterialIds.gunpowder, MaterialIds.blaze, MaterialIds.redstone, MaterialIds.ice,
-			MaterialIds.prismarine, MaterialIds.bone, MaterialIds.glowstone
+			MaterialIds.prismarine, MaterialIds.bone, MaterialIds.glowstone, MaterialIds.magma
 	);
 	public JOTMaterialStats(PackOutput packOutput, AbstractMaterialDataProvider materials) {
 		super(packOutput, materials);
@@ -166,6 +166,7 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 		addMaterialStats(MaterialIds.glowstone, new PropellantMaterialStats(2));
 		addMaterialStats(MaterialIds.prismarine, new PropellantMaterialStats(2.5f));
 		addMaterialStats(sugar, new PropellantMaterialStats(0f));
+		addMaterialStats(MaterialIds.magma, new PropellantMaterialStats(3f));
 	}
 
 	public void gunFromBowStats(MaterialId id, LimbMaterialStats limb, GripMaterialStats grip, int maxAmmo, float power) {

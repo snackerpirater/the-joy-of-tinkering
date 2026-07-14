@@ -4,10 +4,10 @@
     {
       "type": "joy_of_tinkering:magmadaptive",
       "added_duration": {
-        "each_level": 200
+        "each_level": 400
       },
       "max_duration": {
-        "each_level": 1200
+        "each_level": 2400
       }
     }
   ],

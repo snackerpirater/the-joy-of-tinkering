@@ -1,5 +1,11 @@
 {
   "perStat": {
+    "joy_of_tinkering:propellant": [
+      {
+        "level": 1,
+        "name": "tconstruct:fuse"
+      }
+    ],
     "tconstruct:skull": [
       {
         "level": 1,

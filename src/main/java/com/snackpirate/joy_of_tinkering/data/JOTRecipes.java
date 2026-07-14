@@ -141,6 +141,7 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 		bulletRecipe(Items.BONE_MEAL, MaterialIds.bone,  consumer);
 		bulletRecipe(Items.GLOWSTONE_DUST, MaterialIds.glowstone, consumer);
 		bulletRecipe(Items.PRISMARINE_CRYSTALS, MaterialIds.prismarine, consumer);
+		bulletRecipe(Items.MAGMA_CREAM, MaterialIds.magma, consumer);
 
 		ModifierRecipeBuilder.modifier(bulkBandolier)
 				.addInput(Items.LEATHER)

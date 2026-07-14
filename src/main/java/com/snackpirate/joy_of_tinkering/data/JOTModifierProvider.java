@@ -91,7 +91,7 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 				.build();
         buildModifier(magmadaptive)
                 .levelDisplay(ModifierLevelDisplay.SINGLE_LEVEL)
-                .addModule(new MagmadaptiveModule(LevelingInt.eachLevel(200), LevelingInt.eachLevel(1200)))
+                .addModule(new MagmadaptiveModule(LevelingInt.eachLevel(400), LevelingInt.eachLevel(2400)))
 				.build();
         buildModifier(magmaCubeDisguise)
                 .levelDisplay(ModifierLevelDisplay.NO_LEVELS)
