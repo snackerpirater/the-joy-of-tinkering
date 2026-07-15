@@ -1,0 +1,16 @@
+{
+  "default": [
+    {
+      "level": 1,
+      "name": "joy_of_tinkering:greed"
+    }
+  ],
+  "perStat": {
+    "tconstruct:maille": [
+      {
+        "level": 1,
+        "name": "tconstruct:reinforced"
+      }
+    ]
+  }
+}

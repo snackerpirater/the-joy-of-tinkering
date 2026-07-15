@@ -11,6 +11,8 @@ import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
 import slimeknights.tconstruct.tools.stats.SkullStats;
+import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
+
 import static com.snackpirate.joy_of_tinkering.registries.JOTMaterialIds.*;
 
 public class JOTMaterialTraits extends AbstractMaterialTraitDataProvider {
@@ -43,6 +45,9 @@ public class JOTMaterialTraits extends AbstractMaterialTraitDataProvider {
 		addTraits(MaterialIds.prismarine, PropellantMaterialStats.ID, ModifierIds.finsAmmo);
 		addTraits(sugar, PropellantMaterialStats.ID, ModifierIds.soft);
 		addTraits(MaterialIds.magma, PropellantMaterialStats.ID, ModifierIds.fuse);
+
+		addDefaultTraits(shimmervine, JOTModifierIds.greed);
+		addTraits(shimmervine, StatlessMaterialStats.MAILLE.getIdentifier(), ModifierIds.reinforced);
 	}
 
 	@Override

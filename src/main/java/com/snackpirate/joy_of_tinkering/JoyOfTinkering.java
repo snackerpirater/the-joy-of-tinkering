@@ -177,6 +177,7 @@ public class JoyOfTinkering {
 			ModifierModule.LOADER.register(id("crackshot"), CrackshotModule.LOADER);
 			ModifierModule.LOADER.register(id("burst_fire"), BurstfireModule.LOADER);
 			ModifierModule.LOADER.register(id("fire_on_crit"), FireOnCritModule.LOADER);
+			ModifierModule.LOADER.register(id("drop_mob_equipment"), DropMobEquipmentModule.LOADER);
 
 			ToolStackPredicate.LOADER.register(id("has_overslime"), JOTModifierProvider.HAS_OVERSLIME.getLoader());
 		}

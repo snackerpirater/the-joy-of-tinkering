@@ -8,14 +8,12 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.IntersectionIngredient;
 import slimeknights.mantle.recipe.data.ICommonRecipeHelper;
-import slimeknights.mantle.recipe.helper.ItemOutput;
 import slimeknights.mantle.recipe.ingredient.SizedIngredient;
 import slimeknights.mantle.registration.object.FluidObject;
 import slimeknights.tconstruct.common.TinkerTags;
@@ -28,7 +26,7 @@ import slimeknights.tconstruct.library.materials.definition.MaterialId;
 import slimeknights.tconstruct.library.materials.definition.MaterialVariantId;
 import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.recipe.alloying.AlloyRecipeBuilder;
-import slimeknights.tconstruct.library.recipe.casting.ItemCastingRecipeBuilder;
+import slimeknights.tconstruct.library.recipe.casting.material.CompositeCastingRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.casting.material.MaterialCastingRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.casting.material.ToolCastingRecipe;
 import slimeknights.tconstruct.library.recipe.ingredient.MaterialIngredient;
@@ -38,7 +36,6 @@ import slimeknights.tconstruct.library.recipe.partbuilder.recycle.PartBuilderToo
 import slimeknights.tconstruct.library.recipe.tinkerstation.building.MaterialSwappingRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.tinkerstation.building.ToolBuildingRecipeBuilder;
 import slimeknights.tconstruct.library.tools.SlotType;
-import slimeknights.tconstruct.library.tools.nbt.MaterialIdNBT;
 import slimeknights.tconstruct.shared.TinkerMaterials;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.TinkerToolParts;
@@ -49,7 +46,6 @@ import slimeknights.tconstruct.world.TinkerWorld;
 
 import static com.snackpirate.joy_of_tinkering.registries.JOTModifierIds.*;
 
-import java.util.Collections;
 import java.util.function.Consumer;
 
 public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper, IToolRecipeHelper, ISmelteryRecipeHelper, ICommonRecipeHelper {
@@ -227,6 +223,7 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 				.setTools(Ingredient.of(JOTItems.REVOLVER))
 				.saveSalvage(consumer, prefix(burstFire, abilitySalvage))
 				.save(consumer, prefix(burstFire, abilityFolder));
+		materialMeltingComposite(consumer, MaterialIds.vine, JOTMaterialIds.shimmervine, TinkerFluids.moltenEmerald, FluidValues.GEM, materialsFolder);
 	}
 
 	private static final String buildingFolder = "tools/building/";

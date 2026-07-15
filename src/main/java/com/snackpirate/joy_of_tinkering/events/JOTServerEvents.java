@@ -28,10 +28,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
 import net.minecraftforge.event.entity.EntityTeleportEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
-import net.minecraftforge.event.entity.living.LivingGetProjectileEvent;
-import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import net.minecraftforge.event.entity.living.LivingKnockBackEvent;
+import net.minecraftforge.event.entity.living.*;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
@@ -221,14 +218,15 @@ public class JOTServerEvents {
 //		}
 //	}
 
-	@SubscribeEvent
-	static void stickinessMovement(TickEvent.PlayerTickEvent event) {
-		Player entity = event.player;
-		if (entity.getAttributeValue(JOTAttributes.stickiness.get()) > 0) {
-//			if (entity.horizontalCollision) JoyOfTinkering.LOGGER.info("horiz");
-//			if (entity.minorHorizontalCollision) JoyOfTinkering.LOGGER.info("minor");
-		}
-	}
+//	@SubscribeEvent
+//	static void stickinessMovement(TickEvent.PlayerTickEvent event) {
+//		Player entity = event.player;
+//		if (entity.getAttributeValue(JOTAttributes.stickiness.get()) > 0) {
+////			if (entity.horizontalCollision) JoyOfTinkering.LOGGER.info("horiz");
+////			if (entity.minorHorizontalCollision) JoyOfTinkering.LOGGER.info("minor");
+//		}
+//	}
+
 	@net.minecraftforge.fml.common.Mod.EventBusSubscriber(modid = JoyOfTinkering.MOD_ID, bus = net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD)
 	private static class Mod {
 		@SubscribeEvent
