@@ -35,6 +35,8 @@
   },
   "material.joy_of_tinkering": {
     "slimebronze": "#ff8f3b",
-    "shimmervine": "#41f384"
+    "shimmervine": "#41f384",
+    "shimmervine.twisted": "#05dfc6",
+    "shimmervine.crimson": "#ff866f"
   }
 }
