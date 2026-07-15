@@ -149,7 +149,7 @@ public class JOTLang extends LanguageProvider {
 		addModifier(JOTModifierIds.kaboom, "Kaboom", "Kablooey!", "Critical melee attacks fire the gun!");
 
 		addMaterial(shimmervine, "Shimmervine", "Ooh shiny!", "Adds a 3.5% chance per level for killed mobs to drop their equipment, stacking with luck");
-		addMaterialVariant(twistedShimmervine, "Twisted Shimmervine");
+		addMaterialVariant(twistedShimmervine, "Twisting Shimmervine");
 		addMaterialVariant(crimsonShimmervine, "Weeping Shimmervine");
 		add("material.joy_of_tinkering.shimmervine.armor", "Reduces the chance for the tool to take damage. Has a 75% chance of taking damage at level 1, 55% chance at level 2, 40% at level 3, 30% at level 4, and 25% at level 5.");
 		addModifier(JOTModifierIds.greed, "Greed", "Biblical levels of greed", "Increases the chance for killed mobs to drop their equipment");
