@@ -224,6 +224,9 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 				.saveSalvage(consumer, prefix(burstFire, abilitySalvage))
 				.save(consumer, prefix(burstFire, abilityFolder));
 		materialMeltingComposite(consumer, MaterialIds.vine, JOTMaterialIds.shimmervine, TinkerFluids.moltenEmerald, FluidValues.GEM, materialsFolder);
+		materialMeltingComposite(consumer, MaterialIds.twistingVine, JOTMaterialIds.twistedShimmervine, TinkerFluids.moltenEmerald, FluidValues.GEM, materialsFolder);
+		materialMeltingComposite(consumer, MaterialIds.weepingVine, JOTMaterialIds.crimsonShimmervine, TinkerFluids.moltenEmerald, FluidValues.GEM, materialsFolder);
+
 	}
 
 	private static final String buildingFolder = "tools/building/";
