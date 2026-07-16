@@ -1,6 +1,6 @@
 {
   "type": "tconstruct:material_melting",
-  "input": "joy_of_tinkering:shimmervine#crimson",
+  "input": "joy_of_tinkering:shimmervine#twisting",
   "result": {
     "amount": 100,
     "fluid": "tconstruct:molten_emerald"

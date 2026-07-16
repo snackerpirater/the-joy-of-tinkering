@@ -4,7 +4,7 @@
     "amount": 100,
     "tag": "tconstruct:molten_emerald"
   },
-  "input": "tconstruct:twisting_vine",
-  "output": "joy_of_tinkering:shimmervine#twisted",
+  "input": "tconstruct:weeping_vine",
+  "output": "joy_of_tinkering:shimmervine#weeping",
   "temperature": 934
 }
