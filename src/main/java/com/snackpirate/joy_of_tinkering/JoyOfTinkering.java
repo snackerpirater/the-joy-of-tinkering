@@ -132,6 +132,7 @@ public class JoyOfTinkering {
 		gen.addProvider(server, new JOTFluidTextures.BucketModels(output));
 		gen.addProvider(server, new JOTFluidTags(output, provider, JoyOfTinkering.MOD_ID, helper));
 		gen.addProvider(server, new JOTRecipes(output));
+		gen.addProvider(server, new JOTRecipes.FluidTransfer(output));
 		gen.addProvider(server, new JOTStationLayoutProvider(output));
 		gen.addProvider(server, new JOTLootTableInjection(output, MOD_ID));
 		gen.addProvider(server, new JOTLang(output, MOD_ID, "en_us"));

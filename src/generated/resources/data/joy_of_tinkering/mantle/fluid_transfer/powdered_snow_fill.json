@@ -1,0 +1,11 @@
+{
+  "type": "mantle:fill_item",
+  "fluid": {
+    "amount": 250,
+    "tag": "forge:powdered_snow"
+  },
+  "input": {
+    "item": "minecraft:glass_bottle"
+  },
+  "result": "joy_of_tinkering:powder_snow_bottle"
+}

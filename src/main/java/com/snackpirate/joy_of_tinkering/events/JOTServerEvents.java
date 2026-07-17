@@ -21,9 +21,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
@@ -34,16 +36,21 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import slimeknights.tconstruct.common.Sounds;
 import slimeknights.tconstruct.common.TinkerEffect;
 import slimeknights.tconstruct.common.TinkerTags;
+import slimeknights.tconstruct.fluids.TinkerFluids;
+import slimeknights.tconstruct.fluids.util.ConstantFluidContainerWrapper;
 import slimeknights.tconstruct.library.events.teleport.ReturningTeleportEvent;
 import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.hook.mining.BreakSpeedContext;
+import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.tools.definition.module.mining.IsEffectiveToolHook;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.helper.ToolHarvestLogic;
@@ -83,6 +90,19 @@ public class JOTServerEvents {
 				}
 				event.setCanceled(true);
 			}
+		}
+	}
+	@SubscribeEvent
+	static void fluidCaps(AttachCapabilitiesEvent<ItemStack> event) {
+		ItemStack stack = event.getObject();
+		itemPouring(event, stack, JOTItems.powderSnowBottle.get(), TinkerFluids.powderedSnow.get(), FluidValues.BOTTLE, Items.GLASS.getDefaultInstance());
+	}
+	public static void itemPouring(AttachCapabilitiesEvent<ItemStack> event, ItemStack itemStack, Item input, Fluid fluidObject, int amount, ItemStack output) {
+		if (itemStack.getItem().equals(input)) {
+			event.addCapability(
+					JoyOfTinkering.id("pouring_capability_" + ForgeRegistries.ITEMS.getKey(input).getPath()),
+					new ConstantFluidContainerWrapper(new FluidStack(fluidObject, amount), itemStack, output)
+			);
 		}
 	}
 

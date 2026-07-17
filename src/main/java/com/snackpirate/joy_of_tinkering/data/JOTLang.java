@@ -153,6 +153,8 @@ public class JOTLang extends LanguageProvider {
 		addMaterialVariant(crimsonShimmervine, "Weeping Shimmervine");
 		add("material.joy_of_tinkering.shimmervine.armor", "Reduces the chance for the tool to take damage. Has a 75% chance of taking damage at level 1, 55% chance at level 2, 40% at level 3, 30% at level 4, and 25% at level 5.");
 		addModifier(JOTModifierIds.greed, "Greed", "Biblical levels of greed", "Increases the chance for killed mobs to drop their equipment");
+
+		addItem(JOTItems.powderSnowBottle, "Powder Snow Bottle");
 	}
 
 	public void addModifier(ModifierId modifier, String name, String flavour, String desc) {
