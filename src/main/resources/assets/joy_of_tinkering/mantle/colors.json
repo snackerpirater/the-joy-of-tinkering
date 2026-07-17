@@ -21,6 +21,7 @@
     "headbutt": "#ff970d",
     "crackshot": "#ffb823",
     "kaboom": "#c10a00",
+    "greed": "#41f384",
 
     "bulk_bandolier":  "#C65C35",
     "trick_bandolier": "#F7CDBB",
@@ -33,6 +34,9 @@
     "overheat": "#ff8f3b"
   },
   "material.joy_of_tinkering": {
-    "slimebronze": "#ff8f3b"
+    "slimebronze": "#ff8f3b",
+    "shimmervine": "#41f384",
+    "shimmervine.twisting": "#05dfc6",
+    "shimmervine.weeping": "#ff866f"
   }
 }

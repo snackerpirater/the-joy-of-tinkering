@@ -19,6 +19,7 @@ public class JOTEntityTags extends EntityTypeTagsProvider {
 
 	public static final TagKey<EntityType<?>> WEAKPOINT_TOP = TagKey.create(Registries.ENTITY_TYPE, JoyOfTinkering.id("weakpoint/head_top"));
 	public static final TagKey<EntityType<?>> WEAKPOINT_SIDE = TagKey.create(Registries.ENTITY_TYPE, JoyOfTinkering.id("weakpoint/head_side"));
+	public static final TagKey<EntityType<?>> GREED_IMMUNE = TagKey.create(Registries.ENTITY_TYPE, JoyOfTinkering.id("greed_immune"));
 
 	public JOTEntityTags(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pProvider, String modId, @Nullable ExistingFileHelper existingFileHelper) {
 		super(pOutput, pProvider, modId, existingFileHelper);
@@ -88,5 +89,6 @@ public class JOTEntityTags extends EntityTypeTagsProvider {
 						EntityType.ZOGLIN,
 						EntityType.ZOMBIE_HORSE
 				);
+		tag(GREED_IMMUNE).add(EntityType.HORSE, EntityType.DONKEY, EntityType.MULE, EntityType.PLAYER);
 	}
 }

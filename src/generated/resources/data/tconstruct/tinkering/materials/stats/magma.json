@@ -1,5 +1,8 @@
 {
   "stats": {
+    "joy_of_tinkering:propellant": {
+      "proj_power": 3.0
+    },
     "tconstruct:repair_kit": {},
     "tconstruct:skull": {
       "armor": 1,

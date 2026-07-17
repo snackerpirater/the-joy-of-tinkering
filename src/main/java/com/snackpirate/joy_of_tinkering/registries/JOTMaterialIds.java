@@ -8,6 +8,9 @@ import slimeknights.tconstruct.tools.data.material.MaterialIds;
 public class JOTMaterialIds {
 	public static final MaterialId slimebronze = createMaterial("slimebronze");
 	public static final MaterialId sugar = createMaterial("sugar");
+	public static final MaterialId shimmervine = createMaterial("shimmervine");
+	public static final MaterialVariantId twistedShimmervine = MaterialVariantId.create(shimmervine, "twisting");
+	public static final MaterialVariantId crimsonShimmervine = MaterialVariantId.create(shimmervine, "weeping");
 	private static MaterialId createMaterial(String name) {
 		return new MaterialId(JoyOfTinkering.id(name));
 	}

@@ -1,0 +1,12 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:drop_mob_equipment",
+      "chance": {
+        "flat": 0.035
+      }
+    }
+  ],
+  "tooltip_display": "always"
+}

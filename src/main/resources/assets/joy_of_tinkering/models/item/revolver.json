@@ -34,5 +34,11 @@
     { "name": "body",   "index": 0 },
     { "name": "cylinder",   "index": 1 },
     { "name": "grip", "index": 2 }
+  ],
+  "overrides": [
+    {
+      "predicate": { "tconstruct:charging": 2 },
+      "model": "joy_of_tinkering:item/tool/revolver/blocking"
+    }
   ]
 }

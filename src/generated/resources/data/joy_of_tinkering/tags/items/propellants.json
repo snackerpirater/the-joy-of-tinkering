@@ -1,10 +1,11 @@
 {
   "values": [
+    "minecraft:magma_cream",
     "minecraft:gunpowder",
     "minecraft:glowstone_dust",
     "minecraft:sugar",
     "minecraft:bone_meal",
-    "minecraft:powder_snow_bucket",
+    "joy_of_tinkering:powder_snow_bottle",
     "minecraft:prismarine_crystals",
     "minecraft:blaze_powder"
   ]

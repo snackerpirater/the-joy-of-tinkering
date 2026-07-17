@@ -5,7 +5,7 @@
   ],
   "extra_requirements": [
     {
-      "item": "minecraft:powder_snow_bucket"
+      "item": "joy_of_tinkering:powder_snow_bottle"
     }
   ],
   "result": "joy_of_tinkering:bullet",

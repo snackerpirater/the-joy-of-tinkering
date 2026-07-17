@@ -11,6 +11,8 @@ import slimeknights.tconstruct.library.client.data.material.AbstractMaterialRend
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialSpriteProvider;
 import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToColorMapping;
 import slimeknights.tconstruct.library.client.data.spritetransformer.RecolorSpriteTransformer;
+import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
+
 import static com.snackpirate.joy_of_tinkering.registries.JOTMaterialIds.*;
 
 public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
@@ -46,6 +48,40 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 						.addARGB(216, 0xFFeaeaea)
 						.addARGB(255, 0xFFffffff)
 						.build()));
+		buildMaterial(shimmervine)
+				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).maille().repairKit()
+				.fallbacks("primitive", "cloth")
+				.transformer(new RecolorSpriteTransformer(GreyToColorMapping.builderFromBlack()
+						.addARGB(63,  0xFF005300)
+						.addARGB(102, 0xFF007b18)
+						.addARGB(140, 0xFF00aa2c)
+						.addARGB(178, 0xFF17dd62)
+						.addARGB(216, 0xFF41f384)
+						.addARGB(255, 0xFFaffdcd)
+						.build()));
+		buildMaterial(twistedShimmervine)
+				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).maille().repairKit()
+				.fallbacks("primitive", "cloth")
+				.transformer(new RecolorSpriteTransformer(GreyToColorMapping.builderFromBlack()
+						.addARGB(63,  0xFF005582)
+						.addARGB(102, 0xFF1681e7)
+						.addARGB(140, 0xFF44aeff)
+						.addARGB(178, 0xFF7dbfff)
+						.addARGB(216, 0xFFb3d5ff)
+						.addARGB(255, 0xFFf0ffff)
+						.build()));
+
+		buildMaterial(crimsonShimmervine)
+				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).maille().repairKit()
+				.fallbacks("primitive", "cloth")
+				.transformer(new RecolorSpriteTransformer(GreyToColorMapping.builderFromBlack()
+						.addARGB(63,  0xFF933249)
+						.addARGB(102, 0xFFd24d54)
+						.addARGB(140, 0xFFff6c69)
+						.addARGB(178, 0xFFff866f)
+						.addARGB(216, 0xFFffa180)
+						.addARGB(255, 0xFFffc6ac)
+						.build()));
 	}
 	public static class RenderInfo extends AbstractMaterialRenderInfoProvider {
 
@@ -56,6 +92,9 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 		@Override
 		protected void addMaterialRenderInfo() {
 			buildRenderInfo(slimebronze).color(0xff6313).fallbacks("slime_metal", "metal");
+			buildRenderInfo(shimmervine).color(0x41f384).fallbacks("primitive", "cloth");
+			buildRenderInfo(crimsonShimmervine).color(0xff866f).fallbacks("primitive", "cloth");
+			buildRenderInfo(twistedShimmervine).color(0x05dfc6).fallbacks("primitive", "cloth");
 			buildRenderInfo(sugar).color(0xffffff).fallbacks("crystal");
 		}
 

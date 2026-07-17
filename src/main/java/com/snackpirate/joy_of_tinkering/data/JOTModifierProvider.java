@@ -91,7 +91,7 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 				.build();
         buildModifier(magmadaptive)
                 .levelDisplay(ModifierLevelDisplay.SINGLE_LEVEL)
-                .addModule(MagmadaptiveModule.INSTANCE)
+                .addModule(new MagmadaptiveModule(LevelingInt.eachLevel(400), LevelingInt.eachLevel(2400)))
 				.build();
         buildModifier(magmaCubeDisguise)
                 .levelDisplay(ModifierLevelDisplay.NO_LEVELS)
@@ -172,6 +172,11 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 				.addModule(FireOnCritModule.INSTANCE)
 				.addModule(StatBoostModule.add(JOTToolStats.MAX_AMMO).flat(-2f))
 				.levelDisplay(ModifierLevelDisplay.NO_LEVELS)
+				.build();
+		buildModifier(greed)
+				//max without greed: 8.5% + 6% looting 6 = 14.5%
+				//max with greed: 8.5% + 5% looting 5 + 3.5% = 17%
+				.addModule(new DropMobEquipmentModule(LevelingValue.flat(0.035f))) //base is 8.5%, looting is +1% or 0.01
 				.build();
 	}
 

@@ -43,7 +43,7 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 	public static final List<MaterialVariantId> bulletPropellants = List.of(
 			MaterialIds.gunpowder, MaterialIds.blaze,
 //			MaterialIds.redstone,
-			MaterialIds.ice, MaterialIds.prismarine, MaterialIds.bone, MaterialIds.glowstone
+			MaterialIds.ice, MaterialIds.prismarine, MaterialIds.bone, MaterialIds.glowstone, MaterialIds.magma
 	);
 	public JOTMaterialStats(PackOutput packOutput, AbstractMaterialDataProvider materials) {
 		super(packOutput, materials);
@@ -51,16 +51,11 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 
 	@Override
 	protected void addMaterialStats() {
-//		addMaterialStats(MaterialIds.earthslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120));
-//		addMaterialStats(MaterialIds.skyslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(90));
-//		addMaterialStats(MaterialIds.enderslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120));
-//		addMaterialStats(MaterialIds.magma, StatlessMaterialStats.REPAIR_KIT, new SkullStats(100));
-//		addMaterialStats(MaterialIds.clay, StatlessMaterialStats.REPAIR_KIT, new SkullStats(150));
-		addMaterialStats(MaterialIds.earthslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120, 2));
-		addMaterialStats(MaterialIds.skyslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(90, 1));
-		addMaterialStats(MaterialIds.enderslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120, 0));
-		addMaterialStats(MaterialIds.magma, StatlessMaterialStats.REPAIR_KIT, new SkullStats(100, 1));
-		addMaterialStats(MaterialIds.clay, StatlessMaterialStats.REPAIR_KIT, new SkullStats(150, 2));
+		addMaterialStats(MaterialIds.earthslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120));
+		addMaterialStats(MaterialIds.skyslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(90));
+		addMaterialStats(MaterialIds.enderslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120));
+		addMaterialStats(MaterialIds.magma, StatlessMaterialStats.REPAIR_KIT, new SkullStats(100));
+		addMaterialStats(MaterialIds.clay, StatlessMaterialStats.REPAIR_KIT, new SkullStats(150));
 		//gun materials w/o bullet casings
 		addMaterialStats(MaterialIds.roseGold,
 				new GunBarrelMaterialStats(175, -0.25f, 0.2f),
@@ -174,6 +169,9 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 		addMaterialStats(MaterialIds.glowstone, new PropellantMaterialStats(2));
 		addMaterialStats(MaterialIds.prismarine, new PropellantMaterialStats(2.5f));
 		addMaterialStats(sugar, new PropellantMaterialStats(0f));
+		addMaterialStats(MaterialIds.magma, new PropellantMaterialStats(3f));
+
+		addMaterialStats(shimmervine, StatlessMaterialStats.BOWSTRING, StatlessMaterialStats.MAILLE, StatlessMaterialStats.BINDING);
 	}
 
 	public void gunFromBowStats(MaterialId id, LimbMaterialStats limb, GripMaterialStats grip, int maxAmmo, float power) {

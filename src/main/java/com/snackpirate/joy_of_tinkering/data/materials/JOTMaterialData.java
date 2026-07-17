@@ -12,6 +12,7 @@ public class JOTMaterialData extends AbstractMaterialDataProvider {
 	@Override
 	protected void addMaterials() {
 		addMaterial(slimebronze, 3, ORDER_GENERAL + 5, false);
+		addMaterial(shimmervine, 3, ORDER_RANGED + 6, true);
 		addMaterial(sugar, 1, ORDER_RANGED, true);
 	}
 

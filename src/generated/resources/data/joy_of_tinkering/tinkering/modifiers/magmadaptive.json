@@ -2,7 +2,13 @@
   "level_display": "tconstruct:single_level",
   "modules": [
     {
-      "type": "joy_of_tinkering:magmadaptive"
+      "type": "joy_of_tinkering:magmadaptive",
+      "added_duration": {
+        "each_level": 400
+      },
+      "max_duration": {
+        "each_level": 2400
+      }
     }
   ],
   "tooltip_display": "always"

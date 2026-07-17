@@ -12,10 +12,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.IntersectionIngredient;
+import slimeknights.mantle.fluid.transfer.AbstractFluidContainerTransferProvider;
+import slimeknights.mantle.fluid.transfer.FillFluidContainerTransfer;
 import slimeknights.mantle.recipe.data.ICommonRecipeHelper;
 import slimeknights.mantle.recipe.helper.ItemOutput;
+import slimeknights.mantle.recipe.ingredient.FluidIngredient;
 import slimeknights.mantle.recipe.ingredient.SizedIngredient;
 import slimeknights.mantle.registration.object.FluidObject;
 import slimeknights.tconstruct.common.TinkerTags;
@@ -133,10 +137,11 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 		bulletRecipe(Items.BLAZE_POWDER, MaterialIds.blaze, consumer);
 //		bulletRecipe(Items.REDSTONE, MaterialIds.redstone, consumer);
 		bulletRecipe(Items.SUGAR, JOTMaterialIds.sugar, consumer);
-		bulletRecipe(Items.POWDER_SNOW_BUCKET, MaterialIds.ice, consumer);
+		bulletRecipe(JOTItems.powderSnowBottle, MaterialIds.ice, consumer);
 		bulletRecipe(Items.BONE_MEAL, MaterialIds.bone,  consumer);
 		bulletRecipe(Items.GLOWSTONE_DUST, MaterialIds.glowstone, consumer);
 		bulletRecipe(Items.PRISMARINE_CRYSTALS, MaterialIds.prismarine, consumer);
+		bulletRecipe(Items.MAGMA_CREAM, MaterialIds.magma, consumer);
 
 		ModifierRecipeBuilder.modifier(bulkBandolier)
 				.addInput(Items.LEATHER)
@@ -222,6 +227,15 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 				.setTools(Ingredient.of(JOTItems.REVOLVER))
 				.saveSalvage(consumer, prefix(burstFire, abilitySalvage))
 				.save(consumer, prefix(burstFire, abilityFolder));
+		materialMeltingComposite(consumer, MaterialIds.vine, JOTMaterialIds.shimmervine, TinkerFluids.moltenEmerald, FluidValues.GEM, materialsFolder);
+		materialMeltingComposite(consumer, MaterialIds.twistingVine, JOTMaterialIds.twistedShimmervine, TinkerFluids.moltenEmerald, FluidValues.GEM, materialsFolder);
+		materialMeltingComposite(consumer, MaterialIds.weepingVine, JOTMaterialIds.crimsonShimmervine, TinkerFluids.moltenEmerald, FluidValues.GEM, materialsFolder);
+
+		ItemCastingRecipeBuilder.tableRecipe(JOTItems.powderSnowBottle)
+				.setFluid(TinkerFluids.powderedSnow.ingredient(FluidValues.BOTTLE))
+				.setCoolingTime(1)
+				.setCast(Items.GLASS_BOTTLE, true)
+				.save(consumer, location(castingFolder + "bottle"));
 	}
 
 	private static final String buildingFolder = "tools/building/";
@@ -246,6 +260,25 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 				.setCast(skull, true)
 				.setFluidAndTime(TinkerFluids.enderSlime, FluidValues.SLIME_CONGEALED * 5)
 				.save(consumer, location(folder + "slime_skull/" + material.getPath()));
+	}
+	public static class FluidTransfer extends AbstractFluidContainerTransferProvider {
+
+		public FluidTransfer(PackOutput packOutput) {
+			super(packOutput, JoyOfTinkering.MOD_ID);
+		}
+
+		@Override
+		protected void addTransfers() {
+			addFillEmpty("powdered_snow_", JOTItems.powderSnowBottle, Items.GLASS_BOTTLE, TinkerFluids.powderedSnow, FluidValues.BOTTLE, false);
+		}
+
+		@Override
+		public String getName() {
+			return "Joy Of Tinkering Fluid Transfer Provider";
+		}
+		protected void addBottleFill(String name, ItemLike output, Fluid fluid) {
+			addTransfer(name + "_fill", new FillFluidContainerTransfer(Ingredient.of(Items.GLASS_BOTTLE), ItemOutput.fromItem(output), FluidIngredient.of(fluid, FluidValues.BOTTLE)));
+		}
 	}
 
 	@Override

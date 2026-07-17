@@ -13,7 +13,6 @@ import slimeknights.mantle.registration.object.ItemObject;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension;
-import slimeknights.tconstruct.library.materials.IMaterialRegistry;
 import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.library.materials.definition.IMaterial;
 import slimeknights.tconstruct.library.materials.definition.MaterialVariant;
@@ -62,6 +61,8 @@ public class JOTItems {
 
 	public static final ItemObject<ModifiableGunItem> DECIMATOR = ITEMS.register("decimator", () -> new ModifiableDecimator(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.DECIMATOR));
 
+	public static final ItemObject<Item> powderSnowBottle = ITEMS.register("powder_snow_bottle", () -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
+
 	public static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
 		output.accept(JOTBlocks.slimebronze.getIngot());
 		output.accept(JOTBlocks.slimebronze.getNugget());
@@ -72,6 +73,7 @@ public class JOTItems {
 		output.accept(BUCKET_OF_TERRACUBE);
 		output.accept(BUCKET_OF_SKYSLIME);
 		output.accept(BUCKET_OF_ENDERSLIME);
+		output.accept(powderSnowBottle);
 
 		output.accept(ToolBuildHandler.buildItemFromMaterials(TinkerTools.slimesuit.get(ArmorItem.Type.HELMET), MaterialNBT.of(MaterialRegistry.getMaterial(MaterialIds.earthslime), MaterialRegistry.getMaterial(MaterialIds.earthslime))));
 		output.accept(ToolBuildHandler.buildItemFromMaterials(TinkerTools.slimesuit.get(ArmorItem.Type.HELMET), MaterialNBT.of(MaterialRegistry.getMaterial(MaterialIds.magma), MaterialRegistry.getMaterial(MaterialIds.magma))));
