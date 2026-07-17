@@ -51,11 +51,11 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 
 	@Override
 	protected void addMaterialStats() {
-		addMaterialStats(MaterialIds.earthslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120));
-		addMaterialStats(MaterialIds.skyslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(90));
-		addMaterialStats(MaterialIds.enderslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120));
-		addMaterialStats(MaterialIds.magma, StatlessMaterialStats.REPAIR_KIT, new SkullStats(100));
-		addMaterialStats(MaterialIds.clay, StatlessMaterialStats.REPAIR_KIT, new SkullStats(150));
+		addMaterialStats(MaterialIds.earthslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120, 2));
+		addMaterialStats(MaterialIds.skyslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(90, 1));
+		addMaterialStats(MaterialIds.enderslime, StatlessMaterialStats.REPAIR_KIT, new SkullStats(120, 0));
+		addMaterialStats(MaterialIds.magma, StatlessMaterialStats.REPAIR_KIT, new SkullStats(100, 1));
+		addMaterialStats(MaterialIds.clay, StatlessMaterialStats.REPAIR_KIT, new SkullStats(150, 2));
 		//gun materials w/o bullet casings
 		addMaterialStats(MaterialIds.roseGold,
 				new GunBarrelMaterialStats(175, -0.25f, 0.2f),

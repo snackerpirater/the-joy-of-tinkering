@@ -78,7 +78,7 @@ public record MagmadaptiveModule(LevelingInt addedDuration, LevelingInt maxDurat
                         hasMagma = true;
                         if (!level.isClientSide) {
                             multiplier = MULTIPLIERS.getOrDefault(stack.getItem(), 1);
-                            JoyOfTinkering.LOGGER.info("item {} multiplier {}", stack.getItem().getDescriptionId(), multiplier);
+//                            JoyOfTinkering.LOGGER.info("item {} multiplier {}", stack.getItem().getDescriptionId(), multiplier);
                             stack.shrink(1);
                             if (stack.isEmpty()) {
                                 if (stack.is(TinkerFluids.magmaBottle.get())) {

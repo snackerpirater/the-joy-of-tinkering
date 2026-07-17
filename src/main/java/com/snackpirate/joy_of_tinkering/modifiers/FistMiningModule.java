@@ -101,6 +101,6 @@ public enum FistMiningModule implements ModifierModule, BreakSpeedModifierHook, 
 
 	@Override
 	public void finishHarvest(IToolStackView tool, ModifierEntry modifier, ToolHarvestContext context, int harvested) {
-		JoyOfTinkering.LOGGER.info("block harvest finish");
+//		JoyOfTinkering.LOGGER.info("block harvest finish");
 	}
 }

@@ -4,7 +4,7 @@
     {
       "type": "joy_of_tinkering:drop_mob_equipment",
       "chance": {
-        "flat": 0.035
+        "each_level": 0.035
       }
     }
   ],

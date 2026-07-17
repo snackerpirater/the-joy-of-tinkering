@@ -75,18 +75,26 @@ public record DropMobEquipmentModule(LevelingValue chance) implements ModifierMo
 
 	@Override
 	public void processLoot(IToolStackView tool, ModifierEntry modifier, List<ItemStack> generatedLoot, LootContext context) {
+//		JoyOfTinkering.LOGGER.info("greed 1");
 		if (!context.hasParam(LootContextParams.DAMAGE_SOURCE)) {
 			return;
 		}
+//		JoyOfTinkering.LOGGER.info("greed 2");
 		// must have an entity
 		Entity entity = context.getParamOrNull(LootContextParams.THIS_ENTITY);
 		if (entity instanceof Mob mob && !mob.getType().is(JOTEntityTags.GREED_IMMUNE)) {
+//			JoyOfTinkering.LOGGER.info("greed 3");
 			for (EquipmentSlot slot: EquipmentSlot.values()) {
-				if (!mob.getItemBySlot(slot).isEmpty()) {
+				if (!mob.getItemBySlot(slot).isEmpty() && mob.getEquipmentDropChance(slot) != 2) {
+//					JoyOfTinkering.LOGGER.info("greed 4 slot {}", slot.getName());
 					ItemStack item = mob.getItemBySlot(slot);
 					generatedLoot.remove(item);
 					float chanceToDrop = mob.getEquipmentDropChance(slot) + (0.01f*context.getLootingModifier()) + chance.compute(modifier.getLevel());
-					if (context.getRandom().nextFloat() < chanceToDrop) generatedLoot.add(item);
+//					JoyOfTinkering.LOGGER.info("chance to drop {} + {} + {}", mob.getEquipmentDropChance(slot), (0.01f*context.getLootingModifier()), chance.compute(modifier.getLevel()));
+					if (context.getRandom().nextFloat() < chanceToDrop) {
+//						JoyOfTinkering.LOGGER.info("success");
+						generatedLoot.add(item);
+					}
 				}
 			}
 		}
