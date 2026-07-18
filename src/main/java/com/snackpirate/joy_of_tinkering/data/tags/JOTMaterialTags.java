@@ -14,7 +14,8 @@ public class JOTMaterialTags extends AbstractMaterialTagProvider {
 
 	@Override
 	protected void addTags() {
-		tag(TinkerTags.Materials.MELEE).add(JOTMaterialIds.slimebronze);
+		tag(TinkerTags.Materials.MELEE).add(JOTMaterialIds.slimebronze, JOTMaterialIds.shimmervine);
+
 		tag(TinkerTags.Materials.BALANCED).add(JOTMaterialIds.slimebronze);
 	}
 
