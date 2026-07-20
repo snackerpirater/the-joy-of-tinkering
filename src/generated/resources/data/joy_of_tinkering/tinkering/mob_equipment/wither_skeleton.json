@@ -15,6 +15,45 @@
           "max": 4,
           "min": 2
         }
+      },
+      {
+        "type": "tconstruct:random",
+        "allow_hidden": true,
+        "material": {
+          "type": "mantle:inverted",
+          "inverted_type": "mantle:tag",
+          "tag": "tconstruct:exclude_from_loot"
+        },
+        "tier": {
+          "max": 4,
+          "min": 2
+        }
+      },
+      {
+        "type": "tconstruct:random",
+        "allow_hidden": true,
+        "material": {
+          "type": "mantle:inverted",
+          "inverted_type": "mantle:tag",
+          "tag": "tconstruct:exclude_from_loot"
+        },
+        "tier": {
+          "max": 4,
+          "min": 2
+        }
+      },
+      {
+        "type": "tconstruct:random",
+        "allow_hidden": true,
+        "material": {
+          "type": "mantle:inverted",
+          "inverted_type": "mantle:tag",
+          "tag": "tconstruct:exclude_from_loot"
+        },
+        "tier": {
+          "max": 4,
+          "min": 2
+        }
       }
     ],
     "priority": 100,
