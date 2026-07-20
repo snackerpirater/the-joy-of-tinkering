@@ -113,7 +113,7 @@ public class JOTClientEvents {
 		private static final int SLOT_BACKGROUND_SIZE = 22;
 		@SubscribeEvent
 		static void equipmentChange(ToolEquipmentChangeEvent event) {
-//			JoyOfTinkering.LOGGER.info("equip change");
+			JoyOfTinkering.LOGGER.info("equip change");
 			if (event.getEntity() != Minecraft.getInstance().player) {
 				return;
 			}
@@ -220,7 +220,8 @@ public class JOTClientEvents {
 //					}
 					float angleIncrement = (float) (2*Math.PI/magRight);
 					for (int i = 0; i < count; i++) {
-						mc.gui.renderSlot(graphics, (int) (xStart + (SLOT_BACKGROUND_SIZE*1*Mth.cos(angleIncrement*i-Mth.HALF_PI))), (int) (yStart + (SLOT_BACKGROUND_SIZE*1*Mth.sin(angleIncrement*i-Mth.HALF_PI))), partialTicks, player, bulletsRight.get(i), i);
+//						mc.gui.renderSlot(graphics, (int) (xStart + (SLOT_BACKGROUND_SIZE*1*Mth.cos(angleIncrement*i-Mth.HALF_PI))), (int) (yStart + (SLOT_BACKGROUND_SIZE*1*Mth.sin(angleIncrement*i-Mth.HALF_PI))), partialTicks, player, bulletsRight.get(i), i);
+						graphics.renderItem(bulletsRight.get(i), (int) (xStart + (SLOT_BACKGROUND_SIZE*1*Mth.cos(angleIncrement*i-Mth.HALF_PI))), (int) (yStart + (SLOT_BACKGROUND_SIZE*1*Mth.sin(angleIncrement*i-Mth.HALF_PI))));
 					}
 				}
 
@@ -276,7 +277,8 @@ public class JOTClientEvents {
 //					}
 					float angleIncrement = (float) (2*Math.PI/magLeft);
 					for (int i = 0; i < count; i++) {
-						mc.gui.renderSlot(graphics, (int) (xStart + (-SLOT_BACKGROUND_SIZE*1*Mth.cos(angleIncrement*i-Mth.HALF_PI))), (int) (yStart + (SLOT_BACKGROUND_SIZE*1*Mth.sin(angleIncrement*i-Mth.HALF_PI))), partialTicks, player, bulletsLeft.get(i), i);
+//						mc.gui.renderSlot(graphics, (int) (xStart + (-SLOT_BACKGROUND_SIZE*1*Mth.cos(angleIncrement*i-Mth.HALF_PI))), (int) (yStart + (SLOT_BACKGROUND_SIZE*1*Mth.sin(angleIncrement*i-Mth.HALF_PI))), partialTicks, player, bulletsLeft.get(i), i);
+						graphics.renderItem(bulletsLeft.get(i), (int) (xStart + (-SLOT_BACKGROUND_SIZE*1*Mth.cos(angleIncrement*i-Mth.HALF_PI))), (int) (yStart + (SLOT_BACKGROUND_SIZE*1*Mth.sin(angleIncrement*i-Mth.HALF_PI))));
 					}
 				}
 			}
