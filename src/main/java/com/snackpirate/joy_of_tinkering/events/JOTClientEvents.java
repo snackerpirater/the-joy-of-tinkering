@@ -113,7 +113,7 @@ public class JOTClientEvents {
 		private static final int SLOT_BACKGROUND_SIZE = 22;
 		@SubscribeEvent
 		static void equipmentChange(ToolEquipmentChangeEvent event) {
-			JoyOfTinkering.LOGGER.info("equip change");
+//			JoyOfTinkering.LOGGER.info("equip change");
 			if (event.getEntity() != Minecraft.getInstance().player) {
 				return;
 			}
