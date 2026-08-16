@@ -4,8 +4,8 @@
     {
       "type": "joy_of_tinkering:well_read",
       "on_key": [
-        "normal",
-        "shift"
+        "shift",
+        "normal"
       ]
     },
     {

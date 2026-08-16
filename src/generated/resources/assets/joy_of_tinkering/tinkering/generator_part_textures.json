@@ -153,6 +153,50 @@
     {
       "path": "joy_of_tinkering:item/tool/decimator/large/handle",
       "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/morning_star/spikes",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/morning_star/ball",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/morning_star/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/greatmace/side_flanges",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/greatmace/middle_flanges",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/greatmace/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/greatmace/spikes",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/greatmace/large/side_flanges",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/greatmace/large/middle_flanges",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/greatmace/large/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "joy_of_tinkering:item/tool/greatmace/large/spikes",
+      "stat_type": "tconstruct:head"
     }
   ],
   "replace": false

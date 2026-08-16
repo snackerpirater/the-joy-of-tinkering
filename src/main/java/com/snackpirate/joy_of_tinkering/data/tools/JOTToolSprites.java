@@ -67,5 +67,17 @@ public class JOTToolSprites extends AbstractPartSpriteProvider {
 				.addPart("grip", FiringMechanismMaterialStats.ID)
 				.addHead("body")
 				.addHandle("handle");
+
+		buildTool("morning_star")
+				.addHead("spikes")
+				.addHead("ball")
+				.addHandle("handle");
+
+		buildTool("greatmace")
+				.withLarge()
+				.addHead("side_flanges")
+				.addHead("middle_flanges")
+				.addHandle("handle")
+				.addHead("spikes");
 	}
 }

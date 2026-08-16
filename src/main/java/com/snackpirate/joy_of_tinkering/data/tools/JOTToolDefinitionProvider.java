@@ -9,24 +9,25 @@ import com.snackpirate.joy_of_tinkering.registries.JOTModifierIds;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Tiers;
+import net.minecraftforge.common.ToolActions;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.data.tinkering.AbstractToolDefinitionDataProvider;
 import slimeknights.tconstruct.library.materials.RandomMaterial;
 import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 import slimeknights.tconstruct.library.tools.definition.module.ToolHooks;
-import slimeknights.tconstruct.library.tools.definition.module.build.MultiplyStatsModule;
-import slimeknights.tconstruct.library.tools.definition.module.build.SetStatsModule;
-import slimeknights.tconstruct.library.tools.definition.module.build.ToolSlotsModule;
-import slimeknights.tconstruct.library.tools.definition.module.build.ToolTraitsModule;
+import slimeknights.tconstruct.library.tools.definition.module.aoe.BoxAOEIterator;
+import slimeknights.tconstruct.library.tools.definition.module.aoe.CircleAOEIterator;
+import slimeknights.tconstruct.library.tools.definition.module.build.*;
 import slimeknights.tconstruct.library.tools.definition.module.display.FixedMaterialToolName;
 import slimeknights.tconstruct.library.tools.definition.module.material.*;
 import slimeknights.tconstruct.library.tools.definition.module.mining.IsEffectiveModule;
+import slimeknights.tconstruct.library.tools.definition.module.weapon.CircleWeaponAttack;
+import slimeknights.tconstruct.library.tools.definition.module.weapon.ParticleWeaponAttack;
 import slimeknights.tconstruct.library.tools.nbt.MultiplierNBT;
 import slimeknights.tconstruct.library.tools.nbt.StatsNBT;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
-import slimeknights.tconstruct.tools.TinkerModifiers;
-import slimeknights.tconstruct.tools.TinkerToolParts;
+import slimeknights.tconstruct.tools.*;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.stats.HandleMaterialStats;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
@@ -35,12 +36,17 @@ import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
 
 import java.util.List;
 
+import static slimeknights.tconstruct.tools.TinkerToolParts.*;
+import static slimeknights.tconstruct.tools.TinkerToolParts.largePlate;
+
 public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvider {
 	public static final ToolDefinition REVOLVER = ToolDefinition.create(JOTItems.REVOLVER);
 	public static final ToolDefinition RIFLE = ToolDefinition.create(JOTItems.RIFLE);
 	public static final ToolDefinition BULLET = ToolDefinition.create(JOTItems.BULLET);
 	public static final ToolDefinition CRESTED_HELMET = ToolDefinition.create(JOTItems.CRESTED_HELMET);
 	public static final ToolDefinition DECIMATOR = ToolDefinition.create(JOTItems.DECIMATOR);
+	public static final ToolDefinition morningStar = ToolDefinition.create(JOTItems.morningStar);
+	public static final ToolDefinition greatmace = ToolDefinition.create(JOTItems.greatmace);
 
 	public JOTToolDefinitionProvider(PackOutput packOutput, String modId) {
 		super(packOutput, modId);
@@ -213,6 +219,52 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 				.module(new MaterialTraitsModule(FiringMechanismMaterialStats.ID, 1), ToolHooks.REBALANCED_TRAIT)
 				.module(defaultFourParts)
 				.build();
+		define(morningStar)
+				.module(PartStatsModule.parts()
+						.part(TinkerToolParts.smallBlade)
+						.part(TinkerToolParts.largePlate)
+						.part(TinkerToolParts.toolHandle)
+						.build())
+				.module(defaultThreeParts)
+				// stats
+				.module(new SetStatsModule(StatsNBT.builder()
+						.set(ToolStats.ATTACK_DAMAGE, 6.0f)
+						.set(ToolStats.ATTACK_SPEED, 1.1f).build()))
+				.smallToolStartingSlots()
+				// traits
+//				.module(ToolTraitsModule.builder().trait(ModifierIds.stripping).build())
+				// harvest
+				.module(ToolActionsModule.of(TinkerToolActions.SHIELD_DISABLE))
+				.module(new CircleAOEIterator(1, false))
+//				.module(new ParticleWeaponAttack(TinkerTools.axeAttackParticle.get()))
+				.build();
+
+		define(greatmace)
+				// parts
+				.module(PartStatsModule.parts()
+						.part(largePlate, 0.4f)
+						.part(largePlate, 0.4f)
+						.part(smallBlade, 0.2f)
+						.part(toughHandle)
+						.build())
+				.module(defaultFourParts)
+				// stats
+				.module(new SetStatsModule(StatsNBT.builder()
+						.set(ToolStats.ATTACK_DAMAGE, 4f) // gains +5 undead damage from smite modifier
+						.set(ToolStats.ATTACK_SPEED, 0.85f).build()))
+				.module(new MultiplyStatsModule(MultiplierNBT.builder()
+						.set(ToolStats.ATTACK_DAMAGE, 1.35f)
+						.set(ToolStats.MINING_SPEED, 0.4f)
+						.set(ToolStats.DURABILITY, 3.5f).build()))
+				.largeToolStartingSlots()
+				// traits
+//				.module(ToolTraitsModule.builder().trait(ModifierIds.smite, 2).build())
+				// harvest
+				.module(ToolActionsModule.of(TinkerToolActions.SHIELD_DISABLE))
+				.module(new CircleWeaponAttack(1.5f))
+//				.module(IsEffectiveModule.tag(BlockTags.MINEABLE_WITH_PICKAXE))
+//				.module(BoxAOEIterator.builder(1, 1, 0).addWidth(1).addHeight(1).build())
+				.module(new ParticleWeaponAttack(TinkerTools.hammerAttackParticle.get()));
 	}
 
 	@Override

@@ -23,6 +23,7 @@ import slimeknights.tconstruct.library.tools.definition.ModifiableArmorMaterial;
 import slimeknights.tconstruct.library.tools.definition.module.material.ToolMaterialHook;
 import slimeknights.tconstruct.library.tools.helper.ToolBuildHandler;
 import slimeknights.tconstruct.library.tools.item.IModifiable;
+import slimeknights.tconstruct.library.tools.item.ModifiableItem;
 import slimeknights.tconstruct.library.tools.item.armor.MultilayerArmorItem;
 import slimeknights.tconstruct.library.tools.nbt.MaterialNBT;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
@@ -63,6 +64,10 @@ public class JOTItems {
 
 	public static final ItemObject<Item> powderSnowBottle = ITEMS.register("powder_snow_bottle", () -> new Item(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE).stacksTo(16)));
 
+	public static final ItemObject<ModifiableItem> morningStar = ITEMS.register("morning_star", () -> new ModifiableItem(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.morningStar));
+
+	public static final ItemObject<ModifiableItem> greatmace = ITEMS.register("greatmace", () -> new ModifiableItem(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.greatmace));
+
 	public static void addTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
 		output.accept(JOTBlocks.slimebronze.getIngot());
 		output.accept(JOTBlocks.slimebronze.getNugget());
@@ -85,6 +90,8 @@ public class JOTItems {
 		ToolBuildHandler.addVariants(output::accept, JOTItems.RIFLE.get(), "");
 //		ToolBuildHandler.addVariants(output::accept, JOTItems.BULLET.get(), "");
 		addBulletVariants(output::accept);
+		ToolBuildHandler.addVariants(output::accept, JOTItems.morningStar.get(), "");
+		ToolBuildHandler.addVariants(output::accept, JOTItems.greatmace.get(), "");
 
 		ToolBuildHandler.addVariants(output::accept, JOTItems.DECIMATOR.get(), "");
 		ToolBuildHandler.addVariants(output::accept, JOTItems.CRESTED_HELMET.get(), "");

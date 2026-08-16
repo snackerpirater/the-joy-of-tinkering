@@ -48,6 +48,9 @@ public class JOTItemTags extends ItemTagsProvider {
 		addToolTags(JOTItems.RIFLE, MULTIPART_TOOL, DURABILITY, BONUS_SLOTS, LAUNCHERS, MOD_GUNS, BROAD_RANGED, INTERACTABLE_LEFT, MELEE_WEAPON);
 		addToolTags(JOTItems.DECIMATOR, MULTIPART_TOOL, DURABILITY, BONUS_SLOTS, LAUNCHERS, MOD_GUNS, ANCIENT_TOOLS, MELEE_PRIMARY);
 
+		addToolTags(JOTItems.morningStar, MULTIPART_TOOL, DURABILITY, BONUS_SLOTS, MELEE_PRIMARY, INTERACTABLE_RIGHT, SMALL_TOOLS);
+		addToolTags(JOTItems.greatmace, MULTIPART_TOOL, DURABILITY, BONUS_SLOTS, MELEE_PRIMARY, INTERACTABLE_RIGHT, BROAD_TOOLS, AOE);
+
 		IntrinsicTagAppender<Item> goldCasts = this.tag(TinkerTags.Items.GOLD_CASTS);
 		IntrinsicTagAppender<Item> sandCasts = this.tag(TinkerTags.Items.SAND_CASTS);
 		IntrinsicTagAppender<Item> redSandCasts = this.tag(TinkerTags.Items.RED_SAND_CASTS);

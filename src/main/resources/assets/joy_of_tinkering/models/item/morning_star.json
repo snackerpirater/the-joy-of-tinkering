@@ -1,0 +1,16 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "ball": "joy_of_tinkering:item/tool/morning_star/ball",
+    "handle": "joy_of_tinkering:item/tool/morning_star/handle",
+    "spikes": "joy_of_tinkering:item/tool/morning_star/spikes"
+  },
+  "modifier_maps": [ "joy_of_tinkering:morning_star" ],
+  "modifier_roots": ["joy_of_tinkering:item/tool/morning_star/modifiers/"],
+  "parts": [
+    { "name": "ball",   "index": 1 },
+    { "name": "handle",   "index": 2 },
+    { "name": "spikes",   "index": 0 }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "large": true,
+  "large_offset": [-5,5],
+  "textures": {
+    "side_flanges": "joy_of_tinkering:item/tool/greatmace/side_flanges",
+    "middle_flanges": "joy_of_tinkering:item/tool/greatmace/middle_flanges",
+    "handle": "joy_of_tinkering:item/tool/greatmace/handle",
+    "spikes": "joy_of_tinkering:item/tool/greatmace/spikes",
+
+    "large_side_flanges": "joy_of_tinkering:item/tool/greatmace/large/side_flanges",
+    "large_middle_flanges": "joy_of_tinkering:item/tool/greatmace/large/middle_flanges",
+    "large_handle": "joy_of_tinkering:item/tool/greatmace/large/handle",
+    "large_spikes": "joy_of_tinkering:item/tool/greatmace/large/spikes"
+  },
+  "modifier_maps": [ "joy_of_tinkering:greatmace" ],
+  "modifier_roots": {
+    "small": [
+      "joy_of_tinkering:item/tool/greatmace/modifiers/"
+    ],
+    "large": [
+      "joy_of_tinkering:item/tool/greatmace/large/modifiers/"
+    ]
+  },
+  "parts": [
+    { "name": "side_flanges", "index": 0 },
+    { "name": "middle_flanges",   "index": 1 },
+    { "name": "handle",   "index": 3 },
+    { "name": "spikes",   "index": 2 }
+  ]
+}

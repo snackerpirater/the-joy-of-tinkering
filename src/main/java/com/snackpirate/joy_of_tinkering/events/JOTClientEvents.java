@@ -1,13 +1,18 @@
 package com.snackpirate.joy_of_tinkering.events;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import com.snackpirate.joy_of_tinkering.JOTConfig;
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
+import com.snackpirate.joy_of_tinkering.data.tags.JOTItemTags;
+import com.snackpirate.joy_of_tinkering.data.tags.JOTModifierTags;
 import com.snackpirate.joy_of_tinkering.entity.ModifiableBulletRenderer;
 import com.snackpirate.joy_of_tinkering.items.JOTHeadType;
 import com.snackpirate.joy_of_tinkering.items.ModifiableGunItem;
 import com.snackpirate.joy_of_tinkering.items.tools.JOTToolStats;
 import com.snackpirate.joy_of_tinkering.registries.JOTEffects;
 import com.snackpirate.joy_of_tinkering.registries.JOTEntities;
+import com.snackpirate.joy_of_tinkering.registries.JOTItems;
+import com.snackpirate.joy_of_tinkering.registries.JOTModifierIds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.model.SkullModel;
@@ -38,6 +43,9 @@ import slimeknights.tconstruct.common.config.Config;
 import slimeknights.tconstruct.library.client.Icons;
 import slimeknights.tconstruct.library.events.ToolEquipmentChangeEvent;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
+import slimeknights.tconstruct.library.modifiers.ModifierHooks;
+import slimeknights.tconstruct.library.modifiers.ModifierManager;
+import slimeknights.tconstruct.library.tools.capability.inventory.ToolInventoryCapability;
 import slimeknights.tconstruct.library.tools.context.EquipmentChangeContext;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.utils.Orientation2D;
@@ -106,23 +114,27 @@ public class JOTClientEvents {
                 event.setCanceled(true);
             }
         }
+
 		private static final List<ItemStack> bulletsRight = new ArrayList<>();
 		private static int magRight = 0;
+		private static int reserveRight = 0;
 		private static final List<ItemStack> bulletsLeft = new ArrayList<>();
 		private static int magLeft = 0;
+		private static int reserveLeft = 0;
+
 		private static final int SLOT_BACKGROUND_SIZE = 22;
 		@SubscribeEvent
 		static void equipmentChange(ToolEquipmentChangeEvent event) {
-//			JoyOfTinkering.LOGGER.info("equip change");
+			JoyOfTinkering.LOGGER.info("equip change");
 			if (event.getEntity() != Minecraft.getInstance().player) {
 				return;
 			}
 			EquipmentChangeContext context = event.getContext();
-			if (Config.CLIENT.renderItemFrame.get()) {
+			if (JOTConfig.CLIENT.bulletDisplay.get() != JOTConfig.Client.BulletDisplayOption.NONE) {
 				if (context.getChangedSlot() == EquipmentSlot.MAINHAND) {
 					bulletsRight.clear();
 					IToolStackView tool = context.getToolInSlot(EquipmentSlot.MAINHAND);
-					if (tool != null) {
+					if (tool != null && tool.hasTag(JOTItemTags.MOD_GUNS)) {
 						ListTag ammoList = (ListTag) tool.getPersistentData().get(ModifiableGunItem.GUN_AMMO);
 						if (ammoList != null) {
 							int size = ammoList.size();
@@ -131,12 +143,13 @@ public class JOTClientEvents {
 							}
 						}
 						magRight = (int)Math.floor(tool.getStats().get(JOTToolStats.MAX_AMMO));
+						reserveRight = countReserveAmmo(tool);
 					}
 				}
 				else if (context.getChangedSlot() == EquipmentSlot.OFFHAND) {
 					bulletsLeft.clear();
 					IToolStackView tool = context.getToolInSlot(EquipmentSlot.OFFHAND);
-					if (tool != null) {
+					if (tool != null && tool.hasTag(JOTItemTags.MOD_GUNS)) {
 						ListTag ammoList = (ListTag) tool.getPersistentData().get(ModifiableGunItem.GUN_AMMO);
 						if (ammoList != null) {
 							int size = ammoList.size();
@@ -145,10 +158,38 @@ public class JOTClientEvents {
 							}
 						}
 						magLeft = (int)Math.floor(tool.getStats().get(JOTToolStats.MAX_AMMO));
+						reserveLeft = countReserveAmmo(tool);
 					}
 				}
 			}
 		}
+
+		private static int countReserveAmmo(IToolStackView tool) {
+			List<ItemStack> bulletStacks = new ArrayList<>();
+
+//			tool.getModifierList().stream().filter((entry) -> {
+//				JoyOfTinkering.LOGGER.info("modifier {}", entry.getId());
+//				return entry.getModifier().is(JOTModifierTags.BULLET_SUPPLYING);
+//			}).forEach((entry) -> {
+//				JoyOfTinkering.LOGGER.info("modi 2 {}", entry.getId());
+////				bulletStacks.addAll(tool.getHook(ToolInventoryCapability.HOOK).getAllStacks(tool, entry, bulletStacks));
+//				tool.getHook(ToolInventoryCapability.HOOK).getAllStacks(tool, entry, bulletStacks).forEach((stack) -> {
+//					JoyOfTinkering.LOGGER.info("stac2k {}", stack);
+//				});
+//
+//			});
+////			tool.getHook(ToolInventoryCapability.HOOK).
+
+			tool.getModifierList().forEach((entry) -> {
+				if (ModifierManager.isInTag(entry.getId(), JOTModifierTags.BULLET_SUPPLYING)) entry.getHook(ToolInventoryCapability.HOOK).getAllStacks(tool, entry, bulletStacks);
+			});
+			int total = bulletStacks.stream().filter(stack -> stack.is(JOTItems.BULLET.get())).mapToInt((stack) -> {
+//				JoyOfTinkering.LOGGER.info("stack count {}", stack.getCount());
+				return stack.getCount();
+			}).sum();
+			return total;
+		}
+
 		@SubscribeEvent
 		public static void renderSlots(RenderGuiOverlayEvent.Post event) {
 			Minecraft mc = Minecraft.getInstance();
@@ -156,8 +197,8 @@ public class JOTClientEvents {
 			if (mc.options.hideGui || (mc.screen != null && mc.screen.isPauseScreen()) && event.getOverlay() != VanillaGuiOverlay.HOTBAR.type() || player == null || player != mc.getCameraEntity()) {
 				return;
 			}
-			boolean renderBullets = Config.CLIENT.renderItemFrame.get() && (!bulletsRight.isEmpty() || !bulletsLeft.isEmpty());
-			if (!renderBullets) return;
+
+			if (JOTConfig.CLIENT.bulletDisplay.get() == JOTConfig.Client.BulletDisplayOption.NONE) return;
 
 			MultiPlayerGameMode playerController = mc.gameMode;
 			if (playerController != null && playerController.getPlayerMode() != GameType.SPECTATOR) {
@@ -222,6 +263,7 @@ public class JOTClientEvents {
 					for (int i = 0; i < count; i++) {
 //						mc.gui.renderSlot(graphics, (int) (xStart + (SLOT_BACKGROUND_SIZE*1*Mth.cos(angleIncrement*i-Mth.HALF_PI))), (int) (yStart + (SLOT_BACKGROUND_SIZE*1*Mth.sin(angleIncrement*i-Mth.HALF_PI))), partialTicks, player, bulletsRight.get(i), i);
 						graphics.renderItem(bulletsRight.get(i), (int) (xStart + (SLOT_BACKGROUND_SIZE*1*Mth.cos(angleIncrement*i-Mth.HALF_PI))), (int) (yStart + (SLOT_BACKGROUND_SIZE*1*Mth.sin(angleIncrement*i-Mth.HALF_PI))));
+						graphics.drawString(Minecraft.getInstance().font, String.valueOf(reserveRight), xStart, yStart, 0xffffff);
 					}
 				}
 

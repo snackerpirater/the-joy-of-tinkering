@@ -160,6 +160,9 @@ public class JOTLang extends LanguageProvider {
 		addModifier(JOTModifierIds.greed, "Greed", "Biblical levels of greed", "Increases the chance for killed mobs to drop their equipment");
 
 		addItem(JOTItems.powderSnowBottle, "Powder Snow Bottle");
+
+		addItem(JOTItems.morningStar, "Morning Star");
+		addItem(JOTItems.greatmace, "Greatmace");
 	}
 
 	public void addModifier(ModifierId modifier, String name, String flavour, String desc) {

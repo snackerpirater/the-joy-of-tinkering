@@ -1,6 +1,10 @@
 package com.snackpirate.joy_of_tinkering;
 
+import net.minecraftforge.common.ForgeConfigSpec;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
+import org.apache.commons.lang3.tuple.Pair;
 
 // An example config class. This is not required, but it's a good idea to have one to keep your config organized.
 // Demonstrates how to use Forge's config APIs
@@ -37,4 +41,33 @@ public class JOTConfig {
 //		// convert the list of strings into a set of items
 //		items = ITEM_STRINGS.get().stream().map(itemName -> ForgeRegistries.ITEMS.getValue(new ResourceLocation(itemName))).collect(Collectors.toSet());
 //	}
+	public static class Client {
+
+public final ForgeConfigSpec.EnumValue<BulletDisplayOption> bulletDisplay;
+
+		Client(ForgeConfigSpec.Builder builder) {
+			bulletDisplay = builder.comment("How the bullets of the gun are displayed in the GUI. See mod page gallery for visual examples.").defineEnum("bulletDisplayStyle", BulletDisplayOption.NUMBERED_SIMPLE);
+//			builder.pop();
+		}
+
+		public enum BulletDisplayOption {
+			RADIAL,
+			NUMBERED_SIMPLE,
+			NUMBERED_COMPLEX,
+			NONE
+		}
+	}
+
+
+	public static final ForgeConfigSpec clientSpec;
+	public static final Client CLIENT;
+	static {
+		final Pair<Client, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Client::new);
+		clientSpec = specPair.getRight();
+		CLIENT = specPair.getLeft();
+	}
+	public static void init() {
+		ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, clientSpec);
+	}
+
 }
