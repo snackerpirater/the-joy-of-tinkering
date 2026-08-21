@@ -66,7 +66,6 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 						.stat(HeadMaterialStats.ID, 1f)
 						.build())
 				.module(ToolSlotsModule.builder()
-						.slots(SlotType.ABILITY, 1)
 						.slots(SlotType.UPGRADE, 2)
 						.slots(SlotType.DEFENSE, 2)
 						.build())

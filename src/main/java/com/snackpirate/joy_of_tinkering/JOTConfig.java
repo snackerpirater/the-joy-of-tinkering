@@ -44,16 +44,17 @@ public class JOTConfig {
 	public static class Client {
 
 public final ForgeConfigSpec.EnumValue<BulletDisplayOption> bulletDisplay;
+public final ForgeConfigSpec.BooleanValue showReserve;
 
 		Client(ForgeConfigSpec.Builder builder) {
-			bulletDisplay = builder.comment("How the bullets of the gun are displayed in the GUI. See mod page gallery for visual examples.").defineEnum("bulletDisplayStyle", BulletDisplayOption.NUMBERED_SIMPLE);
+			bulletDisplay = builder.comment("How the bullets of the gun are displayed in the GUI. See mod page gallery for visual examples.").defineEnum("bulletDisplayStyle", BulletDisplayOption.NUMBERED);
+			showReserve = builder.comment("Whether or not the reserve bullets (stored in the gun's inventory) are displayed in the GUI.").define("displayReserves", true);
 //			builder.pop();
 		}
 
 		public enum BulletDisplayOption {
 			RADIAL,
-			NUMBERED_SIMPLE,
-			NUMBERED_COMPLEX,
+			NUMBERED,
 			NONE
 		}
 	}
