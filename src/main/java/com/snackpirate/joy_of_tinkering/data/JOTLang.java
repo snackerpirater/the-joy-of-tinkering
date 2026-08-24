@@ -163,6 +163,7 @@ public class JOTLang extends LanguageProvider {
 
 		addItem(JOTItems.morningStar, "Morning Star");
 		addItem(JOTItems.greatmace, "Greatmace");
+		addModifier(JOTModifierIds.crushing, "Crushing", "YOWCH", "Weakens the enemy on hit");
 	}
 
 	public void addModifier(ModifierId modifier, String name, String flavour, String desc) {

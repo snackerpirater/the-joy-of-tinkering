@@ -18,6 +18,7 @@ import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 import slimeknights.tconstruct.library.tools.definition.module.ToolHooks;
 import slimeknights.tconstruct.library.tools.definition.module.aoe.BoxAOEIterator;
 import slimeknights.tconstruct.library.tools.definition.module.aoe.CircleAOEIterator;
+import slimeknights.tconstruct.library.tools.definition.module.aoe.IBoxExpansion;
 import slimeknights.tconstruct.library.tools.definition.module.build.*;
 import slimeknights.tconstruct.library.tools.definition.module.display.FixedMaterialToolName;
 import slimeknights.tconstruct.library.tools.definition.module.material.*;
@@ -220,21 +221,25 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 				.build();
 		define(morningStar)
 				.module(PartStatsModule.parts()
-						.part(TinkerToolParts.smallBlade)
-						.part(TinkerToolParts.largePlate)
+						.part(TinkerToolParts.smallBlade, 0.75f)
+						.part(TinkerToolParts.largePlate, 0.75f)
 						.part(TinkerToolParts.toolHandle)
 						.build())
 				.module(defaultThreeParts)
 				// stats
 				.module(new SetStatsModule(StatsNBT.builder()
-						.set(ToolStats.ATTACK_DAMAGE, 6.0f)
+						.set(ToolStats.ATTACK_DAMAGE, 3.0f)
 						.set(ToolStats.ATTACK_SPEED, 1.1f).build()))
+				.module(new MultiplyStatsModule(MultiplierNBT.builder()
+						.set(ToolStats.MINING_SPEED, 0.25f)
+						.build()))
+				.module(ToolActionsModule.of(ToolActions.PICKAXE_DIG, TinkerToolActions.SHIELD_DISABLE))
+				.module(IsEffectiveModule.tag(BlockTags.MINEABLE_WITH_PICKAXE))
 				.smallToolStartingSlots()
 				// traits
-//				.module(ToolTraitsModule.builder().trait(ModifierIds.stripping).build())
+				.module(ToolTraitsModule.builder().trait(JOTModifierIds.crushing).build())
 				// harvest
-				.module(ToolActionsModule.of(TinkerToolActions.SHIELD_DISABLE))
-				.module(new CircleAOEIterator(1, false))
+				.module(BoxAOEIterator.builder(0, 0, 0).addDepth(2).direction(IBoxExpansion.PITCH).build())
 //				.module(new ParticleWeaponAttack(TinkerTools.axeAttackParticle.get()))
 				.build();
 
@@ -249,20 +254,21 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 				.module(defaultFourParts)
 				// stats
 				.module(new SetStatsModule(StatsNBT.builder()
-						.set(ToolStats.ATTACK_DAMAGE, 4f) // gains +5 undead damage from smite modifier
+						.set(ToolStats.ATTACK_DAMAGE, 3f)
 						.set(ToolStats.ATTACK_SPEED, 0.85f).build()))
 				.module(new MultiplyStatsModule(MultiplierNBT.builder()
 						.set(ToolStats.ATTACK_DAMAGE, 1.35f)
-						.set(ToolStats.MINING_SPEED, 0.4f)
-						.set(ToolStats.DURABILITY, 3.5f).build()))
+						.set(ToolStats.MINING_SPEED, 0.25f)
+						.set(ToolStats.DURABILITY, 3f).build()))
+				.module(ToolActionsModule.of(ToolActions.PICKAXE_DIG, TinkerToolActions.SHIELD_DISABLE))
+				.module(IsEffectiveModule.tag(BlockTags.MINEABLE_WITH_PICKAXE))
 				.largeToolStartingSlots()
 				// traits
-//				.module(ToolTraitsModule.builder().trait(ModifierIds.smite, 2).build())
+				.module(ToolTraitsModule.builder().trait(JOTModifierIds.crushing, 2).build())
 				// harvest
-				.module(ToolActionsModule.of(TinkerToolActions.SHIELD_DISABLE))
 				.module(new CircleWeaponAttack(1.5f))
-//				.module(IsEffectiveModule.tag(BlockTags.MINEABLE_WITH_PICKAXE))
-//				.module(BoxAOEIterator.builder(1, 1, 0).addWidth(1).addHeight(1).build())
+//				.module(BoxAOEIterator.builder(2, 2, 1).addDepth(2).direction(IBoxExpansion.PITCH).build())
+				.module(new CircleAOEIterator(1, false))
 				.module(new ParticleWeaponAttack(TinkerTools.hammerAttackParticle.get()));
 	}
 

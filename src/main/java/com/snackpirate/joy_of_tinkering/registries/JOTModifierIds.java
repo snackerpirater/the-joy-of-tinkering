@@ -65,6 +65,8 @@ public class JOTModifierIds {
 
 	public static final ModifierId greed = modId("greed");
 
+	public static final ModifierId crushing = modId("crushing");
+
 	public static ModifierId modId(String id) {
 		return new ModifierId(JoyOfTinkering.MOD_ID, id);
 	}

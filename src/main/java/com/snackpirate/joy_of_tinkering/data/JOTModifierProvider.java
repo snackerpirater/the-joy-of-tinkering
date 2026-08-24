@@ -7,6 +7,7 @@ import com.snackpirate.joy_of_tinkering.modifiers.*;
 import com.snackpirate.joy_of_tinkering.registries.JOTEffects;
 import com.snackpirate.joy_of_tinkering.registries.JOTItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.Blocks;
 import slimeknights.mantle.client.TooltipKey;
@@ -20,6 +21,7 @@ import slimeknights.tconstruct.library.json.LevelingValue;
 import slimeknights.tconstruct.library.json.RandomLevelingValue;
 import slimeknights.tconstruct.library.json.predicate.tool.ToolContextPredicate;
 import slimeknights.tconstruct.library.json.predicate.tool.ToolStackPredicate;
+import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.modules.armor.MobDisguiseModule;
 import slimeknights.tconstruct.library.modifiers.modules.build.StatBoostModule;
 import slimeknights.tconstruct.library.modifiers.modules.capacity.OverslimeModule;
@@ -178,6 +180,9 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 				//max with greed: 8.5% + 5% looting 5 + 3.5% = 17%
 				.addModule(new DropMobEquipmentModule(LevelingValue.eachLevel(0.035f))) //base is 8.5%, looting is +1% or 0.01
 				.build();
+		buildModifier(crushing)
+				.addModule(MobEffectModule.builder(MobEffects.MOVEMENT_SLOWDOWN).level(RandomLevelingValue.perLevel(0, 1f)).time(RandomLevelingValue.random(60, 20)).build(), ModifierHooks.MELEE_HIT, ModifierHooks.MONSTER_MELEE_HIT)
+				.addModule(MobEffectModule.builder(MobEffects.WEAKNESS).time(RandomLevelingValue.random(60, 20)).build(), ModifierHooks.MELEE_HIT, ModifierHooks.MONSTER_MELEE_HIT);
 	}
 
 	@Override

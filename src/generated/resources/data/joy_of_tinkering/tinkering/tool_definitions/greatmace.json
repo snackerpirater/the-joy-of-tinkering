@@ -43,7 +43,7 @@
     {
       "type": "tconstruct:base_stats",
       "stats": {
-        "tconstruct:attack_damage": 4.0,
+        "tconstruct:attack_damage": 3.0,
         "tconstruct:attack_speed": 0.85
       }
     },
@@ -51,9 +51,21 @@
       "type": "tconstruct:multiply_stats",
       "multipliers": {
         "tconstruct:attack_damage": 1.35,
-        "tconstruct:durability": 3.5,
-        "tconstruct:mining_speed": 0.4
+        "tconstruct:durability": 3.0,
+        "tconstruct:mining_speed": 0.25
       }
+    },
+    {
+      "type": "tconstruct:tool_actions",
+      "tool_actions": [
+        "pickaxe_dig",
+        "shield_disable"
+      ]
+    },
+    {
+      "type": "tconstruct:is_effective",
+      "predicate_type": "mantle:tag",
+      "tag": "minecraft:mineable/pickaxe"
     },
     {
       "type": "tconstruct:modifier_slots",
@@ -63,14 +75,22 @@
       }
     },
     {
-      "type": "tconstruct:tool_actions",
-      "tool_actions": [
-        "shield_disable"
+      "type": "tconstruct:traits",
+      "traits": [
+        {
+          "level": 2,
+          "name": "joy_of_tinkering:crushing"
+        }
       ]
     },
     {
       "type": "tconstruct:circle_melee",
       "diameter": 1.5
+    },
+    {
+      "type": "tconstruct:circle_aoe",
+      "3D": false,
+      "diameter": 1
     },
     {
       "type": "tconstruct:melee_particle",
