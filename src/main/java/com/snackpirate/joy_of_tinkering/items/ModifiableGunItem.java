@@ -261,7 +261,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 
 					// vanilla arrows have a base damage of 2, cancel that out then add in our base damage to account for custom arrows with higher base damage
 					float baseArrowDamage = (float)(arrow.getBaseDamage() - 2 + tool.getStats().get(ToolStats.PROJECTILE_DAMAGE));
-					arrow.setBaseDamage(ConditionalStatModifierHook.getModifiedStat(tool, living, ToolStats.PROJECTILE_DAMAGE, baseArrowDamage) * burstFirePowerMult / 1.5f);
+					arrow.setBaseDamage(ConditionalStatModifierHook.getModifiedStat(tool, living, ToolStats.PROJECTILE_DAMAGE, baseArrowDamage) * burstFirePowerMult * 1.5f);
 
 					// fortunately, don't need to deal with vanilla infinity here, our infinity was dealt with during loading
 					if (creative) {

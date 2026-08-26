@@ -179,6 +179,7 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 				//max without greed: 8.5% + 6% looting 6 = 14.5%
 				//max with greed: 8.5% + 5% looting 5 + 3.5% = 17%
 				.addModule(new DropMobEquipmentModule(LevelingValue.eachLevel(0.035f))) //base is 8.5%, looting is +1% or 0.01
+				.levelDisplay(ModifierLevelDisplay.SINGLE_LEVEL)
 				.build();
 		buildModifier(crushing)
 				.addModule(MobEffectModule.builder(MobEffects.MOVEMENT_SLOWDOWN).level(RandomLevelingValue.perLevel(0, 1f)).time(RandomLevelingValue.random(60, 20)).build(), ModifierHooks.MELEE_HIT, ModifierHooks.MONSTER_MELEE_HIT)

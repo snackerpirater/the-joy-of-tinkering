@@ -3,6 +3,7 @@ package com.snackpirate.joy_of_tinkering.events;
 import be.florens.expandability.api.forge.LivingFluidCollisionEvent;
 import be.florens.expandability.api.forge.PlayerSwimEvent;
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
+import com.snackpirate.joy_of_tinkering.data.tags.JOTEntityTags;
 import com.snackpirate.joy_of_tinkering.data.tools.JOTToolDefinitionProvider;
 import com.snackpirate.joy_of_tinkering.data.tags.JOTItemTags;
 import com.snackpirate.joy_of_tinkering.registries.*;
@@ -14,6 +15,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -22,6 +24,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
@@ -46,19 +49,24 @@ import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.fluids.TinkerFluids;
 import slimeknights.tconstruct.fluids.util.ConstantFluidContainerWrapper;
 import slimeknights.tconstruct.library.events.teleport.ReturningTeleportEvent;
+import slimeknights.tconstruct.library.json.LevelingValue;
 import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
+import slimeknights.tconstruct.library.modifiers.ModifierManager;
 import slimeknights.tconstruct.library.modifiers.hook.mining.BreakSpeedContext;
+import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
 import slimeknights.tconstruct.library.recipe.FluidValues;
 import slimeknights.tconstruct.library.tools.definition.module.mining.IsEffectiveToolHook;
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.helper.ToolHarvestLogic;
+import slimeknights.tconstruct.library.tools.item.armor.ModifiableArmorItem;
 import slimeknights.tconstruct.library.tools.nbt.MaterialNBT;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
 import slimeknights.tconstruct.library.utils.BlockSideHitListener;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid = JoyOfTinkering.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
@@ -221,6 +229,33 @@ public class JOTServerEvents {
 				ItemStack stack = bullets.createStack();
 				stack.setCount(1);
 				event.setProjectileItemStack(stack);
+			}
+		}
+	}
+	private static final LevelingValue chance = LevelingValue.eachLevel(0.035f);
+	@SubscribeEvent
+	static void greedyBoots(LivingDropsEvent event) {
+
+		if (event.getSource().getEntity() instanceof Player player && player.getItemBySlot(EquipmentSlot.FEET).getItem() instanceof ModifiableArmorItem) {
+			ToolStack tool = ToolStack.from(player.getItemBySlot(EquipmentSlot.FEET));
+			int greedLevel = tool.getModifierLevel(JOTModifierIds.greed);
+//			ArrayList<ItemStack> items = new ArrayList<>(event.getDrops().stream().map(ItemEntity::getItem).toList());
+
+			if (event.getEntity() instanceof Mob mob && !mob.getType().is(JOTEntityTags.GREED_IMMUNE)) {
+//			JoyOfTinkering.LOGGER.info("greed 3");
+				for (EquipmentSlot slot: EquipmentSlot.values()) {
+					if (!mob.getItemBySlot(slot).isEmpty() && mob.getEquipmentDropChance(slot) != 2) {
+//					JoyOfTinkering.LOGGER.info("greed 4 slot {}", slot.getName());
+						ItemStack item = mob.getItemBySlot(slot);
+						event.getDrops().removeIf((entity) -> entity.getItem().equals(item, false));
+						float chanceToDrop = mob.getEquipmentDropChance(slot) + (0.01f*event.getLootingLevel()) + chance.compute(greedLevel);
+//					JoyOfTinkering.LOGGER.info("chance to drop {} + {} + {}", mob.getEquipmentDropChance(slot), (0.01f*context.getLootingModifier()), chance.compute(modifier.getLevel()));
+						if (event.getEntity().getRandom().nextFloat() < chanceToDrop) {
+//						JoyOfTinkering.LOGGER.info("success");
+							event.getDrops().add(mob.spawnAtLocation(item));
+						}
+					}
+				}
 			}
 		}
 	}
