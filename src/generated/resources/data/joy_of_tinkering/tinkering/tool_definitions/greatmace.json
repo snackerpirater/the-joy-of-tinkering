@@ -43,7 +43,7 @@
     {
       "type": "tconstruct:base_stats",
       "stats": {
-        "tconstruct:attack_damage": 3.0,
+        "tconstruct:attack_damage": 3.5,
         "tconstruct:attack_speed": 0.85
       }
     },
@@ -85,7 +85,7 @@
     },
     {
       "type": "tconstruct:circle_melee",
-      "diameter": 1.5
+      "diameter": 1.25
     },
     {
       "type": "tconstruct:circle_aoe",

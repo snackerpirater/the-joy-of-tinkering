@@ -232,6 +232,7 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 						.set(ToolStats.ATTACK_SPEED, 1.1f).build()))
 				.module(new MultiplyStatsModule(MultiplierNBT.builder()
 						.set(ToolStats.MINING_SPEED, 0.25f)
+						.set(ToolStats.DURABILITY, 0.65f)
 						.build()))
 				.module(ToolActionsModule.of(ToolActions.PICKAXE_DIG, TinkerToolActions.SHIELD_DISABLE))
 				.module(IsEffectiveModule.tag(BlockTags.MINEABLE_WITH_PICKAXE))
@@ -254,7 +255,7 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 				.module(defaultFourParts)
 				// stats
 				.module(new SetStatsModule(StatsNBT.builder()
-						.set(ToolStats.ATTACK_DAMAGE, 3f)
+						.set(ToolStats.ATTACK_DAMAGE, 3.5f)
 						.set(ToolStats.ATTACK_SPEED, 0.85f).build()))
 				.module(new MultiplyStatsModule(MultiplierNBT.builder()
 						.set(ToolStats.ATTACK_DAMAGE, 1.35f)
@@ -266,7 +267,7 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 				// traits
 				.module(ToolTraitsModule.builder().trait(JOTModifierIds.crushing, 2).build())
 				// harvest
-				.module(new CircleWeaponAttack(1.5f))
+				.module(new CircleWeaponAttack(1.25f))
 //				.module(BoxAOEIterator.builder(2, 2, 1).addDepth(2).direction(IBoxExpansion.PITCH).build())
 				.module(new CircleAOEIterator(1, false))
 				.module(new ParticleWeaponAttack(TinkerTools.hammerAttackParticle.get()));
