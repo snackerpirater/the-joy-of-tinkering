@@ -5,7 +5,6 @@
     },
     "tconstruct:repair_kit": {},
     "tconstruct:skull": {
-      "armor": 1,
       "durability": 100
     }
   }

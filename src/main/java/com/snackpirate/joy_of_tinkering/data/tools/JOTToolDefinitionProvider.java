@@ -72,7 +72,7 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 						.build())
 				.module(ToolTraitsModule.builder()
 //						.trait(JOTModifierIds.headbutt)
-						.trait(ModifierIds.strength, 2)
+						.trait(JOTModifierIds.headbutt)
 						.build())
 				.module(new SetStatsModule(StatsNBT.builder()
 						.set(ToolStats.ATTACK_DAMAGE, 3f).build()))

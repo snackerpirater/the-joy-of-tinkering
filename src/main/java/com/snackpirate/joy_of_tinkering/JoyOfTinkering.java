@@ -173,13 +173,14 @@ public class JoyOfTinkering {
 			ModifierModule.LOADER.register(id("trick_bandolier"), TrickBandolierModule.LOADER);
 			ModifierModule.LOADER.register(id("overheat_melee"), OverheatModule.LOADER);
 			ModifierModule.LOADER.register(id("overheat_counter"), OverheatCounterModule.LOADER);
-//			ModifierModule.LOADER.register(id("headbutt_attack"), HeadbuttModule.LOADER);
+			ModifierModule.LOADER.register(id("headbutt_attack"), HeadbuttModule.LOADER);
 			ModifierModule.LOADER.register(id("junkshot"), JunkshotModule.LOADER);
 			ModifierModule.LOADER.register(id("southpaw"), SouthpawModule.LOADER);
 			ModifierModule.LOADER.register(id("crackshot"), CrackshotModule.LOADER);
 			ModifierModule.LOADER.register(id("burst_fire"), BurstfireModule.LOADER);
 			ModifierModule.LOADER.register(id("fire_on_crit"), FireOnCritModule.LOADER);
 			ModifierModule.LOADER.register(id("drop_mob_equipment"), DropMobEquipmentModule.LOADER);
+			ModifierModule.LOADER.register(id("bandolier_inventory"), BandolierInventoryModule.LOADER);
 
 			ToolStackPredicate.LOADER.register(id("has_overslime"), JOTModifierProvider.HAS_OVERSLIME.getLoader());
 		}

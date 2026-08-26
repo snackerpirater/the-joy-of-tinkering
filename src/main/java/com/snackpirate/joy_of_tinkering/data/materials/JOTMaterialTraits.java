@@ -27,7 +27,7 @@ public class JOTMaterialTraits extends AbstractMaterialTraitDataProvider {
 		addTraits(MaterialIds.earthslime, SkullStats.ID, JOTModifierIds.oversharing, JOTModifierIds.slimeDisguise);
         addTraits(MaterialIds.magma, SkullStats.ID, JOTModifierIds.magmadaptive, JOTModifierIds.magmaCubeDisguise);
 		addTraits(MaterialIds.enderslime, SkullStats.ID, JOTModifierIds.endrobe, JOTModifierIds.enderslimeDisguise);
-		addTraits(MaterialIds.skyslime, SkullStats.ID, new ModifierEntry(ModifierIds.springy, 2), new ModifierEntry(JOTModifierIds.skyslimeDisguise, 1));
+		addTraits(MaterialIds.skyslime, SkullStats.ID, new ModifierEntry(ModifierIds.springing, 2), new ModifierEntry(JOTModifierIds.skyslimeDisguise, 1));
 
 		addTraits(MaterialIds.copper, JOTToolStats.Statless.BULLET_CASING.getIdentifier(), JOTModifierIds.surplus);
 		addTraits(MaterialIds.cobalt, JOTToolStats.Statless.BULLET_CASING.getIdentifier(), JOTModifierIds.scarce);
@@ -39,7 +39,7 @@ public class JOTMaterialTraits extends AbstractMaterialTraitDataProvider {
 
 //		addTraits(MaterialIds.gunpowder, PropellantMaterialStats.ID);
 		addTraits(MaterialIds.blaze, PropellantMaterialStats.ID, ModifierIds.fiery);
-//		addTraits(MaterialIds.redstone, PropellantMaterialStats.ID, ModifierIds.supercharged);
+		addTraits(MaterialIds.redstone, PropellantMaterialStats.ID, ModifierIds.supercharged);
 		addTraits(MaterialIds.ice, PropellantMaterialStats.ID, ModifierIds.freezing);
 		addTraits(MaterialIds.bone, PropellantMaterialStats.ID, ModifierIds.pierce);
 		addTraits(MaterialIds.glowstone, PropellantMaterialStats.ID, ModifierIds.spectral);

@@ -2,13 +2,7 @@
   "level_display": "tconstruct:default",
   "modules": [
     {
-      "type": "tconstruct:inventory",
-      "filter": {
-        "type": "mantle:set",
-        "items": [
-          "joy_of_tinkering:bullet"
-        ]
-      },
+      "type": "joy_of_tinkering:bandolier_inventory",
       "limit": {
         "flat": 32
       },

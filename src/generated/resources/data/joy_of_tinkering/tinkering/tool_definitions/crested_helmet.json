@@ -19,8 +19,8 @@
       "type": "tconstruct:traits",
       "traits": [
         {
-          "level": 2,
-          "name": "tconstruct:strength"
+          "level": 1,
+          "name": "joy_of_tinkering:headbutt"
         }
       ]
     },

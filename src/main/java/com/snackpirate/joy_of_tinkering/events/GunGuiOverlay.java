@@ -105,7 +105,7 @@ public class GunGuiOverlay implements IGuiOverlay {
 		tool.getModifierList().forEach((entry) -> {
 			if (ModifierManager.isInTag(entry.getId(), JOTModifierTags.BULLET_SUPPLYING)) entry.getHook(ToolInventoryCapability.HOOK).getAllStacks(tool, entry, bulletStacks);
 		});
-		return bulletStacks.stream().filter(stack -> stack.is(JOTItems.BULLET.get())).mapToInt(ItemStack::getCount).sum();
+		return bulletStacks.stream().mapToInt(ItemStack::getCount).sum();
 	}
 
 //	@Override
@@ -189,12 +189,12 @@ public class GunGuiOverlay implements IGuiOverlay {
 //						GL33.glPopMatrix();
 					graphics.drawString(Minecraft.getInstance().font, "/ " + magRight, xStart + 6 + ((loaded.length()-1)*8), yStart + 4, 0xffffff);
 					if (bulletsRight.size() > 1) {
-						graphics.renderItem(bulletsRight.get(1), (int) ((xStart - 25)), (int) ((yStart + 11)));
+						graphics.renderItem(bulletsRight.get(1), (int) ((xStart - 23)), (int) ((yStart + 12)));
 					}
 
 					if (JOTConfig.CLIENT.showReserve.get() && reserveRight != 0) {
-						graphics.drawString(Minecraft.getInstance().font, String.valueOf(reserveRight), xStart + 6, yStart + 15, 0xffffff);
-						graphics.blit(xStart - 8, yStart+11, 0, 16, 16, mc.getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(JoyOfTinkering.id("gui/gun/reserve_ammo")));
+						graphics.drawString(Minecraft.getInstance().font, String.valueOf(reserveRight), xStart + 6, yStart + 17, 0xffffff);
+						graphics.blit(xStart - 8, yStart+13, 0, 16, 16, mc.getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(JoyOfTinkering.id("gui/gun/reserve_ammo")));
 					}
 				}
 				if (magLeft != 0) {
@@ -218,12 +218,12 @@ public class GunGuiOverlay implements IGuiOverlay {
 //						GL33.glPopMatrix();
 					graphics.drawString(Minecraft.getInstance().font, "/ " + magLeft, xStart + 6 + ((loaded.length()-1)*8), yStart + 4, 0xffffff);
 					if (bulletsLeft.size() > 1) {
-						graphics.renderItem(bulletsLeft.get(1), (xStart - 25), (yStart + 11));
+						graphics.renderItem(bulletsLeft.get(1), (xStart - 23), (yStart + 12));
 					}
 
 					if (JOTConfig.CLIENT.showReserve.get() && reserveLeft != 0) {
-						graphics.drawString(Minecraft.getInstance().font, String.valueOf(reserveLeft), xStart + 6, yStart + 15, 0xffffff);
-						graphics.blit(xStart - 8, yStart+11, 0, 16, 16, mc.getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(JoyOfTinkering.id("gui/gun/reserve_ammo")));
+						graphics.drawString(Minecraft.getInstance().font, String.valueOf(reserveLeft), xStart + 6, yStart + 17, 0xffffff);
+						graphics.blit(xStart - 8, yStart+13, 0, 16, 16, mc.getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(JoyOfTinkering.id("gui/gun/reserve_ammo")));
 					}
 				}
 			}

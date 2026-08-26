@@ -18,7 +18,7 @@ import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import java.util.List;
 import java.util.function.Predicate;
 
-public record BulkBandolierModule(boolean checkStandardArrows)  implements ModifierModule, BowAmmoModifierHook {
+public record BulkBandolierModule(boolean checkStandardArrows) implements ModifierModule, BowAmmoModifierHook {
 	public static final RecordLoadable<BulkBandolierModule> LOADER = RecordLoadable.create(
 			BooleanLoadable.INSTANCE.defaultField("check_standard_arrows", true, BulkBandolierModule::checkStandardArrows),
 			BulkBandolierModule::new);
