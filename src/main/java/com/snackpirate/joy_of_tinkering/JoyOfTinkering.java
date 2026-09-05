@@ -152,7 +152,7 @@ public class JoyOfTinkering {
 
 		gen.addProvider(server, new JOTMobEquipmentProvider(output, MOD_ID));
 		gen.addProvider(server, new JOTLootTableProvider(output));
-//		gen.addProvider(server, new JOTModifierModelMaps(output, MOD_ID));
+		gen.addProvider(server, new JOTModifierModelMaps(output, MOD_ID));
 
 		gen.addProvider(server, new JOTItemTags(output, provider, blockTags.contentsGetter(), MOD_ID, helper));
 //		gen.addProvider(server, new JOTDamageTypeTags(output, provider, MOD_ID, helper));

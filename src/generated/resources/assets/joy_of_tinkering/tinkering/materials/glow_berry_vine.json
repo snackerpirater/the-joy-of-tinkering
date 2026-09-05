@@ -1,0 +1,31 @@
+{
+  "color": "FF70922D",
+  "fallbacks": [
+    "primitive",
+    "cloth"
+  ],
+  "generator": {
+    "supported_stats": [
+      "tconstruct:binding",
+      "tconstruct:bowstring",
+      "tconstruct:maille",
+      "tconstruct:armor_maille",
+      "tconstruct:repair_kit",
+      "tconstruct:laces",
+      "tconstruct:slimesuit_overlay"
+    ],
+    "transformer": {
+      "type": "tconstruct:grey_to_sprite",
+      "palette": {
+        "000": "FF000000",
+        "063": "joy_of_tinkering:item/material/glow_berry_outline_2",
+        "102": "joy_of_tinkering:item/material/glow_berry_outline",
+        "140": "joy_of_tinkering:item/material/glow_berry",
+        "178": "joy_of_tinkering:item/material/glow_berry",
+        "216": "joy_of_tinkering:item/material/glow_berry",
+        "255": "joy_of_tinkering:item/material/glow_berry"
+      }
+    }
+  },
+  "luminosity": 9
+}

@@ -1,5 +1,6 @@
 package com.snackpirate.joy_of_tinkering.data.tools;
 
+import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
 import com.snackpirate.joy_of_tinkering.registries.JOTItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.ArmorItem;
@@ -16,11 +17,11 @@ public class JOTModifierModelMaps extends AbstractModifierModelMapProvider {
 
 	@Override
 	protected void addModels() {
-		tool(JOTItems.BULLET).smashing("bullet/modifiers/tconstruct_smashing_full").tipped("bullet/modifiers/tconstruct_tipped");
+		tool(JOTItems.BULLET).smashing(JoyOfTinkering.id("bullet/modifiers/tconstruct_smashing_full")).tipped(JoyOfTinkering.id("bullet/modifiers/tconstruct_tipped"), null);
 
 		ModifierId dyed = TinkerModifiers.dyed.getId();
-		tool(JOTItems.ROCKPUNCHERS).trim(ArmorItem.Type.CHESTPLATE).modifier(dyed, new DyedModifierModel(toolMaterial("armor/rockpuncher/chestplate/fists"), null));
-		tool(JOTItems.LAVA_LOAFERS).trim(ArmorItem.Type.BOOTS).modifier(dyed, new DyedModifierModel(toolMaterial("armor/strider/boots/skin_dyed"), null));
+		tool(JOTItems.ROCKPUNCHERS).armor().basic("armor/chestplate/modifiers").trim(ArmorItem.Type.CHESTPLATE).modifier(dyed, new DyedModifierModel(toolMaterial("armor/rockpuncher/chestplate/fists"), null));
+		tool(JOTItems.LAVA_LOAFERS).armor().basic("armor/boots/modifiers").trim(ArmorItem.Type.BOOTS).modifier(dyed, new DyedModifierModel(toolMaterial("armor/strider/boots/skin_dyed"), null));
 
 	}
 

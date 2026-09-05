@@ -11,9 +11,14 @@ public class JOTMaterialData extends AbstractMaterialDataProvider {
 
 	@Override
 	protected void addMaterials() {
-		addMaterial(slimebronze, 3, ORDER_GENERAL + 5, false);
-		addMaterial(shimmervine, 3, ORDER_RANGED + 6, true);
-		addMaterial(sugar, 1, ORDER_RANGED, true);
+//		addMaterial(slimebronze, 3, ORDER_GENERAL + 5, false);
+		material(slimebronze).tier(3).sort(ORDER_GENERAL + 5).craftable(false);
+//		addMaterial(shimmervine, 3, ORDER_RANGED + 6, true);
+		material(shimmervine).tier(3).sort(ORDER_RANGED + 6).craftable();
+//		addMaterial(glowBerryVine, 2, ORDER_GENERAL + 6, true);
+		material(glowBerryVine).tier(2).sort(ORDER_GENERAL + 6).craftable();
+//		addMaterial(sugar, 1, ORDER_RANGED, true);
+		material(sugar).tier(1).sort(ORDER_RANGED+6).craftable();
 	}
 
 	@Override

@@ -183,7 +183,8 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 				.build();
 		buildModifier(crushing)
 				.addModule(MobEffectModule.builder(MobEffects.MOVEMENT_SLOWDOWN).level(RandomLevelingValue.perLevel(0, 1f)).time(RandomLevelingValue.random(60, 20)).build(), ModifierHooks.MELEE_HIT, ModifierHooks.MONSTER_MELEE_HIT)
-				.addModule(MobEffectModule.builder(MobEffects.WEAKNESS).time(RandomLevelingValue.random(60, 20)).build(), ModifierHooks.MELEE_HIT, ModifierHooks.MONSTER_MELEE_HIT);
+				.addModule(MobEffectModule.builder(MobEffects.WEAKNESS).time(RandomLevelingValue.random(60, 20)).build(), ModifierHooks.MELEE_HIT, ModifierHooks.MONSTER_MELEE_HIT)
+				.build();
 	}
 
 	@Override

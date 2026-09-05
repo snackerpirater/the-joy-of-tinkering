@@ -50,14 +50,6 @@
       ]
     },
     {
-      "type": "tconstruct:material_traits",
-      "hooks": [
-        "tconstruct:rebalanced_trait"
-      ],
-      "material_index": 1,
-      "stat_type": "joy_of_tinkering:firing_mechanism"
-    },
-    {
       "type": "tconstruct:default_materials",
       "materials": [
         {

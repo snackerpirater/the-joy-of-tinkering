@@ -1,15 +1,18 @@
 package com.snackpirate.joy_of_tinkering.data.materials;
 
+import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
 import com.snackpirate.joy_of_tinkering.items.tools.FiringMechanismMaterialStats;
 import com.snackpirate.joy_of_tinkering.items.tools.GunBarrelMaterialStats;
 import com.snackpirate.joy_of_tinkering.items.tools.JOTToolStats;
 import com.snackpirate.joy_of_tinkering.items.tools.PropellantMaterialStats;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialRenderInfoProvider;
 import slimeknights.tconstruct.library.client.data.material.AbstractMaterialSpriteProvider;
 import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToColorMapping;
+import slimeknights.tconstruct.library.client.data.spritetransformer.GreyToSpriteTransformer;
 import slimeknights.tconstruct.library.client.data.spritetransformer.RecolorSpriteTransformer;
 import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
 
@@ -82,6 +85,21 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 						.addARGB(216, 0xFFffa180)
 						.addARGB(255, 0xFFffc6ac)
 						.build()));
+
+		ResourceLocation glowBerryTexture = JoyOfTinkering.id("item/material/glow_berry");
+		ResourceLocation glowBerryOutline = JoyOfTinkering.id("item/material/glow_berry_outline");
+		ResourceLocation glowBerryOutline2 = JoyOfTinkering.id("item/material/glow_berry_outline_2");
+		buildMaterial(glowBerryVine)
+				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).maille().repairKit().laces()
+				.fallbacks("primitive", "cloth")
+				.transformer(GreyToSpriteTransformer.builderFromBlack()
+						.addTexture(63,  glowBerryOutline2)
+						.addTexture(102, glowBerryOutline)
+						.addTexture(140, glowBerryTexture)
+						.addTexture(178, glowBerryTexture)
+						.addTexture(216, glowBerryTexture)
+						.addTexture(255, glowBerryTexture)
+						.build());
 	}
 	public static class RenderInfo extends AbstractMaterialRenderInfoProvider {
 
@@ -93,6 +111,7 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 		protected void addMaterialRenderInfo() {
 			buildRenderInfo(slimebronze).color(0xff6313).fallbacks("slime_metal", "metal");
 			buildRenderInfo(shimmervine).color(0x41f384).fallbacks("primitive", "cloth");
+			buildRenderInfo(glowBerryVine).color(0x70922d).fallbacks("primitive", "cloth").luminosity(9);
 			buildRenderInfo(crimsonShimmervine).color(0xff866f).fallbacks("primitive", "cloth");
 			buildRenderInfo(twistedShimmervine).color(0x05dfc6).fallbacks("primitive", "cloth");
 			buildRenderInfo(sugar).color(0xffffff).fallbacks("crystal");

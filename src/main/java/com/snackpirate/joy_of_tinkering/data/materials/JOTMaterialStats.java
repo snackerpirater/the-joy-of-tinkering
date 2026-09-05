@@ -172,6 +172,8 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 		addMaterialStats(MaterialIds.magma, new PropellantMaterialStats(3f));
 
 		addMaterialStats(shimmervine, StatlessMaterialStats.BOWSTRING, StatlessMaterialStats.MAILLE, StatlessMaterialStats.BINDING, RepairStats.laces(220));
+
+		addMaterialStats(glowBerryVine, StatlessMaterialStats.BOWSTRING, StatlessMaterialStats.MAILLE, StatlessMaterialStats.BINDING, RepairStats.laces(90));
 	}
 
 	public void gunFromBowStats(MaterialId id, LimbMaterialStats limb, GripMaterialStats grip, int maxAmmo, float power) {
