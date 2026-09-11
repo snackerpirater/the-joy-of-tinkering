@@ -35,6 +35,7 @@ public record FluidWalkerModule(IJsonPredicate<BlockState> fluidPredicate, Level
 			FloatLoadable.FROM_ZERO.requiredField("damage_chance", FluidWalkerModule::damageChance),
 			FluidWalkerModule::new
 	);
+    //eee
 	@Override
 	public RecordLoadable<? extends ModifierModule> getLoader() {
 		return LOADER;
