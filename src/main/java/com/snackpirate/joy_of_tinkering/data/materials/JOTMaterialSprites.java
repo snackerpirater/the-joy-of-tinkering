@@ -110,10 +110,10 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 		@Override
 		protected void addMaterialRenderInfo() {
 			buildRenderInfo(slimebronze).color(0xff6313).fallbacks("slime_metal", "metal");
-			buildRenderInfo(shimmervine).color(0x41f384).fallbacks("primitive", "cloth");
+			buildRenderInfo(shimmervine).color(0x41f384).fallbacks("primitive", "cloth").luminosity(9);
 			buildRenderInfo(glowBerryVine).color(0x70922d).fallbacks("primitive", "cloth").luminosity(9);
-			buildRenderInfo(crimsonShimmervine).color(0xff866f).fallbacks("primitive", "cloth");
-			buildRenderInfo(twistedShimmervine).color(0x05dfc6).fallbacks("primitive", "cloth");
+			buildRenderInfo(crimsonShimmervine).color(0xff866f).fallbacks("primitive", "cloth").luminosity(9);
+			buildRenderInfo(twistedShimmervine).color(0x05dfc6).fallbacks("primitive", "cloth").luminosity(9);
 			buildRenderInfo(sugar).color(0xffffff).fallbacks("crystal");
 		}
 
