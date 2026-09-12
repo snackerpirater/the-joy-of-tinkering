@@ -181,6 +181,7 @@ public class JoyOfTinkering {
 			ModifierModule.LOADER.register(id("fire_on_crit"), FireOnCritModule.LOADER);
 			ModifierModule.LOADER.register(id("drop_mob_equipment"), DropMobEquipmentModule.LOADER);
 			ModifierModule.LOADER.register(id("bandolier_inventory"), BandolierInventoryModule.LOADER);
+			ModifierModule.LOADER.register(id("place_block_tool_inventory"), PlaceBlockFromToolInventoryModule.LOADER);
 
 			ToolStackPredicate.LOADER.register(id("has_overslime"), JOTModifierProvider.HAS_OVERSLIME.getLoader());
 		}

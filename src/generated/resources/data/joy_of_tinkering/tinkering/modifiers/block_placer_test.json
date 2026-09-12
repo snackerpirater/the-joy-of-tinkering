@@ -1,0 +1,20 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:place_block_tool_inventory"
+    },
+    {
+      "type": "tconstruct:inventory",
+      "slots": {
+        "each_level": 3,
+        "flat": 3
+      }
+    },
+    {
+      "type": "tconstruct:inventory_menu",
+      "on_key": "any"
+    }
+  ],
+  "tooltip_display": "always"
+}
