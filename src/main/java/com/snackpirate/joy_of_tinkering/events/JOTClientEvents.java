@@ -9,6 +9,7 @@ import com.snackpirate.joy_of_tinkering.entity.ModifiableBulletRenderer;
 import com.snackpirate.joy_of_tinkering.items.JOTHeadType;
 import com.snackpirate.joy_of_tinkering.items.ModifiableGunItem;
 import com.snackpirate.joy_of_tinkering.items.tools.JOTToolStats;
+import com.snackpirate.joy_of_tinkering.modifiers.TrimElytraTextureSupplier;
 import com.snackpirate.joy_of_tinkering.registries.JOTEffects;
 import com.snackpirate.joy_of_tinkering.registries.JOTEntities;
 import com.snackpirate.joy_of_tinkering.registries.JOTItems;
@@ -36,10 +37,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.level.material.FogType;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
-import net.minecraftforge.client.event.RenderGuiOverlayEvent;
-import net.minecraftforge.client.event.ViewportEvent;
+import net.minecraftforge.client.event.*;
 import net.minecraftforge.client.gui.overlay.VanillaGuiOverlay;
 import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -95,7 +93,10 @@ public class JOTClientEvents {
 	static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(JOTEntities.bullet.get(), ModifiableBulletRenderer::new);
 	}
-
+	@SubscribeEvent
+	static void registerListeners(RegisterClientReloadListenersEvent event) {
+		event.registerReloadListener(TrimElytraTextureSupplier.CACHE_INVALIDATOR);
+	}
 	@SubscribeEvent
 	static void registerSkullModels(EntityRenderersEvent.CreateSkullModels event) {
 		EntityModelSet modelSet = event.getEntityModelSet();

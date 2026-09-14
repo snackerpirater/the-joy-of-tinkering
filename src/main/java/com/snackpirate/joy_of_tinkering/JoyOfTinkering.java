@@ -22,12 +22,14 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -36,6 +38,7 @@ import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 import slimeknights.mantle.registration.deferred.SynchronizedDeferredRegister;
 import slimeknights.tconstruct.TConstruct;
+import slimeknights.tconstruct.library.client.armor.texture.ArmorTextureSupplier;
 import slimeknights.tconstruct.library.client.data.material.GeneratorPartTextureJsonGenerator;
 import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
 import slimeknights.tconstruct.library.json.predicate.tool.ToolStackPredicate;
@@ -82,6 +85,9 @@ public class JoyOfTinkering {
 		MinecraftForge.EVENT_BUS.register(this);
 		JOTNetwork.setup();
 //		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
+			ArmorTextureSupplier.LOADER.register(JoyOfTinkering.id("elytra_trim"), TrimElytraTextureSupplier.LOADER);
+		});
 	}
 
 	private void commonSetup(final FMLCommonSetupEvent event) {

@@ -18,21 +18,18 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.fluids.capability.IFluidHandler;
 import org.jetbrains.annotations.Nullable;
 import slimeknights.mantle.data.loadable.primitive.IntLoadable;
 import slimeknights.mantle.data.loadable.record.RecordLoadable;
 import slimeknights.tconstruct.TConstruct;
 import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
-import slimeknights.tconstruct.library.modifiers.fluid.FluidEffectContext;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.AreaOfEffectHighlightModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.BlockInteractionModifierHook;
 import slimeknights.tconstruct.library.modifiers.hook.interaction.InteractionSource;
 import slimeknights.tconstruct.library.modifiers.modules.ModifierModule;
 import slimeknights.tconstruct.library.module.HookProvider;
 import slimeknights.tconstruct.library.module.ModuleHook;
-import slimeknights.tconstruct.library.module.ModuleHookMap;
 import slimeknights.tconstruct.library.tools.capability.BlockItemProviderModifierHook;
 import slimeknights.tconstruct.library.tools.capability.inventory.ToolInventoryCapability;
 import slimeknights.tconstruct.library.tools.definition.module.ToolHooks;
@@ -40,10 +37,8 @@ import slimeknights.tconstruct.library.tools.definition.module.aoe.AreaOfEffectI
 import slimeknights.tconstruct.library.tools.helper.ToolDamageUtil;
 import slimeknights.tconstruct.library.tools.nbt.IToolStackView;
 import slimeknights.tconstruct.library.utils.Util;
-import slimeknights.tconstruct.shared.TinkerCommons;
 
 import java.util.List;
-import java.util.Objects;
 
 public record PlaceBlockFromToolInventoryModule(int toolDamage, int cooldown) implements ModifierModule, BlockItemProviderModifierHook, BlockInteractionModifierHook, AreaOfEffectHighlightModifierHook {
 	private static final List<ModuleHook<?>> HOOKS = HookProvider.<PlaceBlockFromToolInventoryModule>defaultHooks(ModifierHooks.BLOCK_ITEM_PROVIDER, ModifierHooks.BLOCK_INTERACT, ModifierHooks.AOE_HIGHLIGHT);
@@ -63,6 +58,7 @@ public record PlaceBlockFromToolInventoryModule(int toolDamage, int cooldown) im
 	public InteractionResult beforeBlockUse(IToolStackView tool, ModifierEntry modifier, UseOnContext context, InteractionSource source) {
 		if (!tool.isBroken() && tool.getHook(ToolHooks.INTERACTION).canInteract(tool, modifier.getId(), source)) {
 			Player player = context.getPlayer();
+			if (player != null && player.isCrouching()) return InteractionResult.FAIL;
 			if (!context.getLevel().isClientSide)
 			{
 				Level world = context.getLevel();
@@ -116,6 +112,14 @@ public record PlaceBlockFromToolInventoryModule(int toolDamage, int cooldown) im
 						}
 					}
 				}
+
+				if (numTargets != 0 && player != null) {
+					if (cooldown != 0) player.getCooldowns().addCooldown(context.getItemInHand().getItem(), cooldown);
+					if (toolDamage > 0 && ToolDamageUtil.damage(tool, toolDamage * numTargets, player, context.getItemInHand(), modifier.getId())) {
+						player.broadcastBreakEvent(source.getSlot(context.getHand()));
+					}
+				}
+//				world.playSound(null, pos, world.getBlockState(pos).getSoundType(world, pos, player).getPlaceSound(), SoundSource.BLOCKS, 1.0f, 1.0f);
 			}
 			return InteractionResult.sidedSuccess(context.getLevel().isClientSide);
 		}
@@ -128,10 +132,7 @@ public record PlaceBlockFromToolInventoryModule(int toolDamage, int cooldown) im
 //		JoyOfTinkering.LOGGER.info("got stack {}", inventory.findStack(tool, modifier, stack -> {
 //			return stack.getItem() instanceof BlockItem;
 //		}).stack());
-		return inventory.findStack(tool, modifier, stack -> {
-			JoyOfTinkering.LOGGER.info("got stack {}", stack);
-			return stack.getItem() instanceof BlockItem;
-		}).stack();
+		return inventory.findStack(tool, modifier, stack -> stack.getItem() instanceof BlockItem).stack();
 	}
 
 	@Override

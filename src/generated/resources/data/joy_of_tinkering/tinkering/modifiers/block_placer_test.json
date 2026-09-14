@@ -13,7 +13,7 @@
     },
     {
       "type": "tconstruct:inventory_menu",
-      "on_key": "any"
+      "on_key": "shift"
     }
   ],
   "tooltip_display": "always"
