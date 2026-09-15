@@ -100,7 +100,7 @@ public record TrimElytraTextureSupplier(ModifierId modifier, ResourceLocation pa
 			ResourceLocation withMaterial = root.withSuffix('_' + material.assetName());
 			TextureAtlasSprite sprite = getTrimAtlas().getSprite(withMaterial);
 			if (!MissingTextureAtlasSprite.getLocation().equals(sprite.contents().name())) {
-				return new TrimArmorTextureSupplier.TrimArmorTexture(sprite);
+				return new TrimElytraTexture(sprite);
 			}
 			// failed to find the unique sprite, go for tinting the base
 			int color = -1;
