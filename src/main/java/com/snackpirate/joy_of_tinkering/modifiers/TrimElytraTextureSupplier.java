@@ -115,7 +115,9 @@ public record TrimElytraTextureSupplier(ModifierId modifier, ResourceLocation pa
 		@Override
 		public void renderTexture(Model model, PoseStack matrices, MultiBufferSource bufferSource, int packedLight, int packedOverlay, float red, float green, float blue, float alpha, boolean hasGlint) {
 			// ignoring glint as odds are very low trim texture is the first one
-			VertexConsumer buffer = trimSprite.wrap(bufferSource.getBuffer(Sheets.armorTrimsSheet()));
+			VertexConsumer buffer = trimSprite.wrap(bufferSource.getBuffer(
+					Sheets.armorTrimsSheet()
+			));
 			model.renderToBuffer(matrices, buffer, packedLight, packedOverlay, red, green, blue, alpha);
 		}
 	}
