@@ -36,22 +36,22 @@
         "netherite_darker": "trims/color_palettes/netherite_darker"
       },
       "textures": [
-        "minecraft:trims/models/armor/coast_wings",
-        "minecraft:trims/models/armor/sentry_wings",
-        "minecraft:trims/models/armor/dune_wings",
-        "minecraft:trims/models/armor/wild_wings",
-        "minecraft:trims/models/armor/vex_wings",
-        "minecraft:trims/models/armor/wayfinder_wings",
-        "minecraft:trims/models/armor/shaper_wings",
-        "minecraft:trims/models/armor/raiser_wings",
-        "minecraft:trims/models/armor/host_wings",
-        "minecraft:trims/models/armor/ward_wings",
-        "minecraft:trims/models/armor/silence_wings",
-        "minecraft:trims/models/armor/tide_wings",
-        "minecraft:trims/models/armor/snout_wings",
-        "minecraft:trims/models/armor/rib_wings",
-        "minecraft:trims/models/armor/eye_wings",
-        "minecraft:trims/models/armor/spire_wings"
+        "joy_of_tinkering:trims/models/armor/coast_wings",
+        "joy_of_tinkering:trims/models/armor/sentry_wings",
+        "joy_of_tinkering:trims/models/armor/dune_wings",
+        "joy_of_tinkering:trims/models/armor/wild_wings",
+        "joy_of_tinkering:trims/models/armor/vex_wings",
+        "joy_of_tinkering:trims/models/armor/wayfinder_wings",
+        "joy_of_tinkering:trims/models/armor/shaper_wings",
+        "joy_of_tinkering:trims/models/armor/raiser_wings",
+        "joy_of_tinkering:trims/models/armor/host_wings",
+        "joy_of_tinkering:trims/models/armor/ward_wings",
+        "joy_of_tinkering:trims/models/armor/silence_wings",
+        "joy_of_tinkering:trims/models/armor/tide_wings",
+        "joy_of_tinkering:trims/models/armor/snout_wings",
+        "joy_of_tinkering:trims/models/armor/rib_wings",
+        "joy_of_tinkering:trims/models/armor/eye_wings",
+        "joy_of_tinkering:trims/models/armor/spire_wings"
       ]
     }
   ]
