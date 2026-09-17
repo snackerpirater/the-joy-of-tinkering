@@ -87,6 +87,7 @@ public class JoyOfTinkering {
 //		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> {
 			ArmorTextureSupplier.LOADER.register(JoyOfTinkering.id("elytra_trim"), TrimElytraTextureSupplier.LOADER);
+			ArmorTextureSupplier.LOADER.register(JoyOfTinkering.id("elytra_banner"), BannerElytraTextureSupplier.LOADER);
 		});
 	}
 

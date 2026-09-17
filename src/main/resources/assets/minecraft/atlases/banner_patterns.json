@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:directory",
+      "prefix": "elytra_banners/",
+      "source": "elytra_banners"
+    }
+  ]
+}

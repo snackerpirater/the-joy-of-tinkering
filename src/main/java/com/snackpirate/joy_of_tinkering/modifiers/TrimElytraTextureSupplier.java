@@ -77,7 +77,7 @@ public record TrimElytraTextureSupplier(ModifierId modifier, ResourceLocation pa
 	private static final Map<String,ArmorTexture> WINGS_CACHE = new HashMap<>();
 	public static final ResourceManagerReloadListener CACHE_INVALIDATOR = manager -> {
 		WINGS_CACHE.clear();
-		TrimArmorTextureSupplier.CACHE_INVALIDATOR.onResourceManagerReload(manager);
+//		TrimArmorTextureSupplier.CACHE_INVALIDATOR.onResourceManagerReload(manager);
 	};
 	public static class TrimElytraTexture implements ArmorTexture {
 		private static TextureAtlas elytraTrimAtlas = null;

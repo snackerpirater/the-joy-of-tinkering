@@ -9,6 +9,7 @@ import com.snackpirate.joy_of_tinkering.entity.ModifiableBulletRenderer;
 import com.snackpirate.joy_of_tinkering.items.JOTHeadType;
 import com.snackpirate.joy_of_tinkering.items.ModifiableGunItem;
 import com.snackpirate.joy_of_tinkering.items.tools.JOTToolStats;
+import com.snackpirate.joy_of_tinkering.modifiers.BannerElytraTextureSupplier;
 import com.snackpirate.joy_of_tinkering.modifiers.TrimElytraTextureSupplier;
 import com.snackpirate.joy_of_tinkering.registries.JOTEffects;
 import com.snackpirate.joy_of_tinkering.registries.JOTEntities;
@@ -96,6 +97,7 @@ public class JOTClientEvents {
 	@SubscribeEvent
 	static void registerListeners(RegisterClientReloadListenersEvent event) {
 		event.registerReloadListener(TrimElytraTextureSupplier.CACHE_INVALIDATOR);
+		event.registerReloadListener(BannerElytraTextureSupplier.CACHE_INVALIDATOR);
 	}
 	@SubscribeEvent
 	static void registerSkullModels(EntityRenderersEvent.CreateSkullModels event) {
