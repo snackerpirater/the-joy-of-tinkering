@@ -151,7 +151,7 @@ public class JOTLang extends LanguageProvider {
 
 		add("death.attack.joy_of_tinkering.bullet", "%s was shot dead by %s");
 
-		addModifier(JOTModifierIds.kaboom, "Kaboom", "Kablooey!", "Critical melee attacks fire the gun!");
+		addModifier(JOTModifierIds.kaboom, "Slamfire", "Kablooey!", "Critical melee attacks fire the gun!");
 
 		addMaterial(shimmervine, "Shimmervine", "Ooh shiny!", "Adds a 3.5% chance per level for killed mobs to drop their equipment, stacking with luck");
 		addMaterialVariant(twistedShimmervine, "Twisting Shimmervine");
