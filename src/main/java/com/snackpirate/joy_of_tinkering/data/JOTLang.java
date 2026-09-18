@@ -166,6 +166,9 @@ public class JOTLang extends LanguageProvider {
 		addModifier(JOTModifierIds.crushing, "Crushing", "YOWCH", "Weakens the enemy on hit");
 
 		addMaterial(glowBerryVine, "Glow Berry Vine", "Do it for the vine", "???");
+
+		addModifier(JOTModifierIds.elytraBanner.getId(), "Elytra Banner", "Wear your heart on your wings", "Shows the banner on the wings");
+		add("modifier.joy_of_tinkering.elytra_banner.requirememt", "Elytra Banner requires Wings");
 	}
 
 	public void addModifier(ModifierId modifier, String name, String flavour, String desc) {

@@ -78,7 +78,7 @@ public class JOTItemTags extends ItemTagsProvider {
 		tag(magmadaptiveConsumable).add(Items.MAGMA_CREAM, Items.MAGMA_BLOCK, TinkerFluids.magmaBottle.get());
 		tag(JUNKSHOT_AMMO).add(Items.FIREWORK_ROCKET).addTag(THROWN_AMMO).addTag(ItemTags.ARROWS);
 		tag(PROPELLANTS).add(Items.MAGMA_CREAM, Items.GUNPOWDER, Items.GLOWSTONE_DUST, Items.SUGAR, Items.BONE_MEAL, JOTItems.powderSnowBottle.get(), Items.PRISMARINE_CRYSTALS, Items.BLAZE_POWDER);
-		tag(BANNER).add(TinkerTools.slimeWings.get());
+//		tag(BANNER).add(TinkerTools.slimeWings.get());
 	}
 
 	@SafeVarargs

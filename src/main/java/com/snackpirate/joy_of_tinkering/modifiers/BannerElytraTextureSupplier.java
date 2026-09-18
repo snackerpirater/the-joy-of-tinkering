@@ -5,14 +5,13 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.VertexFormat;
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
-import net.minecraft.Util;
+import com.snackpirate.joy_of_tinkering.registries.JOTModifierIds;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.Model;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderStateShard;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.renderer.entity.layers.ElytraLayer;
 import net.minecraft.client.renderer.texture.TextureAtlas;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.core.Holder;
@@ -20,20 +19,17 @@ import net.minecraft.core.RegistryAccess;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManagerReloadListener;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BannerPattern;
 import oshi.util.tuples.Pair;
 import slimeknights.mantle.data.loadable.record.RecordLoadable;
 import slimeknights.mantle.data.registry.GenericLoaderRegistry;
-import slimeknights.tconstruct.library.client.TinkerRenderTypes;
 import slimeknights.tconstruct.library.client.armor.AbstractArmorModel;
 import slimeknights.tconstruct.library.client.armor.texture.ArmorTextureSupplier;
 import slimeknights.tconstruct.library.modifiers.ModifierId;
 import slimeknights.tconstruct.library.tools.helper.ModifierUtil;
 import slimeknights.tconstruct.library.tools.nbt.ToolStack;
-import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.modules.cosmetic.BannerModule;
 
 import java.util.ArrayList;
@@ -42,8 +38,8 @@ import java.util.List;
 import java.util.Map;
 
 public record BannerElytraTextureSupplier(ModifierId modifier) implements ArmorTextureSupplier {
-    public static BannerElytraTextureSupplier INSTANCE = new BannerElytraTextureSupplier(TinkerModifiers.banner.getId());
-    public static final RecordLoadable<BannerElytraTextureSupplier> LOADER = RecordLoadable.create(ModifierId.PARSER.defaultField("modifier", TinkerModifiers.banner.getId(), BannerElytraTextureSupplier::modifier), BannerElytraTextureSupplier::new);
+    public static BannerElytraTextureSupplier INSTANCE = new BannerElytraTextureSupplier(JOTModifierIds.elytraBanner.getId());
+    public static final RecordLoadable<BannerElytraTextureSupplier> LOADER = RecordLoadable.create(ModifierId.PARSER.defaultField("modifier", JOTModifierIds.elytraBanner.getId(), BannerElytraTextureSupplier::modifier), BannerElytraTextureSupplier::new);
 
 
     public BannerElytraTextureSupplier {}

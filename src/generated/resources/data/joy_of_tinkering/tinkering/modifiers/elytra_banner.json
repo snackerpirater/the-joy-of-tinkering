@@ -1,0 +1,27 @@
+{
+  "level_display": "tconstruct:no_levels",
+  "modules": [
+    {
+      "type": "tconstruct:requirements",
+      "display_modifiers": [
+        {
+          "level": 1,
+          "name": "tconstruct:wings"
+        }
+      ],
+      "requirement": {
+        "type": "tconstruct:has_modifier",
+        "check": "all",
+        "modifier": {
+          "type": "tconstruct:single",
+          "modifier": "tconstruct:wings"
+        }
+      },
+      "translation_key": "modifier.joy_of_tinkering.elytra_banner.requirement"
+    },
+    {
+      "type": "tconstruct:banner"
+    }
+  ],
+  "tooltip_display": "always"
+}

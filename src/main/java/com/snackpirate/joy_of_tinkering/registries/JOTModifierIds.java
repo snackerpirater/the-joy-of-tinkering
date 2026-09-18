@@ -2,8 +2,12 @@ package com.snackpirate.joy_of_tinkering.registries;
 
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
 import slimeknights.tconstruct.library.modifiers.ModifierId;
+import slimeknights.tconstruct.library.modifiers.util.ModifierDeferredRegister;
+import slimeknights.tconstruct.library.modifiers.util.StaticModifier;
 
 public class JOTModifierIds {
+	public static final ModifierDeferredRegister MODIFIERS = ModifierDeferredRegister.create(JoyOfTinkering.MOD_ID);
+	public static final StaticModifier<?> elytraBanner = MODIFIERS.registerDynamic("elytra_banner");
 	//upgrades
 	public static final ModifierId wellRead = modId("well_read");
 	//defense
@@ -68,6 +72,7 @@ public class JOTModifierIds {
 	public static final ModifierId crushing = modId("crushing");
 
 	public static final ModifierId testPlacement = modId("block_placer_test");
+
 
 	public static ModifierId modId(String id) {
 		return new ModifierId(JoyOfTinkering.MOD_ID, id);

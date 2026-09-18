@@ -23,6 +23,7 @@ import slimeknights.tconstruct.library.json.predicate.tool.ToolContextPredicate;
 import slimeknights.tconstruct.library.json.predicate.tool.ToolStackPredicate;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.modules.armor.MobDisguiseModule;
+import slimeknights.tconstruct.library.modifiers.modules.build.ModifierRequirementsModule;
 import slimeknights.tconstruct.library.modifiers.modules.build.StatBoostModule;
 import slimeknights.tconstruct.library.modifiers.modules.capacity.OverslimeModule;
 import slimeknights.tconstruct.library.modifiers.modules.combat.MobEffectModule;
@@ -33,8 +34,10 @@ import slimeknights.tconstruct.library.tools.capability.inventory.InventoryMenuM
 import slimeknights.tconstruct.library.tools.capability.inventory.InventoryModule;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import slimeknights.tconstruct.tools.TinkerModifiers;
+import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.modules.CraftCountModule;
 import slimeknights.tconstruct.tools.modules.armor.FieryCounterModule;
+import slimeknights.tconstruct.tools.modules.cosmetic.BannerModule;
 import slimeknights.tconstruct.world.TinkerWorld;
 
 import java.util.Set;
@@ -189,6 +192,11 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 				.addModule(new PlaceBlockFromToolInventoryModule(0, 0))
 				.addModule(InventoryModule.builder().slots(3, 3))
 				.addModule(InventoryMenuModule.SHIFT)
+				.build();
+		buildModifier(elytraBanner.getId())
+				.addModule(ModifierRequirementsModule.builder().requireModifier(ModifierIds.wings, 1).translationKey("modifier.joy_of_tinkering.elytra_banner.requirement").build())
+				.addModule(BannerModule.INSTANCE)
+				.levelDisplay(ModifierLevelDisplay.NO_LEVELS)
 				.build();
 	}
 

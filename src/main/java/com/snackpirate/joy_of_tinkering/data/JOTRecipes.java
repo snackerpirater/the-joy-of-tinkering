@@ -2,6 +2,7 @@ package com.snackpirate.joy_of_tinkering.data;
 
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
 import com.snackpirate.joy_of_tinkering.data.tags.JOTItemTags;
+import com.snackpirate.joy_of_tinkering.modifiers.BannerElytraModifierRecipe;
 import com.snackpirate.joy_of_tinkering.registries.*;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -11,16 +12,22 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.IntersectionIngredient;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import slimeknights.mantle.fluid.transfer.AbstractFluidContainerTransferProvider;
 import slimeknights.mantle.fluid.transfer.FillFluidContainerTransfer;
 import slimeknights.mantle.recipe.data.ICommonRecipeHelper;
 import slimeknights.mantle.recipe.helper.ItemOutput;
+import slimeknights.mantle.recipe.helper.SimpleFinishedRecipe;
+import slimeknights.mantle.recipe.helper.SimpleRecipeSerializer;
 import slimeknights.mantle.recipe.ingredient.FluidIngredient;
 import slimeknights.mantle.recipe.ingredient.SizedIngredient;
+import slimeknights.mantle.registration.deferred.SynchronizedDeferredRegister;
 import slimeknights.mantle.registration.object.FluidObject;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.fluids.TinkerFluids;
@@ -48,6 +55,7 @@ import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.TinkerToolParts;
 import slimeknights.tconstruct.tools.TinkerTools;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
+import slimeknights.tconstruct.tools.recipe.BannerModifierRecipe;
 import slimeknights.tconstruct.world.TinkerHeadType;
 import slimeknights.tconstruct.world.TinkerWorld;
 
@@ -57,6 +65,9 @@ import java.util.Collections;
 import java.util.function.Consumer;
 
 public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper, IToolRecipeHelper, ISmelteryRecipeHelper, ICommonRecipeHelper {
+
+	public static final SynchronizedDeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = SynchronizedDeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, JoyOfTinkering.MOD_ID);
+	public static final RegistryObject<RecipeSerializer<BannerElytraModifierRecipe>> elytraBannerModifierSerializer = RECIPE_SERIALIZERS.register("elytra_banner_modifier", () -> new SimpleRecipeSerializer<>(BannerElytraModifierRecipe::new));
 
 	public JOTRecipes(PackOutput pOutput) {
 		super(pOutput);
@@ -240,6 +251,8 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 				.setCoolingTime(1)
 				.setCast(Items.GLASS_BOTTLE, true)
 				.save(consumer, location(castingFolder + "bottle"));
+
+		consumer.accept(new SimpleFinishedRecipe(location(slotlessFolder + "elytra_banner"), elytraBannerModifierSerializer.get()));
 	}
 
 	private static final String buildingFolder = "tools/building/";
