@@ -90,7 +90,7 @@ public class JOTItems {
 		ToolBuildHandler.addVariants(output::accept, JOTItems.RIFLE.get(), "");
 //		ToolBuildHandler.addVariants(output::accept, JOTItems.BULLET.get(), "");
 		addBulletVariants(output::accept);
-		ToolBuildHandler.addVariants(output::accept, JOTItems.morningStar.get(), "");
+//		ToolBuildHandler.addVariants(output::accept, JOTItems.morningStar.get(), "");
 		ToolBuildHandler.addVariants(output::accept, JOTItems.greatmace.get(), "");
 
 		ToolBuildHandler.addVariants(output::accept, JOTItems.DECIMATOR.get(), "");

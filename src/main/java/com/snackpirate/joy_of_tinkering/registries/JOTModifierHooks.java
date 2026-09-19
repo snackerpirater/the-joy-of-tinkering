@@ -1,8 +1,8 @@
 package com.snackpirate.joy_of_tinkering.registries;
 
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
-import com.snackpirate.joy_of_tinkering.modifiers.hook.FluidCollisionModifierHook;
-import com.snackpirate.joy_of_tinkering.modifiers.hook.HarvestCheckModifierHook;
+import com.snackpirate.joy_of_tinkering.modifiers.hooks.FluidCollisionModifierHook;
+import com.snackpirate.joy_of_tinkering.modifiers.hooks.HarvestCheckModifierHook;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.module.ModuleHook;
 
