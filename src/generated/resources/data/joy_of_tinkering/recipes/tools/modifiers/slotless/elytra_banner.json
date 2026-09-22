@@ -1,3 +1,6 @@
 {
-  "type": "joy_of_tinkering:elytra_banner_modifier"
+  "type": "joy_of_tinkering:elytra_banner_modifier",
+  "clear_input": {
+    "item": "tconstruct:sky_slime_bottle"
+  }
 }

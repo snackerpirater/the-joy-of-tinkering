@@ -16,6 +16,11 @@
       "stat_type": "tconstruct:head"
     },
     {
+      "allow_animated": false,
+      "path": "joy_of_tinkering:tinker_armor/rockpuncher/plating_wings",
+      "stat_type": "tconstruct:armor_plating"
+    },
+    {
       "path": "joy_of_tinkering:item/tool/bullet/casing",
       "stat_type": "joy_of_tinkering:bullet_casing"
     },

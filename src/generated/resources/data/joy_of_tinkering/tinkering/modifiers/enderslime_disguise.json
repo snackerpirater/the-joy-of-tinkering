@@ -5,6 +5,5 @@
       "type": "tconstruct:mob_disguise",
       "entity": "tconstruct:ender_slime"
     }
-  ],
-  "tooltip_display": "always"
+  ]
 }

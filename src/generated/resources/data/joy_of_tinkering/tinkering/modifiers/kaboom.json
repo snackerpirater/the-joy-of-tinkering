@@ -10,6 +10,5 @@
       "operation": "add",
       "stat": "joy_of_tinkering:max_ammo"
     }
-  ],
-  "tooltip_display": "always"
+  ]
 }

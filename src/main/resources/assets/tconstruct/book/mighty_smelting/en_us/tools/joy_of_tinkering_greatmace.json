@@ -1,0 +1,15 @@
+{
+  "tool": "joy_of_tinkering:greatmace",
+  "text": [
+    { "text": "The Greatmace is a large melee weapon that inflicts debuffs onto enemies" },
+    { "text": "\n" },
+    { "text": "Lots of sharp metal at the end of a stick. What more has to be said?",
+      "paragraph": true
+    }
+  ],
+  "properties": [
+    "Slow and heavy AOE attacks",
+    "Melee hits debuff targets",
+    "Can also mine stone, slowly"
+  ]
+}

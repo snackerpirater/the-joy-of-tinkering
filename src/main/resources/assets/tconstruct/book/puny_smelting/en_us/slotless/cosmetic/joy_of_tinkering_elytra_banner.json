@@ -1,0 +1,13 @@
+{
+  "modifier_id": "joy_of_tinkering:elytra_banner",
+  "text": [
+    {
+      "text": "Beautiful plumage"
+    }
+  ],
+  "effects": [
+    "Decorates wings with banners",
+    "Apply again to change the banner",
+    "Slotless"
+  ]
+}

@@ -13,6 +13,5 @@
       "operation": "add",
       "stat": "tconstruct:projectile_damage"
     }
-  ],
-  "tooltip_display": "always"
+  ]
 }

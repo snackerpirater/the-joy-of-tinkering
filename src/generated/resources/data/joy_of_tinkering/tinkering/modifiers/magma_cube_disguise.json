@@ -5,6 +5,5 @@
       "type": "tconstruct:mob_disguise",
       "entity": "minecraft:magma_cube"
     }
-  ],
-  "tooltip_display": "always"
+  ]
 }

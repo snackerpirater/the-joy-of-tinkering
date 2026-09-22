@@ -4,5 +4,6 @@
   "pattern_item": {
     "tag": "tconstruct:casts/sand"
   },
-  "result": "joy_of_tinkering:gun_barrel_sand_cast"
+  "result": "joy_of_tinkering:gun_barrel_sand_cast",
+  "title_key": "tconstruct:sand_cast"
 }

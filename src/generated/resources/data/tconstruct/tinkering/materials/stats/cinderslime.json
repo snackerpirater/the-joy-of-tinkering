@@ -6,7 +6,7 @@
       "velocity": 0.0
     },
     "joy_of_tinkering:firing_mechanism": {
-      "draw_speed": -0.2,
+      "draw_speed": -0.1,
       "max_ammo": 8.0,
       "projectile_damage": 2.75
     }

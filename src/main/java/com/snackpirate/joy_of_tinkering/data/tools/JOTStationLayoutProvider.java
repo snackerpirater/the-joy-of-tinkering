@@ -38,12 +38,12 @@ public class JOTStationLayoutProvider extends AbstractStationSlotLayoutProvider 
 				.addInputItem(JOTItems.FIRING_MECHANISM,  51, 34+15)
 				.addInputItem(TinkerToolParts.bowGrip, 31, 42+15)
 				.build();
-		defineModifiable(JOTItems.morningStar)
-				.sortIndex(SORT_WEAPON)
-				.addInputItem(TinkerToolParts.smallBlade, 48, 26)
-				.addInputItem(TinkerToolParts.largePlate, 30, 44)
-				.addInputItem(TinkerToolParts.toolHandle, 12, 62)
-				.build();
+//		defineModifiable(JOTItems.morningStar)
+//				.sortIndex(SORT_WEAPON)
+//				.addInputItem(TinkerToolParts.smallBlade, 48, 26)
+//				.addInputItem(TinkerToolParts.largePlate, 30, 44)
+//				.addInputItem(TinkerToolParts.toolHandle, 12, 62)
+//				.build();
 		defineModifiable(JOTItems.greatmace)
 				.sortIndex(SORT_WEAPON + SORT_LARGE)
 //				.addInputItem(TinkerToolParts.smallBlade, 48, 26)

@@ -270,7 +270,8 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 				.module(new CircleWeaponAttack(1.25f))
 //				.module(BoxAOEIterator.builder(2, 2, 1).addDepth(2).direction(IBoxExpansion.PITCH).build())
 				.module(new CircleAOEIterator(1, false))
-				.module(new ParticleWeaponAttack(TinkerTools.hammerAttackParticle.get()));
+				.module(new ParticleWeaponAttack(TinkerTools.hammerAttackParticle.get()))
+				.build();
 	}
 
 	@Override

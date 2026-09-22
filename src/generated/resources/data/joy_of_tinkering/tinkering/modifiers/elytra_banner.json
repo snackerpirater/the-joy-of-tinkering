@@ -22,6 +22,5 @@
     {
       "type": "tconstruct:banner"
     }
-  ],
-  "tooltip_display": "always"
+  ]
 }

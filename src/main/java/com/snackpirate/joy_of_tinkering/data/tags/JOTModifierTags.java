@@ -18,17 +18,20 @@ public class JOTModifierTags extends AbstractModifierTagProvider {
 	}
 
 	public static final TagKey<Modifier> BULLET_SUPPLYING = ModifierManager.getTag(JoyOfTinkering.id("bullet_supplying"));
+
 	@Override
 	protected void addTags() {
 		tag(TinkerTags.Modifiers.HELMET_UPGRADES).add(JOTModifierIds.wellRead);
 		tag(TinkerTags.Modifiers.BOOT_ABILITIES).add(JOTModifierIds.aquambulant);
 		tag(TinkerTags.Modifiers.GENERAL_SLOTLESS).add(JOTModifierIds.delicate);
 		tag(TinkerTags.Modifiers.RANGED_ABILITIES).add(JOTModifierIds.bulkBandolier, JOTModifierIds.trickBandolier,
-//				JOTModifierIds.junkshot,
+				JOTModifierIds.junkshot,
 				JOTModifierIds.burstFire);
 		tag(TinkerTags.Modifiers.RANGED_UPGRADES).add(JOTModifierIds.extended, JOTModifierIds.southpaw, JOTModifierIds.crackshot);
 		tag(TinkerTags.Modifiers.OVERSLIME_FRIEND).add(JOTModifierIds.overheat, JOTModifierIds.oversharing);
+		tag(TinkerTags.Modifiers.COSMETIC_SLOTLESS).add(JOTModifierIds.elytraBanner.getId());
 		tag(BULLET_SUPPLYING).add(JOTModifierIds.bulkBandolier, JOTModifierIds.trickBandolier);
+		tag(TinkerTags.Modifiers.EXTRACT_MODIFIER_BLACKLIST).add(JOTModifierIds.elytraBanner.getId());
 	}
 
 	@Override

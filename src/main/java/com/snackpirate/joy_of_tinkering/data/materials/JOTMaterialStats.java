@@ -62,7 +62,7 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 				new FiringMechanismMaterialStats(5, 0.15f, 1.75f));
 		addMaterialStats(MaterialIds.cinderslime,
 				new GunBarrelMaterialStats(1221, 0, 0.2f),
-				new FiringMechanismMaterialStats(8, -0.2f, 2.75f));
+				new FiringMechanismMaterialStats(8, -0.1f, 2.75f));
 		addMaterialStats(MaterialIds.queensSlime,
 				new GunBarrelMaterialStats(1650, -0.15f, 0.1f),
 				new FiringMechanismMaterialStats(8, 0, 2.5f));
@@ -83,11 +83,11 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 				JOTToolStats.Statless.BULLET_CASING);
 		addMaterialStats(MaterialIds.steel,
 				new GunBarrelMaterialStats(775, 0.15f, -0.1f),
-				new FiringMechanismMaterialStats(6, -0.3f, 2.5f),
+				new FiringMechanismMaterialStats(6, -0.3f, 2.75f),
 				JOTToolStats.Statless.BULLET_CASING);
 		addMaterialStats(MaterialIds.amethystBronze,
 				new GunBarrelMaterialStats(720, 0.15f, -0.1f),
-				new FiringMechanismMaterialStats(8, -0.25f, 2f),
+				new FiringMechanismMaterialStats(8, -0.15f, 2.25f),
 				JOTToolStats.Statless.BULLET_CASING);
 		addMaterialStats(MaterialIds.cobalt,
 				new GunBarrelMaterialStats(800, 0.05f, 0.05f),
@@ -96,15 +96,15 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 
 		addMaterialStats(MaterialIds.hepatizon,
 				new GunBarrelMaterialStats(975, -0.05f, 0.15f),
-				new FiringMechanismMaterialStats(8, 0.15f, 2.25f),
+				new FiringMechanismMaterialStats(8, 0.15f, 2.0f),
 				JOTToolStats.Statless.BULLET_CASING);
 		addMaterialStats(MaterialIds.manyullyn,
 				new GunBarrelMaterialStats(1150, 0.20f, 0.1f),
-				new FiringMechanismMaterialStats(6, -0.15f, 3f),
+				new FiringMechanismMaterialStats(6, -0.05f, 3f),
 				JOTToolStats.Statless.BULLET_CASING);
 		addMaterialStats(MaterialIds.knightmetal,
 				new GunBarrelMaterialStats(512, 0.05f, 0.1f),
-				new FiringMechanismMaterialStats(8, 0.2f, 2.75f),
+				new FiringMechanismMaterialStats(8, 0f, 2.5f),
 				JOTToolStats.Statless.BULLET_CASING);
 		addMaterialStats(MaterialIds.steeleaf,
 				new GunBarrelMaterialStats(200, 0, 0.15f),

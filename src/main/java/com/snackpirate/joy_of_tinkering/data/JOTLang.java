@@ -59,15 +59,15 @@ public class JOTLang extends LanguageProvider {
 //		add("item.tconstruct.slime_helmet.material.tconstruct.skyslime", "Skyslime Slimeskull");
 		add("material.tconstruct.skyslime.skull", "Skyslime");
 		add("material.tconstruct.skyslime.skull_flavor", "!kcabkconK");
-		add("material.tconstruct.skyslime.skull_encyclopedia", "Receiving knockback sends you upwards instead of sideways");
+		add("material.tconstruct.skyslime.skull_encyclopedia", "Allows launching yourself by holding and releasing the helmet interact key.");
 		addModifier(JOTModifierIds.skyward, "Skyward", "Weeeee!", "Increases launch force for all self-targeted sling modifiers");
 		addModifier(JOTModifierIds.skyslimeDisguise, "Skyslime Disguise", "The sky is blue, and so are you", "Makes you look more like a Skyslime to other Skyslimes");
 
 		addItem(JOTItems.BUCKET_OF_ENDERSLIME, "Bucket of Enderslime");
 //		add("item.tconstruct.slime_helmet.material.tconstruct.enderslime", "Enderslime Slimeskull");
 		add("material.tconstruct.enderslime.skull", "Enderslime");
-		add("material.tconstruct.enderslime.skull_flavor", "Gives you greater control of your own teleportation");
-		add("material.tconstruct.enderslime.skull_encyclopedia", "Whenever you teleport, always teleport in the direction you are looking. The range of this is limited by the distance of the original teleport.");
+		add("material.tconstruct.enderslime.skull_flavor", "Quick change!");
+		add("material.tconstruct.enderslime.skull_encyclopedia", "Pressing the helmet interact key swaps out your current armor (excluding helmet) with armor stored inside the slimeskull. Higher levels allow you to cycle between multiple sets.");
 		addModifier(JOTModifierIds.endrobe, "Endrobe", "Wardrobe malfunction", "Interacting with the helmet allows swapping out your equipped armor");
 		addModifier(JOTModifierIds.enderslimeDisguise, "Enderslime Disguise", "End 'er slime? I hardly know her!", "Makes you look more like an Enderslime to other Enderslimes");
 
@@ -82,8 +82,8 @@ public class JOTLang extends LanguageProvider {
 		addModifier(JOTModifierIds.fistMining, "Fist Mining", "Diggy diggy hole!", "Allows you to mine with empty hands");
 
 		addItem(JOTItems.CRESTED_HELMET, "Crested Helmet");
-		add(JOTItems.CRESTED_HELMET.get().getDescriptionId() + ".description", "The Crested Helmet is a fanciful piece of headgear sporting a large blade, allowing the wearer to execute a devastating headbutt attack against enemies.");
-		addModifier(JOTModifierIds.headbutt, "Headbutt", "Parry this!", "Charges up a melee attack from the helmet");
+		add(JOTItems.CRESTED_HELMET.get().getDescriptionId() + ".description", "The Crested Helmet is a fanciful piece of headgear sporting a large blade, allowing the wearer to execute a headbutt attack against enemies.");
+		addModifier(JOTModifierIds.headbutt, "Headbutt", "Parry this you filty casual", "Charges up a melee attack from the helmet");
 		add("modifier.joy_of_tinkering.plus_modifier.type_format", "%s (+%s)");
 		add("stat.joy_of_tinkering.bullet_casing", "Casing");
 		add("tool_stat.joy_of_tinkering.extra.no_stats", "No stats");
@@ -163,12 +163,13 @@ public class JOTLang extends LanguageProvider {
 
 		addItem(JOTItems.morningStar, "Morning Star");
 		addItem(JOTItems.greatmace, "Greatmace");
+		add("item.joy_of_tinkering.greatmace.description", "The Greatmace is a large melee weapon capable of damaging and debuffing multiple enemies in one hit. ");
 		addModifier(JOTModifierIds.crushing, "Crushing", "YOWCH", "Weakens the enemy on hit");
 
 		addMaterial(glowBerryVine, "Glow Berry Vine", "Do it for the vine", "???");
 
 		addModifier(JOTModifierIds.elytraBanner.getId(), "Elytra Banner", "Wear your heart on your wings", "Shows the banner on the wings");
-		add("modifier.joy_of_tinkering.elytra_banner.requirememt", "Elytra Banner requires Wings");
+		add("modifier.joy_of_tinkering.elytra_banner.requirement", "Elytra Banner requires Wings");
 	}
 
 	public void addModifier(ModifierId modifier, String name, String flavour, String desc) {

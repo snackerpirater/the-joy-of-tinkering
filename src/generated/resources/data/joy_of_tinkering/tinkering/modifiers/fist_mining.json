@@ -5,6 +5,5 @@
       "type": "joy_of_tinkering:fist_mining"
     }
   ],
-  "priority": 71,
-  "tooltip_display": "always"
+  "priority": 71
 }

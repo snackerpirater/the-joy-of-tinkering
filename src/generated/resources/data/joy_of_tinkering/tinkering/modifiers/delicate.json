@@ -6,6 +6,5 @@
       "predicate_type": "mantle:any"
     }
   ],
-  "priority": 50,
-  "tooltip_display": "always"
+  "priority": 50
 }

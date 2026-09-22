@@ -35,6 +35,7 @@ public class JOTToolSprites extends AbstractPartSpriteProvider {
 
 		addTexture("tinker_armor/rockpuncher/plating_armor", ARMOR_PLATING).disallowAnimated();
 		addTexture("tinker_armor/rockpuncher/fists_armor", HeadMaterialStats.ID).disallowAnimated();
+		addTexture("tinker_armor/rockpuncher/plating_wings", ARMOR_PLATING).disallowAnimated();
 
 		addTexture("item/tool/bullet/casing", JOTToolStats.Statless.BULLET_CASING.getIdentifier());
 		addTexture("item/tool/bullet/head", StatlessMaterialStats.ARROW_HEAD.getIdentifier());
