@@ -52,7 +52,7 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 						.addARGB(255, 0xFFffffff)
 						.build()));
 		buildMaterial(shimmervine)
-				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).maille().repairKit().laces()
+				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).cuirass().repairKit().laces()
 				.fallbacks("primitive", "cloth")
 				.transformer(new RecolorSpriteTransformer(GreyToColorMapping.builderFromBlack()
 						.addARGB(63,  0xFF005300)
@@ -63,7 +63,7 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 						.addARGB(255, 0xFFaffdcd)
 						.build()));
 		buildMaterial(twistedShimmervine)
-				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).maille().repairKit().laces()
+				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).cuirass().repairKit().laces()
 				.fallbacks("primitive", "cloth")
 				.transformer(new RecolorSpriteTransformer(GreyToColorMapping.builderFromBlack()
 						.addARGB(63,  0xFF005582)
@@ -75,7 +75,7 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 						.build()));
 
 		buildMaterial(crimsonShimmervine)
-				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).maille().repairKit().laces()
+				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).cuirass().repairKit().laces()
 				.fallbacks("primitive", "cloth")
 				.transformer(new RecolorSpriteTransformer(GreyToColorMapping.builderFromBlack()
 						.addARGB(63,  0xFF933249)
@@ -90,7 +90,7 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 		ResourceLocation glowBerryOutline = JoyOfTinkering.id("item/material/glow_berry_outline");
 		ResourceLocation glowBerryOutline2 = JoyOfTinkering.id("item/material/glow_berry_outline_2");
 		buildMaterial(glowBerryVine)
-				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).maille().repairKit().laces()
+				.statType(StatlessMaterialStats.BINDING, StatlessMaterialStats.BOWSTRING).cuirass().repairKit().laces()
 				.fallbacks("primitive", "cloth")
 				.transformer(GreyToSpriteTransformer.builderFromBlack()
 						.addTexture(63,  glowBerryOutline2)

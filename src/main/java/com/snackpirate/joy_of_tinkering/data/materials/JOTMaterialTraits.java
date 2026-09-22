@@ -48,7 +48,7 @@ public class JOTMaterialTraits extends AbstractMaterialTraitDataProvider {
 		addTraits(MaterialIds.magma, PropellantMaterialStats.ID, ModifierIds.fuse);
 
 		addDefaultTraits(shimmervine, JOTModifierIds.greed);
-		addTraits(shimmervine, StatlessMaterialStats.MAILLE.getIdentifier(), ModifierIds.reinforced);
+		addTraits(shimmervine, StatlessMaterialStats.CUIRASS.getIdentifier(), ModifierIds.reinforced);
 		addDefaultTraits(glowBerryVine, ModifierIds.lightspeed);
 	}
 
