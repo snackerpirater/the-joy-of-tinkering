@@ -163,12 +163,12 @@ public class JOTLang extends LanguageProvider {
 
 		addItem(JOTItems.morningStar, "Morning Star");
 		addItem(JOTItems.greatmace, "Greatmace");
-		add("item.joy_of_tinkering.greatmace.description", "The Greatmace is a large melee weapon capable of damaging and debuffing multiple enemies in one hit. ");
+		add("item.joy_of_tinkering.greatmace.description", "The Greatmace is a large melee weapon capable of damaging multiple enemies in one hit. ");
 		addModifier(JOTModifierIds.crushing, "Crushing", "YOWCH", "Weakens the enemy on hit");
 
 		addMaterial(glowBerryVine, "Glow Berry Vine", "Do it for the vine", "???");
 
-		addModifier(JOTModifierIds.elytraBanner.getId(), "Elytra Banner", "Wear your heart on your wings", "Shows the banner on the wings");
+		addModifier(JOTModifierIds.elytraBanner.getId(), "Elytra Banner", "Wear your heart on your wings!", "Shows the banner on the wings");
 		add("modifier.joy_of_tinkering.elytra_banner.requirement", "Elytra Banner requires Wings");
 	}
 
