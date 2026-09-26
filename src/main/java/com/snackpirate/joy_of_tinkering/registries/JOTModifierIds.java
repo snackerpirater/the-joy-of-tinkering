@@ -73,6 +73,8 @@ public class JOTModifierIds {
 
 	public static final ModifierId testPlacement = modId("block_placer_test");
 
+	public static final ModifierId greedy = modId("greedy");
+
 
 	public static ModifierId modId(String id) {
 		return new ModifierId(JoyOfTinkering.MOD_ID, id);

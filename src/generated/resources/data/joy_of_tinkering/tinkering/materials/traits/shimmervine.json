@@ -11,6 +11,12 @@
         "level": 1,
         "name": "tconstruct:reinforced"
       }
+    ],
+    "tconstruct:laces": [
+      {
+        "level": 1,
+        "name": "joy_of_tinkering:greedy"
+      }
     ]
   }
 }

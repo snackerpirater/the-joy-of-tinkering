@@ -8,6 +8,7 @@ import com.snackpirate.joy_of_tinkering.registries.JOTEffects;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.level.block.Blocks;
 import slimeknights.mantle.client.TooltipKey;
 import slimeknights.mantle.data.predicate.block.BlockPredicate;
@@ -22,6 +23,7 @@ import slimeknights.tconstruct.library.json.predicate.tool.ToolContextPredicate;
 import slimeknights.tconstruct.library.json.predicate.tool.ToolStackPredicate;
 import slimeknights.tconstruct.library.modifiers.ModifierHooks;
 import slimeknights.tconstruct.library.modifiers.modules.armor.MobDisguiseModule;
+import slimeknights.tconstruct.library.modifiers.modules.behavior.AttributeModule;
 import slimeknights.tconstruct.library.modifiers.modules.build.ModifierRequirementsModule;
 import slimeknights.tconstruct.library.modifiers.modules.build.StatBoostModule;
 import slimeknights.tconstruct.library.modifiers.modules.capacity.OverslimeModule;
@@ -32,6 +34,7 @@ import slimeknights.tconstruct.library.recipe.partbuilder.Pattern;
 import slimeknights.tconstruct.library.tools.capability.inventory.InventoryMenuModule;
 import slimeknights.tconstruct.library.tools.capability.inventory.InventoryModule;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
+import slimeknights.tconstruct.shared.TinkerAttributes;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.modules.CraftCountModule;
@@ -197,6 +200,10 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 				.addModule(BannerModule.INSTANCE)
 				.levelDisplay(ModifierLevelDisplay.NO_LEVELS)
 				.build();
+		buildModifier(greedy)
+				.addModule(new DropMobEquipmentModule(LevelingValue.flat(0.035f)))
+				.addModule(AttributeModule.builder(TinkerAttributes.EXPERIENCE_MULTIPLIER, AttributeModifier.Operation.MULTIPLY_BASE).minLevel(2).flat(0.25f))
+				.levelDisplay(new ModifierLevelDisplay.UniqueForLevels(2)).build();
 	}
 
 	@Override

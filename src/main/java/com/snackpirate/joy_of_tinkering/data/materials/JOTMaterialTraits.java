@@ -11,6 +11,7 @@ import slimeknights.tconstruct.library.modifiers.ModifierEntry;
 import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
+import slimeknights.tconstruct.tools.stats.RepairStats;
 import slimeknights.tconstruct.tools.stats.SkullStats;
 import slimeknights.tconstruct.tools.stats.StatlessMaterialStats;
 
@@ -49,6 +50,7 @@ public class JOTMaterialTraits extends AbstractMaterialTraitDataProvider {
 
 		addDefaultTraits(shimmervine, JOTModifierIds.greed);
 		addTraits(shimmervine, StatlessMaterialStats.CUIRASS.getIdentifier(), ModifierIds.reinforced);
+		addTraits(shimmervine, RepairStats.LACES.getId(), JOTModifierIds.greedy);
 		addDefaultTraits(glowBerryVine, ModifierIds.lightspeed);
 	}
 
