@@ -5,6 +5,7 @@ import slimeknights.tconstruct.library.data.material.AbstractMaterialDataProvide
 import static com.snackpirate.joy_of_tinkering.registries.JOTMaterialIds.*;
 
 public class JOTMaterialData extends AbstractMaterialDataProvider {
+
 	public JOTMaterialData(PackOutput packOutput) {
 		super(packOutput);
 	}

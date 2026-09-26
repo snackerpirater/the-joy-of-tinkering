@@ -5,8 +5,8 @@
     { "text": "Also capable of slowly mining stone, and expanders increase melee and mining radius", "paragraph": true }
   ],
   "properties": [
-    "+3.5 Attack Damage",
-    "135% Attack Multiplier",
+    "+3 Attack Damage",
+    "125% Attack Multiplier",
     "300% Durability Multiplier",
     "25% Mining Multiplier",
     "2 Upgrade Slots",

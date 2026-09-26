@@ -255,10 +255,10 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 				.module(defaultFourParts)
 				// stats
 				.module(new SetStatsModule(StatsNBT.builder()
-						.set(ToolStats.ATTACK_DAMAGE, 3.5f)
+						.set(ToolStats.ATTACK_DAMAGE, 3f)
 						.set(ToolStats.ATTACK_SPEED, 0.85f).build()))
 				.module(new MultiplyStatsModule(MultiplierNBT.builder()
-						.set(ToolStats.ATTACK_DAMAGE, 1.35f)
+						.set(ToolStats.ATTACK_DAMAGE, 1.25f)
 						.set(ToolStats.MINING_SPEED, 0.25f)
 						.set(ToolStats.DURABILITY, 3f).build()))
 				.module(ToolActionsModule.of(ToolActions.PICKAXE_DIG, TinkerToolActions.SHIELD_DISABLE))
