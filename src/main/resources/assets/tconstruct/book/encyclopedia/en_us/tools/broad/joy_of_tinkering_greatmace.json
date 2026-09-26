@@ -1,14 +1,14 @@
 {
   "tool": "joy_of_tinkering:greatmace",
   "text": [
-    { "text": "The Greatmace is a large melee weapon capable of damaging and debuffing multiple enemies in one hit. Melee hits apply Slowness and Weakness." },
-    { "text": "Also capable of slowly mining stone, and expanders increase melee and mining radius", "paragraph": true }
+    { "text": "The Greatmace is a large melee weapon capable of damaging multiple enemies in one hit." },
+    { "text": "Also capable of slowly mining stone; Expanders increase melee and mining radius", "paragraph": true }
   ],
   "properties": [
     "+3 Attack Damage",
     "125% Attack Multiplier",
     "300% Durability Multiplier",
-    "25% Mining Multiplier",
+    "25% Mining Speed",
     "2 Upgrade Slots",
     "1 Ability Slot"
   ]

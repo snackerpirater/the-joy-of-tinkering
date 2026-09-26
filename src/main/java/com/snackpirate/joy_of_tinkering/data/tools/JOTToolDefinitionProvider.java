@@ -265,7 +265,7 @@ public class JOTToolDefinitionProvider extends AbstractToolDefinitionDataProvide
 				.module(IsEffectiveModule.tag(BlockTags.MINEABLE_WITH_PICKAXE))
 				.largeToolStartingSlots()
 				// traits
-				.module(ToolTraitsModule.builder().trait(JOTModifierIds.crushing, 2).build())
+//				.module(ToolTraitsModule.builder().trait(JOTModifierIds.crushing, 2).build())
 				// harvest
 				.module(new CircleWeaponAttack(1.25f))
 //				.module(BoxAOEIterator.builder(2, 2, 1).addDepth(2).direction(IBoxExpansion.PITCH).build())

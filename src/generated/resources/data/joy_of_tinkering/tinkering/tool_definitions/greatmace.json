@@ -75,15 +75,6 @@
       }
     },
     {
-      "type": "tconstruct:traits",
-      "traits": [
-        {
-          "level": 2,
-          "name": "joy_of_tinkering:crushing"
-        }
-      ]
-    },
-    {
       "type": "tconstruct:circle_melee",
       "diameter": 1.25
     },
