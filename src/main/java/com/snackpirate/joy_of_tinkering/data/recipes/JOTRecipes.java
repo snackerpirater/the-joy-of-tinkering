@@ -47,6 +47,7 @@ import slimeknights.tconstruct.library.recipe.material.MaterialRecipe;
 import slimeknights.tconstruct.library.recipe.modifiers.adding.ModifierRecipeBuilder;
 import slimeknights.tconstruct.library.recipe.partbuilder.recycle.PartBuilderToolRecycleBuilder;
 import slimeknights.tconstruct.library.recipe.tinkerstation.building.MaterialSwappingRecipeBuilder;
+import slimeknights.tconstruct.library.recipe.tinkerstation.building.ToolBuildingRecipe;
 import slimeknights.tconstruct.library.recipe.tinkerstation.building.ToolBuildingRecipeBuilder;
 import slimeknights.tconstruct.library.tools.SlotType;
 import slimeknights.tconstruct.shared.TinkerMaterials;
@@ -253,7 +254,7 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 
 //		consumer.accept(new SimpleFinishedRecipe(location(slotlessFolder + "elytra_banner"), elytraBannerModifierSerializer.get()));
 		LoadableFinishedRecipe.save(consumer, BannerElytraModifierRecipe.LOADER, new BannerElytraModifierRecipe(location(slotlessFolder + "elytra_banner"), Ingredient.of(TinkerFluids.slimeBottle.get(SlimeType.SKY))));
-
+		ToolBuildingRecipeBuilder.toolBuildingRecipe(JOTItems.greatmace.get()).save(consumer, location(buildingFolder + "greatmace"));
 	}
 
 	private static final String buildingFolder = "tools/building/";
