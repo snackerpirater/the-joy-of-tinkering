@@ -2,10 +2,10 @@
   "modifier_id": "joy_of_tinkering:junkshot",
   "text": [
     {
-      "text": "Allows the rifle to fire any projectile or ammo, including arrows, fireworks, shurikens, etc."
+      "text": "Allows the rifle to fire arrows, fireworks, shurikens, and throwing axes"
     },
     {
-      "text": "Firing non-bullet ammunition consumes 5 extra durability per shot.",
+      "text": "Firing non-bullet ammunition consumes 3 extra durability per shot.",
       "paragraph": true
     }
   ],

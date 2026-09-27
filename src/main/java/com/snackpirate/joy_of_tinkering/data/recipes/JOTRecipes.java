@@ -150,7 +150,7 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 
 		bulletRecipe(Items.GUNPOWDER, MaterialIds.gunpowder, consumer);
 		bulletRecipe(Items.BLAZE_POWDER, MaterialIds.blaze, consumer);
-//		bulletRecipe(Items.REDSTONE, MaterialIds.redstone, consumer);
+		bulletRecipe(Items.REDSTONE, MaterialIds.redstone, consumer);
 		bulletRecipe(Items.SUGAR, JOTMaterialIds.sugar, consumer);
 		bulletRecipe(JOTItems.powderSnowBottle, MaterialIds.ice, consumer);
 		bulletRecipe(Items.BONE_MEAL, MaterialIds.bone,  consumer);
@@ -200,11 +200,11 @@ public class JOTRecipes extends RecipeProvider implements IMaterialRecipeHelper,
 		metalCrafting(consumer, JOTBlocks.slimebronze, "crafting/materials");
 
 		ModifierRecipeBuilder.modifier(junkshot)
-				.addInput(TinkerMaterials.steel.getIngotTag(), 4)
-				.addInput(TinkerMaterials.cinderslime.getIngotTag(), 4)
-				.addInput(TinkerMaterials.steel.getIngotTag(), 4)
-				.addInput(Items.TNT, 4)
-				.addInput(Items.TNT, 4)
+				.addInput(TinkerMaterials.steel.getIngotTag(), 1)
+				.addInput(TinkerMaterials.cinderslime.getIngotTag(), 1)
+				.addInput(TinkerMaterials.steel.getIngotTag(), 1)
+				.addInput(Items.TNT, 1)
+				.addInput(Items.TNT, 1)
 				.setSlots(SlotType.ABILITY, 1)
 				.setTools(Ingredient.of(JOTItems.RIFLE))
 				.setMaxLevel(1)
