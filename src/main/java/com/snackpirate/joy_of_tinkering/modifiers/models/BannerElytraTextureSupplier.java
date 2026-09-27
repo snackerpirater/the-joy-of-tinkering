@@ -141,6 +141,7 @@ public record BannerElytraTextureSupplier(ModifierId modifier) implements ArmorT
         public BannerRenderType(String pName, VertexFormat pFormat, VertexFormat.Mode pMode, int pBufferSize, boolean pAffectsCrumbling, boolean pSortOnUpload, Runnable pSetupState, Runnable pClearState) {
             super(pName, pFormat, pMode, pBufferSize, pAffectsCrumbling, pSortOnUpload, pSetupState, pClearState);
         }
+        //same as banner trims but supports transparency
         private static final RenderType ELYTRA_BANNER = RenderType.create("joy_of_tinkering:elytra_banner",
                 DefaultVertexFormat.NEW_ENTITY,
                 VertexFormat.Mode.QUADS,
