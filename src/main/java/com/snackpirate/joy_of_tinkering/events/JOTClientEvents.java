@@ -1,13 +1,16 @@
 package com.snackpirate.joy_of_tinkering.events;
 
 import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
+import com.snackpirate.joy_of_tinkering.data.tags.JOTItemTags;
 import com.snackpirate.joy_of_tinkering.entity.ModifiableBulletRenderer;
 import com.snackpirate.joy_of_tinkering.items.JOTHeadType;
 import com.snackpirate.joy_of_tinkering.modifiers.models.BannerElytraTextureSupplier;
 import com.snackpirate.joy_of_tinkering.modifiers.models.TrimElytraTextureSupplier;
 import com.snackpirate.joy_of_tinkering.registries.JOTEffects;
 import com.snackpirate.joy_of_tinkering.registries.JOTEntities;
+import com.snackpirate.joy_of_tinkering.registries.JOTItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.model.SkullModel;
 import net.minecraft.client.model.geom.EntityModelSet;
 import net.minecraft.client.model.geom.ModelLayerLocation;
@@ -21,6 +24,8 @@ import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import slimeknights.tconstruct.library.client.model.TinkerItemProperties;
+import slimeknights.tconstruct.library.client.model.tools.ToolModel;
 import slimeknights.tconstruct.library.materials.definition.MaterialId;
 import slimeknights.tconstruct.tools.client.SlimeskullArmorModel;
 import slimeknights.tconstruct.tools.data.material.MaterialIds;
@@ -51,9 +56,33 @@ public class JOTClientEvents {
 			registerHeadModel(JOTHeadType.ENDERSLIME, MaterialIds.enderslime, JoyOfTinkering.id("textures/entity/skull/enderslime.png"));
 			registerHeadModel(JOTHeadType.MAGMA_CUBE, MaterialIds.magma, JoyOfTinkering.id("textures/entity/skull/magma_cube.png"));
 			registerHeadModel(JOTHeadType.TERRACUBE, MaterialIds.clay, JoyOfTinkering.id("textures/entity/skull/terracube.png"));
+
+			TinkerItemProperties.registerToolProperties(JOTItems.BULLET);
+			TinkerItemProperties.registerToolProperties(JOTItems.REVOLVER);
+			TinkerItemProperties.registerToolProperties(JOTItems.RIFLE);
+			TinkerItemProperties.registerToolProperties(JOTItems.DECIMATOR);
+			TinkerItemProperties.registerToolProperties(JOTItems.greatmace);
+
+			TinkerItemProperties.registerToolProperties(JOTItems.CRESTED_HELMET);
+			TinkerItemProperties.registerToolProperties(JOTItems.ROCKPUNCHERS);
+			TinkerItemProperties.registerToolProperties(JOTItems.LAVA_LOAFERS);
 		});
 	}
+
 	@SubscribeEvent
+	static void itemColors(RegisterColorHandlersEvent.Item event) {
+		final ItemColors colors = event.getItemColors();
+		colors.register(ToolModel.COLOR_HANDLER, JOTItems.BULLET);
+		colors.register(ToolModel.COLOR_HANDLER, JOTItems.REVOLVER);
+		colors.register(ToolModel.COLOR_HANDLER, JOTItems.RIFLE);
+		colors.register(ToolModel.COLOR_HANDLER, JOTItems.DECIMATOR);
+		colors.register(ToolModel.COLOR_HANDLER, JOTItems.greatmace);
+
+		colors.register(ToolModel.COLOR_HANDLER, JOTItems.CRESTED_HELMET);
+		colors.register(ToolModel.COLOR_HANDLER, JOTItems.ROCKPUNCHERS);
+		colors.register(ToolModel.COLOR_HANDLER, JOTItems.LAVA_LOAFERS);
+	}
+		@SubscribeEvent
 	static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(JOTEntities.bullet.get(), ModifiableBulletRenderer::new);
 	}

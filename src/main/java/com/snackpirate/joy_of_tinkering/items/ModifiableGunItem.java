@@ -72,8 +72,10 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 	public static final ResourceLocation GUN_AMMO = JoyOfTinkering.id("gun_ammo");
 	private static final String PROJECTILE_KEY = "item.minecraft.crossbow.projectile";
 	private static final boolean storeDrawingItem = false;
-	public ModifiableGunItem(Properties properties, ToolDefinition toolDefinition) {
+	public boolean twoHanded = false;
+	public ModifiableGunItem(Properties properties, ToolDefinition toolDefinition, boolean twoHand) {
 		super(properties, toolDefinition);
+		twoHanded = twoHand;
 	}
 
 	@Override

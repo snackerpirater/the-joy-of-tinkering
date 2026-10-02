@@ -28,7 +28,7 @@ public class ModifiableDecimator extends ModifiableGunItem {
 
 	private static final boolean storeDrawingItem = false;
 	public ModifiableDecimator(Properties properties, ToolDefinition toolDefinition) {
-		super(properties, toolDefinition);
+		super(properties, toolDefinition, false);
 	}
 
 	@Override

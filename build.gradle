@@ -119,6 +119,10 @@ repositories {
             includeGroup "be.florens"
         }
     }
+    maven { // JSON Things
+        name 'Dogforce Games'
+        url 'https://www.dogforce-games.com/maven/'
+    }
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
@@ -155,6 +159,9 @@ dependencies {
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
+
+
+    compileOnly fg.deobf("dev.gigaherz.jsonthings:JsonThings-${minecraft_version}:0.9.9")
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar

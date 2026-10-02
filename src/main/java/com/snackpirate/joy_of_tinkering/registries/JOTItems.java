@@ -57,8 +57,8 @@ public class JOTItems {
 	public static final CastItemObject firingMechanismCast = ITEMS.registerCast("firing_mechanism", new Item.Properties());
 
 	public static final ItemObject<ModifiableBulletItem> BULLET = ITEMS.register("bullet", () -> new ModifiableBulletItem(new Item.Properties().stacksTo(64), JOTToolDefinitionProvider.BULLET));
-	public static final ItemObject<ModifiableGunItem> REVOLVER = ITEMS.register("revolver", () -> new ModifiableGunItem(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.REVOLVER));
-	public static final ItemObject<ModifiableGunItem> RIFLE = ITEMS.register("rifle", () -> new ModifiableGunItem(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.RIFLE));
+	public static final ItemObject<ModifiableGunItem> REVOLVER = ITEMS.register("revolver", () -> new ModifiableGunItem(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.REVOLVER, false));
+	public static final ItemObject<ModifiableGunItem> RIFLE = ITEMS.register("rifle", () -> new ModifiableGunItem(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.RIFLE, true));
 
 	public static final ItemObject<ModifiableGunItem> DECIMATOR = ITEMS.register("decimator", () -> new ModifiableDecimator(new Item.Properties().stacksTo(1), JOTToolDefinitionProvider.DECIMATOR));
 

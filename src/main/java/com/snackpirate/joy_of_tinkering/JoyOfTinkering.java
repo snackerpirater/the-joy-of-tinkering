@@ -16,6 +16,7 @@ import com.snackpirate.joy_of_tinkering.modifiers.models.BannerElytraTextureSupp
 import com.snackpirate.joy_of_tinkering.modifiers.models.TrimElytraTextureSupplier;
 import com.snackpirate.joy_of_tinkering.modifiers.modules.*;
 import com.snackpirate.joy_of_tinkering.network.JOTNetwork;
+import com.snackpirate.joy_of_tinkering.plugin.json_things.JsonThingsPlugin;
 import com.snackpirate.joy_of_tinkering.registries.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -33,6 +34,7 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -94,6 +96,10 @@ public class JoyOfTinkering {
 			ArmorTextureSupplier.LOADER.register(JoyOfTinkering.id("elytra_trim"), TrimElytraTextureSupplier.LOADER);
 			ArmorTextureSupplier.LOADER.register(JoyOfTinkering.id("elytra_banner"), BannerElytraTextureSupplier.LOADER);
 		});
+		ModList modList = ModList.get();
+		if (modList.isLoaded("jsonthings")) {
+			JsonThingsPlugin.onConstruct();
+		}
 	}
 
 	private void commonSetup(final FMLCommonSetupEvent event) {

@@ -51,7 +51,7 @@ public class GunArmPose extends ModifiableItemClientExtension {
         ListTag heldAmmo = (ListTag) persistentData.get(GUN_AMMO);
         // ignore warning, null check is necessary
         if (heldAmmo != null && !heldAmmo.isEmpty()) {
-            return stack.is(TinkerTags.Items.BROAD_RANGED) ? TWO_HANDED : ONE_HANDED;
+            return ((ModifiableGunItem) stack.getItem()).twoHanded ? TWO_HANDED : ONE_HANDED;
         }
         return HumanoidModel.ArmPose.ITEM;
     }
