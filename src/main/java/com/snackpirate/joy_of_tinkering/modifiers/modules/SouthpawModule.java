@@ -35,14 +35,14 @@ public enum SouthpawModule implements ModifierModule, GeneralInteractionModifier
 		if (source == InteractionSource.LEFT_CLICK && hand == InteractionHand.MAIN_HAND && !tool.isBroken()) {
 			ListTag heldAmmo = ((ListTag) tool.getPersistentData().get(GUN_AMMO));
 			if (!heldAmmo.isEmpty()) {
-				ModifiableGunItem.fireGun(tool, player, hand, heldAmmo);
+				ModifiableGunItem.fireGun(player.getItemInHand(hand), tool, player, hand, heldAmmo);
 				for (int i = 0; i < tool.getModifierLevel(JOTModifierIds.burstFire); i++) {
 					new Timer().schedule(new TimerTask() {
 						@Override
 						public void run() {
 							ModDataNBT persistentData = tool.getPersistentData();
 							ListTag ammo = (ListTag) persistentData.get(GUN_AMMO);
-							if (!ammo.isEmpty()) ModifiableGunItem.fireGun(tool, player, hand, ammo);
+							if (!ammo.isEmpty()) ModifiableGunItem.fireGun(player.getItemInHand(hand), tool, player, hand, ammo);
 						}
 					}, 100L * (i+1));
 				}

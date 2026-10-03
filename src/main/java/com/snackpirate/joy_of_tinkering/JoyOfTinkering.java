@@ -26,6 +26,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
@@ -52,6 +53,7 @@ import slimeknights.tconstruct.library.modifiers.modules.ModifierModule;
 import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 import slimeknights.tconstruct.tools.data.sprite.TinkerPartSpriteProvider;
 
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
@@ -99,8 +101,10 @@ public class JoyOfTinkering {
 		ModList modList = ModList.get();
 		if (modList.isLoaded("jsonthings")) {
 			JsonThingsPlugin.onConstruct();
+			flexGunItems = JsonThingsPlugin.ItemTypes.GUN_ITEMS;
 		}
 	}
+	public static List<Item> flexGunItems = List.of();
 
 	private void commonSetup(final FMLCommonSetupEvent event) {
 		JOTModifierHooks.init();

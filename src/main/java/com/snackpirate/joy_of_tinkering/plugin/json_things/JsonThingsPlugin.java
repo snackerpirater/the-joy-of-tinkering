@@ -26,7 +26,7 @@ public class JsonThingsPlugin {
 	}
 
 	public static class ItemTypes {
-		static final List<Item> GUN_ITEMS = new ArrayList<>();
+		public static final List<Item> GUN_ITEMS = new ArrayList<>();
 
 		public static void init() {
 			register("gun", data -> {

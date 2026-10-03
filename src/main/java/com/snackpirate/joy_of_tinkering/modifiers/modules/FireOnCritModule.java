@@ -34,7 +34,7 @@ public enum FireOnCritModule implements ModifierModule, MeleeHitModifierHook {
 			context.getTarget().invulnerableTime = 0;
 			ListTag ammo = (ListTag) tool.getPersistentData().get(ModifiableGunItem.GUN_AMMO);
 			if (!ammo.isEmpty()) {
-				ModifiableGunItem.fireGun(tool, context.getPlayerAttacker(), context.getHand(), ammo);
+				ModifiableGunItem.fireGun(context.getAttacker().getItemInHand(context.getHand()), tool, context.getPlayerAttacker(), context.getHand(), ammo);
 				ToolAttackUtil.spawnAttackParticle(TinkerTools.hammerAttackParticle.get(), context.getTarget(), 0.8f);
 			}
 		}

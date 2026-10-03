@@ -5,6 +5,7 @@ import com.snackpirate.joy_of_tinkering.JoyOfTinkering;
 import com.snackpirate.joy_of_tinkering.data.tags.JOTItemTags;
 import com.snackpirate.joy_of_tinkering.entity.ModifiableBullet;
 import com.snackpirate.joy_of_tinkering.items.tools.JOTToolStats;
+import com.snackpirate.joy_of_tinkering.plugin.json_things.JsonThingsPlugin;
 import com.snackpirate.joy_of_tinkering.registries.JOTItems;
 import com.snackpirate.joy_of_tinkering.registries.JOTModifierIds;
 import net.minecraft.ChatFormatting;
@@ -62,6 +63,7 @@ import slimeknights.tconstruct.tools.data.ModifierIds;
 import slimeknights.tconstruct.tools.entity.ThrownShuriken;
 
 import javax.annotation.Nullable;
+import javax.json.Json;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -165,13 +167,13 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 			}
 		}
 		// ammo already loaded? time to fire
-		fireGun(tool, player, hand, heldAmmo);
+		fireGun(gun, tool, player, hand, heldAmmo);
 		for (int i = 0; i < tool.getModifierLevel(JOTModifierIds.burstFire); i++) {
 			new Timer().schedule(new TimerTask() {
 				@Override
 				public void run() {
 					ListTag ammo = (ListTag) persistentData.get(GUN_AMMO);
-					if (!ammo.isEmpty()) fireGun(tool, player, hand, ammo);
+					if (!ammo.isEmpty()) fireGun(gun, tool, player, hand, ammo);
 				}
 			}, 100L * (i+1));
 		}
@@ -185,8 +187,8 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 	 * @param hand       Hand fired from
 	 * @param heldAmmo   Ammo used to fire, should be non-empty
 	 */
-	public static void fireGun(IToolStackView tool, Player player, InteractionHand hand, ListTag heldAmmo) {
-		fireGun(tool, player, player.getAbilities().instabuild, hand, heldAmmo);
+	public static void fireGun(ItemStack item, IToolStackView tool, Player player, InteractionHand hand, ListTag heldAmmo) {
+		fireGun(item, tool, player, player.getAbilities().instabuild, hand, heldAmmo);
 	}
 
 	/**
@@ -197,7 +199,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 	 * @param hand       Hand fired from
 	 * @param heldAmmo   Ammo used to fire, should be non-empty
 	 */
-	public static void fireGun(IToolStackView tool, LivingEntity living, boolean creative, InteractionHand hand, ListTag heldAmmo) {
+	public static void fireGun(ItemStack item, IToolStackView tool, LivingEntity living, boolean creative, InteractionHand hand, ListTag heldAmmo) {
 //		JoyOfTinkering.LOGGER.info("fire gun");
 		// ammo already loaded? time to fire
 		Level level = living.level();
@@ -302,9 +304,11 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 			((ListTag) tool.getPersistentData().get(GUN_AMMO)).remove(0);
 			ToolDamageUtil.damageAnimated(tool, damage, living, hand);
 			if (living instanceof Player p) {
-				float drawSpeed = ConditionalStatModifierHook.getModifiedStat(tool, p, ToolStats.DRAW_SPEED);
-				p.getCooldowns().addCooldown(JOTItems.REVOLVER.get(), (int) (20/drawSpeed));
-				p.getCooldowns().addCooldown(JOTItems.RIFLE.get(), (int) (20/drawSpeed));
+				int cdTicks = (int) (20 / ConditionalStatModifierHook.getModifiedStat(tool, p, ToolStats.DRAW_SPEED));
+				p.getCooldowns().addCooldown(JOTItems.REVOLVER.get(), cdTicks);
+				p.getCooldowns().addCooldown(JOTItems.RIFLE.get(), cdTicks);
+				JoyOfTinkering.flexGunItems.forEach((item2) -> p.getCooldowns().addCooldown(item2, cdTicks));
+//				p.getCooldowns().addCooldown(item.getItem(), cdTicks);
 			}
 
 			// stats
@@ -361,7 +365,7 @@ public class ModifiableGunItem extends ModifiableLauncherItem {
 				persistentData.put(GUN_AMMO, ammoListNBT);
 				// if the crossbow broke during loading, fire immediately
 				if (tool.isBroken()) {
-					fireGun(tool, living, player != null && player.getAbilities().instabuild, living.getUsedItemHand(), ammoListNBT);
+					fireGun(bow, tool, living, player != null && player.getAbilities().instabuild, living.getUsedItemHand(), ammoListNBT);
 				}
 			}
 		}
