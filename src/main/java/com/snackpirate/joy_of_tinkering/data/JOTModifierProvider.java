@@ -203,7 +203,12 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 		buildModifier(greedy)
 				.addModule(new DropMobEquipmentModule(LevelingValue.flat(0.035f)))
 				.addModule(AttributeModule.builder(TinkerAttributes.EXPERIENCE_MULTIPLIER, AttributeModifier.Operation.MULTIPLY_BASE).minLevel(2).flat(0.25f))
-				.levelDisplay(new ModifierLevelDisplay.UniqueForLevels(2)).build();
+				.levelDisplay(new ModifierLevelDisplay.UniqueForLevels(2))
+				.build();
+
+		buildModifier(echoic)
+				.addModule(new EchoMeleeHitsModule(LevelingValue.flat(1f), LevelingValue.flat(1f), LevelingInt.flat(3)))
+				.build();
 	}
 
 	@Override

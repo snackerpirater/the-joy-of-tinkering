@@ -1,0 +1,17 @@
+{
+  "level_display": "tconstruct:default",
+  "modules": [
+    {
+      "type": "joy_of_tinkering:echo_melee_hits",
+      "chance": {
+        "flat": 1.0
+      },
+      "damage": {
+        "flat": 1.0
+      },
+      "max_targets": {
+        "flat": 3
+      }
+    }
+  ]
+}
