@@ -19,5 +19,7 @@ public class JOTEffects {
 	public static final RegistryObject<TinkerEffect> TERRAGUARD = MOB_EFFECTS.register("terraguard", () -> new TinkerEffect(MobEffectCategory.BENEFICIAL, 0xAFB9D6, true).addAttributeModifier(Attributes.ARMOR, "5de036ed-bee7-4965-9348-64c3ab5c8ba8", 4f, AttributeModifier.Operation.ADDITION));
     public static final RegistryObject<TinkerEffect> MAGMADAPTATION = MOB_EFFECTS.register("magmadaptation", () -> new TinkerEffect(MobEffectCategory.BENEFICIAL, 0x652828, true));
 	public static final RegistryObject<MobEffect> overheat = MOB_EFFECTS.register("overheat", () -> new TinkerEffect(MobEffectCategory.HARMFUL, 0xff8f3b, true));
+    //marker for echoic trait
+    public static final RegistryObject<MobEffect> echoing = MOB_EFFECTS.register("echoing", () -> new TinkerEffect(MobEffectCategory.HARMFUL, 0x0f839c, true));
 
 }

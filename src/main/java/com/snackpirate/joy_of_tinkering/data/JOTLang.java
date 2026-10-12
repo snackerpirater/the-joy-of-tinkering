@@ -172,6 +172,8 @@ public class JOTLang extends LanguageProvider {
 
 		addModifier(JOTModifierIds.elytraBanner.getId(), "Elytra Banner", "Wear your heart on your wings!", "Shows the banner on the wings");
 		add("modifier.joy_of_tinkering.elytra_banner.requirement", "Elytra Banner requires Wings");
+
+        addEffect(JOTEffects.echoing, "Echoing");
 	}
 
 	public void addModifier(ModifierId modifier, String name, String flavour, String desc) {
