@@ -12,6 +12,18 @@
       "max_targets": {
         "flat": 3
       }
+    },
+    {
+      "type": "tconstruct:weapon_mob_effect",
+      "apply_before_melee": true,
+      "effect": "joy_of_tinkering:echoing",
+      "level": {
+        "flat": 1.0
+      },
+      "time": {
+        "flat": 60.0,
+        "per_level": 40.0
+      }
     }
   ]
 }

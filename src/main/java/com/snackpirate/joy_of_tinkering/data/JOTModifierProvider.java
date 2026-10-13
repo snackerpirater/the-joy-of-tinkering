@@ -208,6 +208,7 @@ public class JOTModifierProvider extends AbstractModifierProvider {
 
 		buildModifier(echoic)
 				.addModule(new EchoMeleeHitsModule(LevelingValue.flat(1f), LevelingValue.flat(1f), LevelingInt.flat(3)))
+				.addModule(MobEffectModule.builder(JOTEffects.echoing.get()).chance(LevelingValue.ONE).applyBeforeMelee(true).time(RandomLevelingValue.perLevel(60f, 40f)).buildWeapon())
 				.build();
 	}
 

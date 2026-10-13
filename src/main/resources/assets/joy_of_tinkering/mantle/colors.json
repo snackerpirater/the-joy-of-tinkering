@@ -33,7 +33,8 @@
     "southpaw":    "#A6846A",
 
     "overheat": "#ff8f3b",
-    "crushing": "#da3736"
+    "crushing": "#da3736",
+    "echoic": "#007782"
   },
   "material.joy_of_tinkering": {
     "slimebronze": "#ff8f3b",
