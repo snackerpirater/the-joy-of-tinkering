@@ -100,6 +100,20 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 						.addTexture(216, glowBerryTexture)
 						.addTexture(255, glowBerryTexture)
 						.build());
+
+        buildMaterial(reverberite).meleeHarvest().ranged().armor().maille().repairKit()
+                .statType(JOTToolStats.Statless.BULLET_CASING)
+                .statType(GunBarrelMaterialStats.ID)
+                .statType(FiringMechanismMaterialStats.ID)
+                .fallbacks("crystalline", "metal_contrast", "metal")
+                .transformer(new RecolorSpriteTransformer(GreyToColorMapping.builderFromBlack()
+                        .addARGB(63,  0xFF009295)
+                        .addARGB(102, 0xFF29dfeb)
+                        .addARGB(140, 0xFF111b21)
+                        .addARGB(178, 0xFF052a32)
+                        .addARGB(216, 0xFF034150)
+                        .addARGB(255, 0xFF0a5060)
+                        .build()));
 	}
 	public static class RenderInfo extends AbstractMaterialRenderInfoProvider {
 
@@ -115,6 +129,7 @@ public class JOTMaterialSprites extends AbstractMaterialSpriteProvider {
 			buildRenderInfo(crimsonShimmervine).color(0xff866f).fallbacks("primitive", "cloth").luminosity(9);
 			buildRenderInfo(twistedShimmervine).color(0x05dfc6).fallbacks("primitive", "cloth").luminosity(9);
 			buildRenderInfo(sugar).color(0xffffff).fallbacks("crystal");
+            buildRenderInfo(reverberite).color(0x007782).fallbacks("crystalline", "metal_contrast", "metal").luminosity(7);
 		}
 
 		@Override

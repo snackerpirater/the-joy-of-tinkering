@@ -52,6 +52,8 @@ public class JOTMaterialTraits extends AbstractMaterialTraitDataProvider {
 		addTraits(shimmervine, StatlessMaterialStats.CUIRASS.getIdentifier(), ModifierIds.reinforced);
 		addTraits(shimmervine, RepairStats.LACES.getId(), JOTModifierIds.greedy);
 		addDefaultTraits(glowBerryVine, ModifierIds.lightspeed);
+
+        addDefaultTraits(reverberite, JOTModifierIds.echoic);
 	}
 
 	@Override

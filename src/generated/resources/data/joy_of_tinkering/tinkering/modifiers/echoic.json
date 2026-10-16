@@ -6,7 +6,7 @@
       "chance": {
         "flat": 1.0
       },
-      "damage": {
+      "damage_mult": {
         "flat": 1.0
       },
       "max_targets": {
@@ -23,6 +23,18 @@
       "time": {
         "flat": 60.0,
         "per_level": 40.0
+      }
+    },
+    {
+      "type": "joy_of_tinkering:echo_projectile_hits",
+      "chance": {
+        "flat": 1.0
+      },
+      "damage_mult": {
+        "flat": 1.0
+      },
+      "max_targets": {
+        "flat": 3
       }
     }
   ]

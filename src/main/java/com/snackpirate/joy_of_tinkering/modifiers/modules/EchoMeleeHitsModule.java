@@ -31,7 +31,7 @@ public record EchoMeleeHitsModule(LevelingValue chance, LevelingValue damage, Le
 
 	public static final RecordLoadable<EchoMeleeHitsModule> LOADER = RecordLoadable.create(
 			LevelingValue.LOADABLE.requiredField("chance", EchoMeleeHitsModule::chance),
-			LevelingValue.LOADABLE.requiredField("percent_damage", EchoMeleeHitsModule::damage),
+			LevelingValue.LOADABLE.requiredField("damage_mult", EchoMeleeHitsModule::damage),
 			LevelingInt.LOADABLE.requiredField("max_targets", EchoMeleeHitsModule::maxTargets),
 			EchoMeleeHitsModule::new);
 

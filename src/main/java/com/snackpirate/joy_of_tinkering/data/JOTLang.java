@@ -175,7 +175,8 @@ public class JOTLang extends LanguageProvider {
 
         addEffect(JOTEffects.echoing, "Echoing");
 		addModifier(JOTModifierIds.echoic, "Echoic", "Echo... echo... echo...", "Melee and ranged hits can echo to nearby targets");
-	}
+	    addMaterial(reverberite, "Reverberite", "Sharing is caring", "Inflicts a debuff which causes hits to echo to nearby afflicted enemies");
+    }
 
 	public void addModifier(ModifierId modifier, String name, String flavour, String desc) {
 		String id = modifier.getPath();

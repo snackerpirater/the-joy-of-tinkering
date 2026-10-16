@@ -161,6 +161,23 @@ public class JOTMaterialStats extends AbstractMaterialStatsDataProvider {
 				new FiringMechanismMaterialStats(6, -0.05f, 2.25f),
 				JOTToolStats.Statless.BULLET_CASING);
 
+        //TODO: Tier 4 stats
+        addMaterialStats(reverberite,
+                new HeadMaterialStats(480, 7.5f, Tiers.DIAMOND, 2.5f),
+                new HandleMaterialStats(0f, -0.1f, 0.05f, 0.05f),
+                StatlessMaterialStats.BINDING,
+                new PlatingMaterialStats(PlatingMaterialStats.HELMET, 318, 2, 2, 0.1f),
+                new PlatingMaterialStats(PlatingMaterialStats.CHESTPLATE, 458, 6, 2, 0.1f),
+                new PlatingMaterialStats(PlatingMaterialStats.LEGGINGS, 430, 5, 2, 0.1f),
+                new PlatingMaterialStats(PlatingMaterialStats.BOOTS, 374, 2, 2, 0.1f),
+                new PlatingMaterialStats(PlatingMaterialStats.SHIELD, 514, 1, 2, 0.1f),
+                StatlessMaterialStats.MAILLE,
+                new LimbMaterialStats(480, -0.1f, 0.1f, -0.1f),
+                new GripMaterialStats(-0.05f, -0.1f, 2.5f),
+                new GunBarrelMaterialStats(1040, -0.05f, 0.15f),
+                new FiringMechanismMaterialStats(6, -0.05f, 2.25f),
+                JOTToolStats.Statless.BULLET_CASING);
+
 		addMaterialStats(MaterialIds.gunpowder, new PropellantMaterialStats(3f));
 		addMaterialStats(MaterialIds.blaze, new PropellantMaterialStats(2.5f));
 		addMaterialStats(MaterialIds.redstone, new PropellantMaterialStats(2));

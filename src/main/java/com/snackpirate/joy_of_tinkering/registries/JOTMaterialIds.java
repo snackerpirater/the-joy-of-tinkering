@@ -12,7 +12,8 @@ public class JOTMaterialIds {
 	public static final MaterialId glowBerryVine = createMaterial("glow_berry_vine");
 	public static final MaterialVariantId twistedShimmervine = MaterialVariantId.create(shimmervine, "twisting");
 	public static final MaterialVariantId crimsonShimmervine = MaterialVariantId.create(shimmervine, "weeping");
-	private static MaterialId createMaterial(String name) {
+	public static final MaterialId reverberite = createMaterial("reverberite");
+    private static MaterialId createMaterial(String name) {
 		return new MaterialId(JoyOfTinkering.id(name));
 	}
 
