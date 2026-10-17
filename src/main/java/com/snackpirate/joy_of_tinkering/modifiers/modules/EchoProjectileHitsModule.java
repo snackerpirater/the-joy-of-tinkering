@@ -118,7 +118,7 @@ public record EchoProjectileHitsModule(LevelingValue chance, LevelingValue damag
             LivingEntity targetI = entities.get(i);
 //			JoyOfTinkering.LOGGER.info("target {}: {}", i, targetI.getType());
             if (!targetI.hasEffect(JOTEffects.echoing.get())) continue;
-            if (level.isClientSide()) ((ServerLevel) level).sendParticles(new VibrationParticleOption(new EntityPositionSource(targetI, targetI.getBbHeight() / 2f), 5), projectile.getX(), projectile.getY() + (projectile.getBbHeight()/2d), projectile.getZ(), 1, 0, 0, 0, 0);
+            ((ServerLevel) level).sendParticles(new VibrationParticleOption(new EntityPositionSource(targetI, targetI.getBbHeight() / 2f), 5), projectile.getX(), projectile.getY() + (projectile.getBbHeight()/2d), projectile.getZ(), 1, 0, 0, 0, 0);
             //			DamageSource pSource = context.getAttacker().damageSources().playerAttack(context.getPlayerAttacker());
             if ((owner == null || !owner.isAlliedTo(targetI))
                     && !(targetI instanceof ArmorStand stand && stand.isMarker())) {
