@@ -103,7 +103,7 @@ public class JOTServerEvents {
 	@SubscribeEvent
 	static void fluidCaps(AttachCapabilitiesEvent<ItemStack> event) {
 		ItemStack stack = event.getObject();
-		itemPouring(event, stack, JOTItems.powderSnowBottle.get(), TinkerFluids.powderedSnow.get(), FluidValues.BOTTLE, Items.GLASS.getDefaultInstance());
+		itemPouring(event, stack, JOTItems.powderSnowBottle.get(), TinkerFluids.powderedSnow.get(), FluidValues.BOTTLE, Items.GLASS_BOTTLE.getDefaultInstance());
 	}
 	public static void itemPouring(AttachCapabilitiesEvent<ItemStack> event, ItemStack itemStack, Item input, Fluid fluidObject, int amount, ItemStack output) {
 		if (itemStack.getItem().equals(input)) {
